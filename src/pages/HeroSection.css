@@ -1,3 +1,12 @@
+/* Styling for the logo image */
+.logo-image {
+  width: 123.55px; /* Adjust size as necessary */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle; /* Align it with the text */
+  margin-right: 11px;
+}
+
 /* Background image for the banner */
 .banner-container {
   position: relative;
@@ -13,6 +22,7 @@
   max-width: 100%;
   overflow: hidden;
 }
+
 .lay {
   position: absolute;
   top: 0;
@@ -22,6 +32,7 @@
   background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
   z-index: 1;
 }
+
 /* Adding overlay with a background color */
 .banner-container::before {
   content: "";
@@ -33,46 +44,21 @@
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
   z-index: 1; /* Ensures overlay stays below the content */
 }
- 
+
 /* The content inside the banner */
 .banner-content {
   position: relative;
   z-index: 2; /* Keep content above the overlay */
   color: white;
-  max-width:1100px;
+  max-width: 1100px;
   font-family: "Houschka Rounded";
-font-size: 36px;
-font-weight: 500;
-line-height: 44px;
-text-align: left;
- 
-}
-.logo{
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
   text-align: left;
 }
- 
+
 /* Gradient effect for the logo text */
-.logo-gradient {
-  background: linear-gradient(41.86deg, #7B0B98 19.51%, #610C9F 35.99%, #DA0C81 53.97%, #E95793 72.7%);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-  font-family: "Houschka Rounded";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 44px;
-  text-align: left;
-}
- 
-/* Styling the text for emphasis */
-.h {
-  font-family: "Houschka Rounded";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 44px;
-  text-align: left;
-}
- 
 .str {
   color: white; /* Emphasized part of the text */
   font-weight: bold;
@@ -82,19 +68,20 @@ text-align: left;
   line-height: 44px;
   text-align: left;
 }
- 
+
 /* Media query for responsiveness */
 @media (max-width: 768px) {
   .banner-container {
     height: auto; /* Adjust height for smaller screens */
     padding: 30px;
   }
- 
-  .logo-gradient,
-  .h,
+
+  .logo-image {
+    width: 100px; /* Adjust size for smaller screens */
+  }
+
   .str {
     font-size: 18px;
     line-height: 24px;
   }
 }
- 

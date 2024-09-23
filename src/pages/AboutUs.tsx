@@ -16,6 +16,8 @@ import img3 from '../assets/images/services/technician-doing-ai-simulation.jpg';
 // import img8 from '../assets/images/services/medium-shot-man-holding-device.jpg'; // Add an appropriate image for Sustainability
 import img8 from '../assets/images/services/man-using-tablet-eco-friendly-wind-power-project-layout.jpg';
 import im from "../assets/images/diversity/pexels-august-de-richelieu-4427430.jpg"
+import logoImplica from "../assets/images/newlogo with short size.png";
+
 
 
 const CompanyAd = () => {
@@ -74,7 +76,7 @@ const CompanyAd = () => {
       <div className="lay"></div> {/* This is the overlay element */}
       <div className="banner-content">
         {/* <p className="logo"> */}
-          <span className="logo-gradient">implica </span>
+        <img src={logoImplica} alt="Implica Logo" className="logo-image" />
           s more than a corporation—{" "}
     <p className="banner-content">we are a movement, driving lasting change and helping businesses achieve their full potential in a rapidly evolving world. 
         </p>

@@ -43,7 +43,7 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrentIndex(0); // Reset index without animation
-      }, 700); // Match transition duration
+      }, 7000); // Match transition duration
     }
   }, [currentIndex, media.length]);
 
@@ -53,7 +53,7 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
     if (isPlaying) {
       interval = setInterval(() => {
         nextSlide(); // Automatically go to the next slide
-      }, 7000); // Change slide every 7 seconds
+      }, 10000); // Change slide every 7 seconds
     } else if (interval !== undefined) {
       clearInterval(interval);
     }
