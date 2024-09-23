@@ -1,0 +1,256 @@
+/* dropdown.css */
+ 
+/* Industries grid styling */
+.industries-container {
+  display: flex;
+  justify-content: space-between; /* Aligns the grid and view-all link to extremes */
+  align-items: flex-start; /* Aligns the top of both items */
+  padding: 20px 0;
+}
+ 
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* 3 columns for better spacing */
+  column-gap: 120px; /* Adjust column gap for better spacing */
+  row-gap: 15px; /* Add vertical spacing */
+}
+ 
+ 
+ 
+.view-all-container {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+ 
+.view-all-link {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+ 
+.view-all-link svg {
+  margin-left: 5px;
+}
+  /* Services section styling */
+  .services-section {
+    background: rgba(24, 26, 27, 1);
+    color: #fff; /* White text color */
+    padding: 50px 0;
+    text-align: center;
+  }
+ 
+  .services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+ 
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px; /* Spacing between the service items */
+  }
+ 
+  .service-item {
+    background: rgba(24, 26, 27, 1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+ 
+  .service-item:hover {
+    transform: translateY(-10px);
+  }
+ 
+  .service-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+ 
+  .service-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc; /* Light gray text for description */
+  }
+ 
+  /* Career section styling */
+  .career-section {
+    background: #181a1b; /* Dark background */
+    color: white;
+    padding: 50px; /* Adjust padding as needed */
+  }
+ 
+  .career-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between sections */
+  }
+ 
+  /* Featured section styling */
+  .featured-section {
+    border-left: 2px solid #ff4dba; /* Vertical pink line */
+    padding-left: 20px;
+    color: white;
+  }
+ 
+  .featured-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+ 
+  .featured-item {
+    /* background: rgba(255, 255, 255, 0.1); Light gray background */
+    padding: 20px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+  }
+ 
+  /* Products section styling */
+  .products-section {
+    padding: 20px;
+    background: rgba(24, 26, 27, 1);
+    color: #fff;
+  }
+ 
+  .products-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+ 
+  .product-category {
+    margin-bottom: 40px;
+  }
+ 
+  .category-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+ 
+  .product-cards {
+    display: flex;
+    gap: 20px; /* Adjust gap as needed */
+  }
+ 
+  .product-card {
+    padding: 20px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center;
+    border-radius: 8px;
+  }
+ 
+  .imag {
+    width: 158px;
+    height: 100px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+ 
+  /* Insights section styling */
+  .inScard {
+    display: flex;
+    background: rgba(24, 26, 27, 1);
+    color: white;
+    padding: 30px;
+  }
+ 
+  .insights-sidebar {
+    width: 20%;
+    margin-right: 20px;
+  }
+ 
+  .insights-sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+ 
+  .insights-categories {
+    list-style-type: none;
+    padding-top: 20px;
+    padding-left: 0px;
+  }
+ 
+  .insights-categories li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+ 
+  .insights-content {
+    width: 80%;
+    display: flex;
+    padding-top: 80px;
+  }
+ 
+  .insights-category {
+    margin-bottom: 40px;
+    padding-left: 30px;
+  }
+ 
+  .insights-category h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+ 
+  .insights-items {
+    display: flex;
+    gap: 20px;
+  }
+ 
+  .insight-item {
+    /* padding: 20px; */
+    border-radius: 8px;
+    width: 200px;
+  }
+ 
+  /* Typography */
+  .head {
+    /* font-family: Work Sans; */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(173, 165, 155, 1);
+  }
+ 
+  .in {
+    font-family: Work Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+  }
+ 
+  .inProduct {
+    font-family: Work Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    padding-left: 20px;
+  }
+ 
+  .imgText {
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+  }
+  .fss{
+    font-family: Work Sans;
+font-size: 20px;
+font-weight: 600;
+line-height: 22px;
+text-align: left;
+padding-left: 20px;
+  }
