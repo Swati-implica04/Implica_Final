@@ -1,0 +1,91 @@
+.footer {
+  background: rgba(18, 13, 23, 1);
+  color: #fff;
+  padding: 40px 0px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 332px;
+  max-width: 661px;
+  /* margin-bottom: 20px; */
+}
+
+.footer-description {
+  margin-top: 30px;
+font-family: var(--TypographyFontFamilyBody-WorkSans);
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.01em;
+text-align: left;
+
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-icons a {
+  color: #fff;
+  font-size: 24px;
+  /* border: 1px solid white; */
+  /* padding: 8px; */
+  border-radius: 50%;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #ff4dba;
+  border-color: #ff4dba;
+}
+
+.footer-center {
+  padding: 85px 0px 0px 10px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style for the footer links */
+.footer-links {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+font-family: var(--TypographyFontFamilyBody-WorkSans);
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.01em;
+text-align: left;
+
+}
+
+.footer-links a {
+  color: #fff; /* White color for the links */
+  text-decoration: none;
+  font-family: Work Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.11px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff4dba; /* Implica brand color for hover state */
+}

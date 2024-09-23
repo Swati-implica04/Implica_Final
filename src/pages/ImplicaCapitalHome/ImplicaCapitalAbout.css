@@ -1,0 +1,174 @@
+.ImplicaCapitalHome {
+    width: 100vw; /* Use full width for responsive design */
+    /* max-width: 1280px; Maintain a maximum width */
+    min-height: 100vh; /* Minimum height is the full viewport height */
+    padding: 64px 90px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center content vertically */
+    position: relative;
+    background-color: #FFFFFF;
+    overflow: hidden; /* Hide overflow */
+}
+
+.ImplicaCapitalHome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the background from the parent */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    filter: brightness(0.4); /* Reduce the brightness of the background image */
+    z-index: -1; /* Ensure the background image is behind the content */
+}
+
+
+.headerclass {
+    font-family: Impact ;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 117.9px;
+    text-align: left;
+    color: #760874;
+    padding: 50px;
+}
+
+.ImplicaCapText {
+    width: 100%;
+    min-height: 220px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+    position: relative;
+}
+
+.startCss {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: left;
+    color: #000000;
+}
+
+.fontscene {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: left;
+    color: #000000;
+}
+
+/* Main container with text and image */
+.imagecontent-left {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 40px 0; /* Add padding for spacing from top and bottom */
+  }
+  
+  /* Text styling */
+  .TextLeftpro {
+    max-width: 45%; /* Set max width for the text */
+    font-size: 24px;
+    line-height: 29.05px;
+    font-weight: 400;
+    color: #000000;
+    text-align: left;
+    padding: 80px 100px;
+  }
+  
+  /* Image container styling */
+  .imgcsspro {
+    max-width: 45%; /* Ensure the image takes up approximately half the container */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+  }
+  
+  .imgcsspro img {
+    width: 532px; /* Make sure the image scales responsively */
+    height: 384px; /* Maintain aspect ratio */
+    padding-right: 10%;
+  }
+  
+  /* Purple section */
+  .purple-section {
+    background: linear-gradient(10deg, #3A075F 20%, #F29BBE 100%); /* Gradient background */
+    padding: 80px 200px;
+    text-align: center; /* Center-align text */
+    color: #FFFFFF; /* White text */
+    height: 244px;
+  }
+  
+  /* Purple section text */
+  .purple-text {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 400;
+    max-width: 800px; /* Limit the text width */
+    margin: 0 auto; /* Center the text block */
+  }
+/* Media query for medium devices (tablets, small desktops) */
+@media (max-width: 1024px) {
+    .ImplicaCapitalHome {
+        padding: 48px 40px;
+        gap: 40px;
+    }
+}
+
+/* Media query for smaller devices (phones) */
+@media (max-width: 768px) {
+    .ImplicaCapitalHome {
+        padding: 32px 16px;
+        gap: 32px;
+    }
+
+}
+
+/* Media query for extra small devices */
+@media (max-width: 480px) {
+    .ImplicaCapitalHome {
+        padding: 24px 12px;
+        gap: 24px;
+        background-size: contain; /* Adjust background size for small screens */
+    }
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .imagecontent-left {
+      flex-direction: column; /* Stack the text and image vertically */
+      align-items: center;
+    }
+  
+    .TextLeftpro,
+    .imgcsspro {
+      max-width: 100%;
+      text-align: center; /* Center-align text on smaller screens */
+    }
+  
+    .TextLeftpro {
+      padding-right: 0; /* Remove right padding */
+    }
+  
+    .imgcsspro img {
+      width: 80%; /* Reduce image size on small screens */
+    }
+  
+    .purple-text {
+      font-size: 18px;
+    }
+  }

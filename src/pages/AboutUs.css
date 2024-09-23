@@ -1,0 +1,206 @@
+/* Ensure the container takes full screen space */
+.company-ad-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  background-color: #f4f4f4;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 500px; /* Adjust based on your image size */
+  height: 300px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Responsive typography */
+.slogan {
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 1);
+font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+font-size: 41px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: -0.03em;
+text-align: center;
+
+}
+
+.highligt {
+color:rgba(148, 10, 145, 1);
+font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+font-size: 41px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: -0.03em;
+text-align: center;
+
+}
+
+.descriptio {
+  color:rgba(0, 0, 0, 1);
+  max-width: 800px;
+
+font-family: var(--TypographyFontFamilyBody-WorkSans);
+font-size: 18px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: 0.01em;
+text-align: left;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+  
+  .image-placeholder {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .image-placeholder {
+    height: 150px;
+  }
+}
+.about-page-container {
+  background-color: #121014; /* Dark background similar to the image */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+.business-approach-container {
+  background-color: #121014; /* Dark background to match your design */
+  color: #fff; /* White text for contrast */
+  padding: 60px; /* Add padding to make it spacious */
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Increase gap between sections for clarity */
+}
+
+/* General approach section styling */
+.approach-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px; /* Larger gap between text and image */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Alternate layout for reverse order of text and image */
+.approach-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Placeholder for the images */
+.image-placeholder {
+  background-color: #d3d3d3; /* Light gray color for placeholder */
+  width: 350px;
+  height: 350px;
+}
+
+/* Text styling for each approach section */
+.approach-text {
+  font-size: 1.25rem; /* Slightly larger font for better readability */
+  line-height: 1.75; /* Increase line height for spacing */
+  max-width: 600px; /* Limit the width of the text for readability */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .approach-section {
+    flex-direction: column;
+    align-items: flex-start; /* Align text and images vertically */
+  }
+
+  .approach-section.reverse {
+    flex-direction: column; /* Ensure reverse order stacks vertically */
+  }
+
+  .image-placeholder {
+    width: 100%; /* Make image full width on small screens */
+    height: 250px;
+  }
+}
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.features-container h1 {
+  font-size: 2.5rem;
+  color: black;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 20px;
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.feature-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.75rem;
+  color: black;
+}
+
+.feature-item p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,133 @@
+.horizontal-carousel-container {
+  position: relative;
+  width: 95%;
+  /* height: 700px; */
+  margin: auto;
+  overflow: hidden; /* Ensure content does not overflow */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-carousel-wrapper {
+  display: flex;
+  transition: transform 0.7s ease;
+  will-change: transform;
+  transform: translateX(calc(-100% * var(--current-index)));
+  height: 700px;
+  width: 1400px;
+}
+
+
+.horizontal-carousel-slide {
+  min-width: calc(100% - 20px); /* Adjust for spacing, 20px gap */
+  flex-shrink: 0;
+  margin-right: 50px; /* Space between slides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Ensure image zoom effect stays inside bounds */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 1.2s ease; /* Zoom effect */
+}
+
+.active .carousel-image {
+  animation: zoomInOut 12s infinite; /* Apply the zoom-in-out effect */
+}
+
+.carousel-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+  z-index: 10; /* Ensure text is above image */
+  animation: zoomInOut 12s infinite;
+  opacity: 1; /* Ensure text is always visible */
+  font-family: var(--TypefaceHeading);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* .horizontal-carousel-slide:hover .carousel-text {
+  opacity: 1; /* Show text on hover */
+/* } */
+* .carousel-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between buttons */
+  z-index: 100;
+}
+
+.carousel-button {
+  background-color: #000000; /* Change button color to black */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #333333; /* Slightly lighter black for hover effect */
+}
+
+.arrow {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-top: 5px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.pause-icon:before {
+  content: "❙❙";
+  color: #fff;
+}
+
+.play-icon:before {
+  content: "▶";
+  color: #fff;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Zoom in */
+  }
+} 

@@ -1,0 +1,163 @@
+/* General Styles */
+
+.media-kit-container {
+    padding: 90px;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  /* Media Grid and Placeholders */
+  .media-kit-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .media-image-placeholder {
+    width: 48%;
+    height: 350px;
+    background-color: #ccc;
+  }
+  
+  /* Download Section */
+  .download-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 4%;
+  }
+  
+  .download-section {
+    width: 48%;
+  }
+  
+  .download-section ul {
+    list-style: none;
+    padding: 0;
+    padding-right: 8%;
+    margin-top: 3%;
+  }
+  
+  .download-section li {
+    margin-bottom: 10px;
+  }
+  
+  .download-section a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #6f42c1;
+    margin-bottom: 10px;
+  }
+  
+  .download-section a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+  }
+  
+  /* Core Team Section */
+  .core-team-section {
+    margin-top: 40px;
+  }
+  
+  h3 {
+    font-size: 1.2rem; /* Decreased the size of the heading */
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Team Grid Layout */
+  .team-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Team Column for stacking members vertically */
+  .team-column {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+  
+  /* Team Member Styles */
+  .team-member {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .team-member .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .team-member .designation {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .team-member .download-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .media-kit-grid,
+    .download-links,
+    .team-grid {
+      flex-direction: column;
+    }
+  
+    .media-image-placeholder,
+    .download-section,
+    .team-member {
+      width: 100%;
+    }
+  
+    .team-member {
+      justify-content: space-between;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .media-image-placeholder {
+      height: 200px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h3 {
+      font-size: 1.25rem;
+    }
+  
+    .team-member .name {
+      font-size: 1.1rem;
+    }
+  
+    .team-member .designation {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,118 @@
+/* FeaturedContacts.css */
+
+.featured-contacts {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* .featured-contacts h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.featured-contacts p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+} */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2rem;
+    justify-content: center;
+}
+.ls{
+    font-family: Houschka Rounded;
+font-size: 48px;
+font-weight: 500;
+line-height: 48px;
+text-align: left;
+
+}
+.contact-card {
+    background-color: black;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.contact-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+.HeadPlace{
+    font-family: Houschka Rounded;
+font-size: 24px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+
+}
+.fp{
+    font-family: Houschka Rounded;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.11px;
+text-align: left;
+
+}
+.email-icon {
+    color: #ff00ff;
+    margin-right: 0.5rem;
+    font-size: 24px;
+}
+
+
+.emailLink{
+    color: white;
+    text-decoration: underline;
+    font-family: var(--TypefaceBody);
+font-size: 18px;
+font-weight: 400;
+line-height: 21.11px;
+text-align: left;
+
+}
+.emailLink:hover {
+    color: rgba(255, 0, 255, 1);
+}
+
+/* Center-align the 3rd and 4th cards together on the same line */
+.centered-row {
+    grid-column: span 1; /* Span one column, but they will appear on the same row */
+    justify-self: center; /* Center-align the cards within their respective grid items */
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .centered-row {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .centered-row {
+        grid-column: span 1;
+    }
+}

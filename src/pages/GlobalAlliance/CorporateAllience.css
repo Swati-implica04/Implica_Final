@@ -1,0 +1,106 @@
+/* Main section styling */
+.alliances-section {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Corporate Alliances Section */
+.corporate-alliances {
+    background-color: #120D17; /* Dark background for corporate section */
+    text-align: center;
+    width: 100%; /* Ensure it spans full width */
+    height: 442px; /* Fixed height as per Figma */
+    padding: 64px 16px 0 16px; /* Updated top padding */
+}
+
+.corporate-alliances h2 {
+    font-size: 66px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 69px;
+    padding-top: 40px;
+    padding-left: 180px;
+    text-align: left;
+}
+
+.alliance-logos.corporate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center logos */
+    gap: 28px; /* Updated gap */
+    max-width: 100%; /* Ensure they don't exceed parent width */
+    color: #D9D9D9;
+}
+
+/* Academic Alliances Section */
+.academic-alliances {
+    background-color: #fff; /* White background for academic section */
+    height: 322px;
+    text-align: center;
+    width: 100%; /* Ensure it spans full width */
+    margin: 0 auto; /* Ensure proper centering */
+    padding: 40px 16px; /* Added padding */
+}
+
+.academic-alliances h2 {
+    font-size: 66px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    margin-bottom: 29px;
+    padding-top: 40px;
+    padding-left: 180px;
+    text-align: left;
+}
+
+.alliance-logos.academic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center logos */
+    gap: 28px; /* Updated gap */
+    max-width: 100%; /* Ensure they don't exceed parent width */
+    margin: 70px; /* Adjusted margin */
+}
+
+/* Common logo box styles */
+.logo-box {
+    width: 180px;
+    height: 72px;
+    background-color: #ccc; /* Placeholder color for logos */
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+    border-color: #940a91;
+}
+
+.logo-box:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+    border-color: #d124b4; /* Pink border on hover */
+}
+
+/* Adjust shadow for academic alliance */
+.academic .logo-box {
+    box-shadow: 0 0 10px rgba(209, 36, 180, 0.5); /* Pink shadow for academic section */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .alliance-logos.corporate,
+    .alliance-logos.academic {
+        justify-content: center;
+        gap: 16px; /* Adjusted for smaller screens */
+    }
+
+    .logo-box {
+        width: 100px;
+        height: 60px;
+    }
+
+    /* Responsive padding */
+    .corporate-alliances, .academic-alliances {
+        padding: 32px;
+    }
+}

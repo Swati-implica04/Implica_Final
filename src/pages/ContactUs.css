@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+.contact-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Changed to 'flex-start' instead of 'left' for proper alignment */
+  margin-left: 5%;
+  padding: 40px 20px;
+  background-color: #000;
+}
+
+/* Text styles for "What's on your mind?" */
+.contact-content {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.contact-content h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+}
+
+/* Service Box Layout */
+.service-box-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  
+}
+
+.service-box {
+  background-color: #111;
+  border: 2px solid #c10682;
+  border-radius: 10px;
+  padding: 40px; /* Increased padding for larger service box */
+  text-align: center;
+  width: 350px; /* Increased width for larger service box */
+  transition: border-color 0.3s ease;
+}
+
+.service-box:hover {
+  border-color: #7b0b98;
+}
+
+.service-box input[type="checkbox"] {
+  margin-bottom: 10px;
+  transform: scale(1.5);
+  accent-color: #c10682;
+}
+
+.service-box p {
+  font-size: 1.4rem; /* Increased font size for text */
+}
+
+/* IGC Offices Section */
+.igc-content {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Responsive design for tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .contact-content h1 {
+    font-size: 3rem; /* Decrease heading size for tablets */
+  }
+
+  .contact-content p {
+    font-size: 1rem; /* Decrease paragraph text size */
+  }
+
+  .service-box-container {
+    gap: 20px;
+    margin-right: 20%; /* Adjust right margin for tablet view */
+  }
+
+  .service-box {
+    padding: 30px; /* Reduce padding for smaller screens */
+    width: 300px; /* Reduce width for tablets */
+  }
+
+  .service-box p {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .contact-container {
+    margin-left: 0; /* Remove left margin */
+    padding: 20px;
+  }
+
+  .contact-content h1 {
+    font-size: 2.5rem; /* Smaller heading for mobile */
+  }
+
+  .contact-content p {
+    font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  .service-box-container {
+    flex-direction: column; /* Stack service boxes vertically */
+    align-items: center;
+    margin-right: 0; /* Remove right margin */
+    gap: 20px;
+  }
+
+  .service-box {
+    padding: 20px; /* Further reduce padding for mobile */
+    width: 90%; /* Make service box take up 90% width of the screen */
+  }
+
+  .service-box p {
+    font-size: 1.1rem; /* Smaller font for mobile */
+  }
+}

@@ -1,0 +1,114 @@
+/* Main section container */
+.section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    padding: 50px; /* Padding to give space around the section */
+    background-color: #2d2d2d; /* Dark background similar to the design */
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* Sidebar */
+  .section__sidebar {
+    flex: 0.7; /* Set the flex basis of the sidebar */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .section__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section__list-item {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .section__list-item--active {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .section__list-item:hover {
+    color: rgba(255, 255, 255, 0.9); /* Hover effect for inactive items */
+  }
+  
+  /* Image Container */
+  .section__image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section__image {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Description Container */
+  .section__description {
+    flex: 1.5;
+    padding-left: 50px;
+  }
+  
+  .section__text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Read More Button */
+  .section__read-more-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .section__read-more-btn:hover {
+    text-decoration: underline;
+  }
+  
+  /* Global Corporation branding */
+  .section__footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .section__footer-logo {
+    color: #ff00ff;
+    font-weight: bold;
+  }
+  
+  .section__footer-icons {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+  }
+  
+  .section__footer-icons img {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  

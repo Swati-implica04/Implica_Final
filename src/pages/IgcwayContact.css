@@ -1,0 +1,156 @@
+@import '@fortawesome/fontawesome-free/css/all.css'; /* Import FontAwesome for icons */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.igc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.igc-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.igc-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #000;
+  margin-top: 30px;
+  gap: 20px; /* Adds spacing between city-list and city-map */
+}
+
+.city-list {
+  display: flex;
+  flex-direction: column;
+  width: 30%; /* Maintain a smaller width for larger screens */
+}
+
+.city-search-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.city-search {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #c10682;
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-right: 40px; /* Make space for the icon */
+}
+
+.city-search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.city-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.city-list ul li {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  cursor: pointer;
+  position: relative; /* Allows us to position the arrow */
+}
+
+.city-list ul li::after {
+  content: '\f105'; /* FontAwesome arrow icon */
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 10px;
+  color: #fff;
+}
+
+.city-list ul li:hover {
+  color: #fff;
+}
+
+.city-map {
+  width: 60%; /* For larger screens, keep a larger width */
+  height: 400px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/* Tablet view adjustments */
+@media (max-width: 1024px) {
+  .igc-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px; /* Slightly reduce the gap */
+  }
+
+  .city-list {
+    width: 40%; /* Slightly increase the width for better readability */
+  }
+
+  .city-map {
+    width: 55%; /* Adjust width to make it more balanced on medium screens */
+    height: 350px; /* Reduce height for medium screens */
+  }
+
+  .igc-content h1 {
+    font-size: 2.5rem; /* Adjust font size for tablets */
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .igc-container {
+    flex-direction: column; /* Stack city-list and city-map vertically */
+    align-items: center;
+    gap: 20px; /* Add gap between stacked sections */
+  }
+
+  .city-list {
+    width: 100%; /* Full width for city list on mobile */
+  }
+
+  .city-map {
+    width: 100%; /* Full width for map on mobile */
+    height: 300px; /* Adjust height for mobile view */
+    margin-top: 20px;
+  }
+
+  .city-search {
+    font-size: 0.9rem; /* Adjust input size for mobile */
+  }
+
+  .city-list ul li {
+    font-size: 1rem; /* Adjust list item font size for mobile */
+  }
+
+  .igc-content h1 {
+    font-size: 2rem; /* Smaller font size for headings on mobile */
+  }
+}

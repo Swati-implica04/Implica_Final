@@ -1,0 +1,47 @@
+/* Specific styles for the WelcomePage component */
+.welcome-page {
+    position: relative;
+    width: 100vw; /* Set to full viewport width */
+    height: 100vh; /* Set to full viewport height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Add a semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .welcome-content {
+    max-width: 600px;
+    padding: 20px;
+    color: #fff; /* Ensure text is readable */
+  }
+  
+  .welcome-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  

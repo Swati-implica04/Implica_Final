@@ -1,0 +1,80 @@
+/* General page styling */
+/* Container for the CEO Quote and Image */
+.CorpCEO {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* No internal padding */
+    width: 85vw; /* Fixed width */
+    height: 540px; /* Fixed height */
+    background-color: #1E021D; /* Dark background for contrast */
+    color: white;
+    border-radius: 8px 0px 0px 0px; /* Partial rounded top-left corner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for effect */
+    overflow: hidden; /* Prevent any content from overflowing */
+    opacity: 1; /* Fully visible */
+    box-sizing: border-box; /* Include padding/border in total width/height */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+/* Left section for the CEO quote */
+.CEOQuote {
+    flex: 1;
+    padding: 20px; /* Padding for content inside the quote section */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.CEOQuote_pText {
+    font-size: 24px;
+    line-height: 28.15px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.ceoname_span2 {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #FFFFFF;
+    padding-top: 6%;
+}
+
+/* Right section for the CEO image */
+.CEOImage {
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CEOImage img {
+    max-width: 100%;
+    height: 540px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .CorpCEO {
+        flex-direction: column;
+        padding: 20px;
+        width: 90vw; /* Adjust width to be more fluid on smaller screens */
+    }
+
+    .CEOQuote {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .CEOQuote p {
+        font-size: 20px;
+    }
+
+    .CEOQuote span {
+        font-size: 28px;
+    }
+}

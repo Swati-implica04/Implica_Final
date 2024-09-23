@@ -1,0 +1,105 @@
+.industries-section {
+  background-color: white;
+  /* padding: 50px 20px; Increased padding for better spacing */
+  text-align: center;
+  max-width: auto; /* Optional: limit width for larger screens */
+  margin: 0 auto;
+}
+
+.industries-title {
+  margin-left: 50px; /* Adjust left margin for balance */
+  color: #000000;
+  font-size: 48px; /* Reduced size for better readability */
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: left;
+  line-height: 56px;
+  padding-top: 30px;
+}
+
+.industries-list {
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px; /* Adjusted spacing between items */
+  margin-bottom: 50px;
+}
+
+.industry-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0; /* Increased padding for better spacing */
+  border-bottom: 1px solid #e0e0e0; /* Soft border for each item */
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.industry-item:hover {
+  color: #1b1b2f;
+  transform: scale(1.05); /* Subtle scale effect on hover */
+}
+
+.industry-icon {
+  font-size: 1.5rem;
+  margin-right: 15px; /* Added some space between icon and text */
+  color: #1b1b2f; /* Consistent color for the icon */
+}
+
+.industry-name {
+  flex: 1;
+  text-align: left;
+}
+
+.view-all-industries-button {
+  background-color: transparent;
+  border: 2px solid #1b1b2f;
+  color: #1b1b2f;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: Hug (257px)px;
+height: Hug (48px)px;
+padding: 8px 32px 8px 32px;
+gap: 8px;
+/* border-radius: 1000px 0px 0px 0px; */
+border: 1px 0px 0px 0px;
+opacity: 0px;
+
+}
+
+.view-all-industries-button:hover {
+  /* background-color: #1b1b2f;
+  color: #ffffff; */
+  border: 2px solid #1b1b2f;
+}
+
+@media (max-width: 768px) {
+  /* Mobile responsiveness */
+  .industries-list {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    gap: 20px; /* Adjusted gap for better mobile spacing */
+  }
+
+  .industries-title {
+    font-size: 36px; /* Adjust title size for smaller screens */
+    margin-left: 20px;
+    line-height: 44px;
+  }
+
+  .industry-item {
+    font-size: 1.1rem;
+  }
+
+  .view-all-industries-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

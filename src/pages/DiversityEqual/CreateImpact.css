@@ -1,0 +1,122 @@
+/* Main container for the Corporate Social Responsibility section */
+.CreateImpact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Second section with black background and text */
+.CommitmentSectionnew {
+    width: 100%;
+    background-color: #120D17;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px;
+}
+
+.CommitmentContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.CommitmentTextLeft {
+    max-width: 400px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding-left: 20px;
+}
+
+.CommitmentTextRight {
+    max-width: 400px;
+    font-size: 24px;
+    line-height: 28.15px;
+    text-align: left;
+    font-weight: 400;
+}
+
+/* Images Section */
+.ImagesSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32px;
+    gap: 8px;
+}
+
+.ImageWithText {
+    position: relative;
+    width: 49%;
+}
+
+/* White box with text (over image) */
+.WhiteBox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #FFFFFF;
+    width: 360px;
+    height: 135px;
+    padding: 18px 30px 18px 30px;
+    gap: 8px;
+    opacity: 0px;
+
+
+}
+
+.ImageText {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* Half-width images */
+.HalfWidthImage {
+    width: 640px;
+    height: 480px;
+    gap: 8px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .CommitmentContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .CommitmentTextLeft {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .CommitmentTextRight {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    /* Stack images with text vertically for smaller screens */
+    .ImagesSection {
+        flex-direction: column;
+    }
+
+    .ImageWithText {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .WhiteBox {
+        top: 5px;
+        left: 5px;
+    }
+}

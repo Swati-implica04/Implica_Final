@@ -1,0 +1,101 @@
+/* Main container for the Corporate Social Responsibility section */
+.DiversityCmtmnt {
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+ 
+/* Top section with background image and text */
+.CSRBanner {
+    width: 100%;
+    min-height: 220px;
+    background-image: url("../../assets/images/CSR/growing-organic-ecological-plants-fields-background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensure the banner itself is on top of the overlay */
+}
+ 
+.CSRBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    z-index: -1; /* Behind text, but in front of the background image */
+}
+ 
+ 
+.CSRBanner .CSRText {
+    max-width: 1200px;
+    padding: 20px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 28.15px;
+    border-radius: 8px;
+}
+ 
+/* Second section with black background and text */
+.CommitmentSection {
+    width: 100%;
+    height: 320px;
+    background-color: #120D17;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px;
+}
+ 
+.CommitmentContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+ 
+.CommitmentTextLeft {
+    max-width: 400px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+ 
+.CommitmentTextRight {
+    max-width: 400px;
+    font-size: 24px;
+    line-height: 28.15px;
+    text-align: left;
+    font-weight: 400;
+}
+ 
+@media (max-width: 768px) {
+    .CommitmentContent {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .CommitmentTextLeft {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+ 
+    .CommitmentTextRight {
+        max-width: 100%;
+        font-size: 16px;
+    }
+}

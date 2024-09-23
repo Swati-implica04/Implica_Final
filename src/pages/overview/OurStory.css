@@ -1,0 +1,47 @@
+.our-story-container {
+    background-color: #121014; /* Dark background similar to the image */
+    color: #fff; /* White text color */
+    padding: 50px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .our-story-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .our-story-intro, .our-story-conclusion {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .our-story-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .image-placeholder {
+    background-color: #d3d3d3; /* Light grey to mimic image placeholder */
+    width: 300px;
+    height: 300px;
+  }
+  
+  @media (max-width: 768px) {
+    .our-story-images {
+      flex-direction: column;
+    }
+  
+    .image-placeholder {
+      width: 100%;
+      height: 200px;
+    }
+  }
+  

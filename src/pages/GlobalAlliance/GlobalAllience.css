@@ -1,0 +1,120 @@
+.GlobalAlliance {
+    width: 100%;
+    min-height: 100vh; /* Minimum height is the full viewport height, but can expand based on content */
+    padding: 64px 90px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Center horizontally */
+    justify-content: left; /* Center vertically if enough space */
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+.GlobalAlliance::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/Leonardo_Lightning_partnership_handshake_0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.4); /* Reduce the brightness of the background image */
+    z-index: -1; /* Ensure the background image is behind the content */
+}
+
+.GlobalAlliance h1 {
+    styleName: Displays/D1/D1-Medium;
+    font-family: Houschka Rounded;
+    font-size: 66px;
+    font-weight: 500;
+    line-height: 74px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #FFFFFF;
+}
+.GlobalAlliance_text1,.GlobalAlliance_text2 {
+    styleName: Headings/H5/H5-Regular;
+    font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    text-align: left;  
+    color: #FFFFFF;
+}
+
+.ContactLink a {
+    color: #fff; /* Natural white color for text */
+    z-index: 1; /* Keep text above the background */
+    text-align: left; /* Center the text */
+}
+.GlobalAlliance span {
+    z-index: 1; 
+    font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    /* Apply gradient */
+    background: linear-gradient(90.13deg, #D256DD 12.62%, #D24A94 35.59%, #F90089 54.77%);
+    -webkit-background-clip: text;  /* Required for Safari and Chrome */
+    background-clip: text;          /* Non-prefixed for other browsers */
+    /* This makes the text fill transparent, revealing the gradient */
+    -webkit-text-fill-color: transparent;
+}
+
+
+.ContactLink a {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    align-items: left;
+}
+
+.ContactLink a:hover {
+    color: #d124b4; /* Hover effect */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .GlobalAlliance {
+        padding: 32px 16px;
+        gap: 32px;
+    }
+
+    .GlobalAlliance h1 {
+        font-family: Houschka Rounded;
+        font-size: 66px;
+        font-weight: 500;
+        line-height: 74px;
+        letter-spacing: -0.03em;
+        text-align: left;
+    }
+
+    .GlobalAlliance_text1,
+    .GlobalAlliance_text2 {
+        styleName: Headings/H5/H5-Regular;
+        font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: -0.01em;
+        text-align: left;  
+        color: #FFFFFF;
+    }
+
+    .GlobalAlliance span {
+        font-size: 20px;
+    }
+
+    .ContactLink a {
+        font-size: 16px;
+    }
+}
