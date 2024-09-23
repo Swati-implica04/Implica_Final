@@ -29,7 +29,7 @@ import DiversitySocial from './pages/DiversityEqual/DiversitySocial';
 import Digital from './pages/IGC/ImplicaAI';
 import ImplicaCapitalHome from './pages/ImplicaCapitalHome/ImplicaCapitalAbout';
 import CommonBlog from './pages/CommonBlog/CommonBlog';
-import video1 from "./assets/images/home.mp4"
+import video1 from "./assets/images/home.mp4";
 import HorizontalCarousel from './pages/image';
 interface MediaType {
   src: string;
