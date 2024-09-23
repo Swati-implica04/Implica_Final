@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+overflow: hidden;
+}
+
+.section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.welcome-page,
+.hero-section {
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
