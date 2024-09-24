@@ -59,14 +59,26 @@ const CardText = styled.div`
   text-align: left;
 `;
 
+const LogoImage = styled.img`
+  width: 250px; /* Adjust size for visibility */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; /* Adjust space between text and logo */
+`;
+
 import imgTab1 from "../../assets/images/diversity/drawing-women-looking-camera.jpg";
 import imgTab2 from "../../assets/images/gay-with-rainbow-flags-sitting-street.jpg";
 import imgTab3 from "../../assets/images/diversity/pexels-charles-parker-5845744.jpg";
+import logoImplica from "../../assets/images/Implica_full_light_transparent_png.png";
+
 
 const KeyAchievementsSection: React.FC = () => {
   return (
     <Container>
-      <KeyAchievements>Key Achievements</KeyAchievements>
+      <KeyAchievements>Key Achievements of 
+      <LogoImage src={logoImplica} alt="Implica Logo" />
+      </KeyAchievements>
 
       <Card>
         <CardImage src={imgTab1} alt="Women in Workforce" />

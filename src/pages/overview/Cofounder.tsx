@@ -4,7 +4,7 @@ import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import image1 from "../../assets/images/IMG_0035-PL Legitymacja szkolna-35x45 mm.jpg";
 import styled from 'styled-components';
 import img from "../../assets/images/team-2.jpeg"
-import img2 from "../../assets/images/sarved.jpg"
+import img2 from "../../assets/images/IMG_0681.jpg"
 const CoreFounders = () => {
     const teamMembers = new Array(18).fill(null); // Placeholder for 16 team members
   return (
@@ -18,7 +18,7 @@ const CoreFounders = () => {
           <h4>FOUNDER & CEO</h4>
           <h2>Sarved Dhar Badgayan</h2>
           <p className="founder-quote">
-            "In a world of possibilities, we don’t follow trends; we set them. Our drive for innovation and excellence pushes us to conquer markets, disrupt industries, and lead globally. We’re not just part of the future; we’re shaping it."
+            In a world of possibilities, we don’t follow trends; we set them. Our drive for innovation and excellence pushes us to conquer markets, disrupt industries, and lead globally. We’re not just part of the future; we’re shaping it.
             {/* "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'" */}
           </p>
           <div className="social-icons">

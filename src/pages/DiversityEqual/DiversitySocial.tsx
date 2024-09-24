@@ -12,7 +12,7 @@ const images = [
   {
     src: img,
     alt: "Slide 1",
-    caption: "Global Impact Program (GIP):",
+    caption: "Global Internship Program (GIP):",
     content: "Through GIP, we provide mentorship, skills development, and leadership training specifically designed to uplift women within our organization, empowering them to drive change both within Implica and in the broader business landscape.",
     subText: "",
   },
@@ -51,7 +51,7 @@ const DiversitySocial: React.FC = () => {
      
         <Text>
           At <strong>our company</strong>, we know that gender diversity is key to creating a strong, resilient organization. 
-          Through initiatives such as our GIP (Global Impact Program) and Leadership Development for Women, we are committed 
+          Through initiatives such as our GIP (Global Internship Program) and Leadership Development for Women, we are committed 
           to nurturing female talent and creating pathways for women to grow into leadership positions.
         </Text>
       </RightContent>

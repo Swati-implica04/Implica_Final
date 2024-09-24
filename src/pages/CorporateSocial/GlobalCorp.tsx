@@ -13,7 +13,10 @@ const GlobalCorp: React.FC = () => {
             Corporate Social Responsibility (CSR) initiatives are rooted in our unwavering
             commitment to building a sustainable world, advancing social equity, and creating
             lasting value for the communities we serve.
-          </span>
+            </span>
+            <p>
+            By integrating innovation and collaboration, we ensure our business practices contribute meaningfully to global goals, from education to environmental sustainability.
+          </p>
         </div>
       </div>
 
@@ -30,6 +33,9 @@ const GlobalCorp: React.FC = () => {
             world’s most pressing challenges, such as access to education, environmental
             conservation, and social inclusion.
             </span>
+            <p>
+            Our approach is centered around creating long-term sustainable impact while contributing to the United Nations Sustainable Development Goals (SDGs).
+            </p>
           </div>
         </div>
       </div>

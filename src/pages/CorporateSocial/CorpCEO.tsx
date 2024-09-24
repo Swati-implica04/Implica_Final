@@ -1,6 +1,6 @@
 import React from "react";
 import "./CorpCEO.css";
-import ceo from "../../assets/images/beautiful-city-landscape-with-tall-buildings.jpg" 
+import ceo from "../../assets/images/Snapseed.jpg" 
 
 const CorpCEO: React.FC = () => {
   return (

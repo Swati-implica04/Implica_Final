@@ -12,7 +12,7 @@ const images = [
   {
     src: img,
     alt: "Slide 1",
-    caption: "Global Impact Program (GIP):",
+    caption: "Global Internship Program (GIP):",
     content: "Through GIP, we provide mentorship, skills development, and leadership training specifically designed to uplift women within our organization, empowering them to drive change both within Implica and in the broader business landscape.",
     subText: "",
   },
@@ -50,7 +50,7 @@ const CorporateSustain: React.FC = () => {
       <RightContent>
      
         <Text>
-        At Implica, we are deeply committed to minimizing our environmental footprint and promoting a circular economy. By investing in clean energy, reducing our resource consumption, and preserving natural ecosystems, we are paving the way for a greener, more resilient planet. 
+        At Implica, we are deeply committed to minimizing our environmental footprint and promoting a circular economy. By investing in clean energy, reducing our resource consumption, and preserving natural ecosystems, we are paving the way for a greener, more resilient planet.
       
         </Text>
       </RightContent>
