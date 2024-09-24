@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
  
 const IndustriesDropdown: React.FC = () => {
   return (
-    <>
-      <p className="Career">Industries</p>
+    <div className="career-section">
+      <div className="Career">Industries</div>
       <div className="industries-container">
         <div className="industries-grid">
           <Nav.Link href="#industries/ecommerce">E-commerce</Nav.Link>
@@ -29,7 +29,7 @@ const IndustriesDropdown: React.FC = () => {
           </Nav.Link>
         </div>
       </div>
-    </>
+  </div>
   );
 };
  

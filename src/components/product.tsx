@@ -2,7 +2,7 @@ import React from "react";
 import "./dropdown.css"
 const ProductsDropdown: React.FC = () => {
   return (
-    <div className="products-section">
+    <div className="career-section">
       <p className="Career" style={{ paddingLeft: "20px" }}>Products</p>
       <div style={{ display: "flex" }}>
         <div className="product-category">
@@ -39,5 +39,5 @@ const ProductsDropdown: React.FC = () => {
     </div>
   );
 };
-
+ 
 export default ProductsDropdown;
