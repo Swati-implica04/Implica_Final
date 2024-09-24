@@ -13,6 +13,8 @@ const CoreFounders = () => {
       <div className="founder-card">
       <Image src={img2} alt="Description of image 1" />
 
+      
+
         {/* <div className="founder-image-placeholder"></div> */}
         <div className="founder-details">
           <h4>FOUNDER & CEO</h4>
