@@ -4,7 +4,7 @@ import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import image1 from "../../assets/images/IMG_0035-PL Legitymacja szkolna-35x45 mm.jpg";
 import styled from 'styled-components';
 import img from "../../assets/images/team-2.jpeg"
-import img2 from "../../assets/images/IMG_0681.jpg"
+import img2 from "../../assets/images/ceo/IMG_0681.jpg"
 const CoreFounders = () => {
     const teamMembers = new Array(18).fill(null); // Placeholder for 16 team members
   return (
