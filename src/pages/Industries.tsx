@@ -1,13 +1,46 @@
 import React, { useState } from "react";
 import "./Industries.css";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaPlane, FaIndustry, FaCar, FaGasPump, FaFileMedical, FaSuitcaseRolling, FaCity, FaShuttleVan, FaTractor, FaHamburger, FaBookReader, FaFileInvoiceDollar, FaUniversity, FaHandHoldingUsd, FaBasketballBall, FaTshirt, FaAtom, FaGem, FaPagelines, FaShip, FaDice, FaToilet, FaStore, FaCapsules, FaDna, FaTruckLoading, FaLaptop, FaPeopleCarry, FaShieldAlt, FaPhoneAlt, FaUserAstronaut, FaBrain, FaRobot, FaSubway, FaChargingStation, FaGamepad, FaTree, FaCommentsDollar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+
 const industriesData = [
-  "Aviation", "Manufacturing",
-  "Automotive", "Energy and Utilities",
-  "Health Care", "Hospitality and Tourism",
-  "Real Estate", "Agriculture",
-  "Education", "E Commerce"
+  { name: "Aviation", icon: <FaPlane /> },
+  { name: "Manufacturing", icon: <FaIndustry /> },
+  { name: "Automotive", icon: <FaCar /> },
+  { name: "Energy and Utilities", icon: <FaGasPump /> },
+  { name: "Healthcare", icon: <FaFileMedical /> },
+  { name: "Hospitality and Tourism", icon: <FaSuitcaseRolling /> },
+  { name: "Real Estate", icon: <FaCity /> },
+  { name: "Agriculture", icon: <FaTractor /> },
+  { name: "Food and Beverage", icon: <FaHamburger /> },
+  { name: "Education", icon: <FaBookReader /> },
+  { name: "Insurance", icon: <FaFileInvoiceDollar /> },
+  { name: "Banking", icon: <FaUniversity /> },
+  { name: "Private Equity", icon: <FaHandHoldingUsd /> },
+  { name: "Sports", icon: <FaBasketballBall /> },
+  { name: "Fashion and Apparel", icon: <FaTshirt /> },
+  { name: "Chemicals", icon: <FaAtom /> },
+  { name: "Mining and Metals", icon: <FaGem /> },
+  { name: "Environmental Services", icon: <FaPagelines /> },
+  { name: "Marine and Shipping", icon: <FaShip /> },
+  { name: "Gaming and Casinos", icon: <FaDice /> },
+  { name: "Waste Management", icon: <FaToilet /> },
+  { name: "Wholesale Distribution", icon: <FaStore /> },
+  { name: "Pharmaceuticals", icon: <FaCapsules /> },
+  { name: "Biotechnology", icon: <FaDna /> },
+  { name: "E-commerce", icon: <FaTruckLoading /> },
+  { name: "Information Technology", icon: <FaLaptop /> },
+  { name: "Nonprofit Organizations", icon: <FaPeopleCarry /> },
+  { name: "Cybersecurity", icon: <FaShieldAlt /> },
+  { name: "Telecommunications", icon: <FaPhoneAlt /> },
+  { name: "Space Exploration & Aerospace", icon: <FaUserAstronaut /> },
+  { name: "Artificial Intelligence", icon: <FaBrain /> },
+  { name: "Robotics", icon: <FaRobot /> },
+  { name: "Rail Transportation", icon: <FaSubway /> },
+  { name: "EV Infrastructure", icon: <FaChargingStation /> },
+  { name: "E-sports", icon: <FaGamepad /> },
+  { name: "Carbon Capture and Utilization (CCU)", icon: <FaTree /> },
+  { name: "Venture Capital", icon: <FaCommentsDollar /> },
 ];
 
 const Industries = () => {
@@ -17,6 +50,7 @@ const Industries = () => {
   const handleClick = () => {
     navigate('/industry');
   };
+
   const handleTileClick = (index: number) => {
     setExpandedTile((prev) => (prev === index ? null : index));
   };
@@ -31,16 +65,21 @@ const Industries = () => {
             key={index}
             onClick={() => handleTileClick(index)}
           >
-            <span className="industry-icon">🛒</span>
-            <span className="industry-name">{industry}</span>
+            <span className="industry-icon">{industry.icon}</span>
+            <span className="industry-name">{industry.name}</span>
             {expandedTile === index && (
               <span className="industry-arrow">
-                                <FaChevronRight /></span> /* The arrow or additional content */
+                <FaChevronRight />
+              </span>
             )}
           </div>
         ))}
       </div>
-      <button className="view-all-industries-button" style={{marginBottom:'20px'}} onClick={handleClick}>
+      <button
+        className="view-all-industries-button"
+        style={{ marginBottom: '20px' }}
+        onClick={handleClick}
+      >
         View all Industries <span>↗</span>
       </button>
     </section>

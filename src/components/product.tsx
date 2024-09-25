@@ -39,5 +39,5 @@ const ProductsDropdown: React.FC = () => {
     </div>
   );
 };
- 
+
 export default ProductsDropdown;

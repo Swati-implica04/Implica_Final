@@ -35,7 +35,9 @@ const AboutUsDropdown: React.FC = () => {
           <div className="featured-items">
             <div className="featured-item">
               <div className="imag"></div>
-              <p className="imgText">Lorem ipsum dolor sit amet consectetur.</p>
+              {/* https://www.linkedin.com/posts/implica-global-corporation_implica-global-acquires-knocksy-spzoo-ugcPost-7209157842841288705-JVOR/?utm_source=share&utm_medium=member_desktop */}
+              <p className="imgText">Implica Global Corporation Announces Acquisition of Knocksy Sp.zo.o (Poland) &
+              Knocksy oü (Estonia)</p>
             </div>
             <div className="featured-item">
               <div className="imag"></div>

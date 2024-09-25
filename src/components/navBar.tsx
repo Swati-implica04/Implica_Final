@@ -92,7 +92,7 @@ const CustomNavbar: React.FC = () => {
           className={`full-width-dropdown ${expandedDropdown ? "show" : ""}`}
           onClick={handleDropdownItemClick}
         >
-          <Container>
+          <Container >
             {expandedDropdown === "about-us" && <AboutUsDropdown />}
             {expandedDropdown === "services" && <ServicesDropdown />}
             {expandedDropdown === "industries" && <IndustriesDropdown />}

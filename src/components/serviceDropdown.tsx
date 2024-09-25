@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 const ServicesDropdown: React.FC = () => {
   return (
-    <div className="services-section p-2">
+    <div className="services-section ">
       <h2 style={{ textAlign: "left", paddingLeft: "25px" }}>Services</h2>
       <div className="services-grid">
         <div className="service-item">
