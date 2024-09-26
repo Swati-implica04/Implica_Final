@@ -1,35 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./image.css";
 
-// Define the type for a single media item (image or video)
 type MediaType = {
   src: string;
   alt: string;
   caption: string;
-  type: "image" | "video"; // New property to differentiate between image and video
+  type: "image" | "video";
 };
 
-// Define the props for the HorizontalCarousel component
 interface HorizontalCarouselProps {
-  media: Array<MediaType>; // Change 'images' to 'media'
+  media: Array<MediaType>;
 }
 
 const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
-  const [currentIndex, setCurrentIndex] = useState<number>(1); // Start from the second slide
+  const [currentIndex, setCurrentIndex] = useState<number>(1);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
-  
-  // Duplicating the slides for the infinite effect
+
   const duplicatedSlides = [...media, ...media];
 
-  // Function to handle next slide
   const nextSlide = () => {
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) => prevIndex + 1);
   };
 
-  // Function to handle previous slide
   const prevSlide = () => {
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) =>
@@ -37,28 +32,24 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
     );
   };
 
-  // Handle continuous loop effect
   useEffect(() => {
     if (currentIndex === media.length) {
       setTimeout(() => {
         setIsTransitioning(false);
-        setCurrentIndex(0); // Reset index without animation
-      }, 7000); // Match transition duration
+        setCurrentIndex(0);
+      }, 7000);
     }
   }, [currentIndex, media.length]);
 
-  // Auto-play effect
   useEffect(() => {
     let interval: NodeJS.Timeout | undefined;
     if (isPlaying) {
       interval = setInterval(() => {
-        nextSlide(); // Automatically go to the next slide
-      }, 10000); // Change slide every 7 seconds
+        nextSlide();
+      }, 10000);
     } else if (interval !== undefined) {
       clearInterval(interval);
     }
-
-    // Cleanup on unmount or when the playing state changes
     return () => {
       if (interval !== undefined) {
         clearInterval(interval);
@@ -66,9 +57,21 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
     };
   }, [isPlaying, currentIndex]);
 
+  // Adding a useEffect hook to handle autoplay behavior
+  useEffect(() => {
+    const currentSlide = document.querySelectorAll(
+      ".horizontal-carousel-slide"
+    )[currentIndex];
+    if (currentSlide) {
+      const video = currentSlide.querySelector("video");
+      if (video) {
+        video.play(); // Trigger play when the slide becomes active
+      }
+    }
+  }, [currentIndex]);
+
   return (
     <div className="horizontal-carousel-container">
-      {/* Carousel Media (Images or Videos) */}
       <div
         className="horizontal-carousel-wrapper"
         ref={carouselRef}
@@ -80,7 +83,9 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
       >
         {duplicatedSlides.map((item, index) => (
           <div
-            className={`horizontal-carousel-slide ${index === currentIndex ? "active" : ""}`}
+            className={`horizontal-carousel-slide ${
+              index === currentIndex ? "active" : ""
+            }`}
             style={{ height: "700px", width: "1100px" }}
             key={index}
           >
@@ -90,10 +95,10 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
               <video
                 src={item.src}
                 className="carousel-video"
-                controls
-                autoPlay={index === currentIndex} // Autoplay only the current video
                 muted
-                loop // Ensures video loops continuously
+                loop
+                playsInline // Important for mobile autoplay support
+                autoPlay={index === currentIndex} // Only autoplay the current video
               />
             )}
             <h2 className="carousel-text">{item.caption}</h2>
@@ -101,7 +106,6 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
         ))}
       </div>
 
-      {/* Navigation Buttons */}
       <div className="carousel-buttons">
         <button className="carousel-button prev-button" onClick={prevSlide}>
           <i className="arrow left"></i>
@@ -109,8 +113,10 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
         <button className="carousel-button next-button" onClick={nextSlide}>
           <i className="arrow right"></i>
         </button>
-        {/* Play/Pause Button */}
-        <button className="carousel-button play-button" onClick={() => setIsPlaying(!isPlaying)}>
+        <button
+          className="carousel-button play-button"
+          onClick={() => setIsPlaying(!isPlaying)}
+        >
           {isPlaying ? <i className="pause-icon"></i> : <i className="play-icon"></i>}
         </button>
       </div>

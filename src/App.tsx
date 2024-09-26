@@ -11,8 +11,7 @@ import Industries from './pages/Industries';
 import AnimatedCarousel from './pages/igc';
 import Insights from './pages/Insights';
 import Footer from './pages/Footer';
-import img from "./assets/images/img.png";
-import img2 from "./assets/images/beautiful-city-landscape-with-tall-buildings.jpg"
+import img from "./assets/images/beautiful-city-landscape-with-tall-buildings.jpg"
 import CompanyAd from './pages/AboutUs';
 import Contact from './pages/Contact';
 import CoreFounders from './pages/overview/Cofounder';
@@ -29,7 +28,9 @@ import DiversitySocial from './pages/DiversityEqual/DiversitySocial';
 import Digital from './pages/IGC/ImplicaAI';
 import ImplicaCapitalHome from './pages/ImplicaCapitalHome/ImplicaCapitalAbout';
 import CommonBlog from './pages/CommonBlog/CommonBlog';
-import video1 from "./assets/images/home.mp4";
+import video2 from "./assets/images/video/12324291-uhd_3840_2160_60fps.mp4";
+import video1 from "./assets/images/video/5396818-uhd_3840_2160_30fps.mp4"
+import img1 from "./assets/images/video/pexels-jokassis-5534595.jpg"
 import HorizontalCarousel from './pages/image';
 interface MediaType {
   src: string;
@@ -56,24 +57,29 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 const App: React.FC = () => {
   const media: MediaType[] = [
     {
-      src: img2, // Image source (for the image)
+      src:video1, // Image source (for the image)
       alt: "Slide 1",
       caption: "From Insight to Impact: Leading the Way in Tech and Strategy Consulting.",
-      type: "image", // Specify the type as 'image'
+      type: "video", // Specify the type as 'image'
     },
     {
-      src: video1, // Video source (for the video)
+      src: img1, // Video source (for the video)
       alt: "Slide 2",
-      caption: "Implica: Be part of the movement, drive the next big change.",
-      type: "video", // Specify the type as 'video'
+      caption: "Trust in Every Step, Growth in Every Direction.",
+      type: "image", // Specify the type as 'video'
     },
     {
-      src: img,
+      src: video2,
       alt: "Slide 3",
-      caption: "Join the momentum—Implica is shaping the future.",
-      type: "image", // Specify the type as 'image'
+      caption: "Global Strategies, Tailored Solutions.",
+      type: "video", // Specify the type as 'image'
     },
-
+    {
+      src: img, // Video source (for the video)
+      alt: "Slide 2",
+      caption: "Implica: The movement for those ready to create the next big wave.",
+      type: "image", // Specify the type as 'video'
+    },
   ];
   return (
     <Router>

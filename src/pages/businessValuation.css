@@ -66,7 +66,7 @@
 .highlight-tertiary {
   color: var(--Color-Brand-Magenta, rgba(148, 10, 145, 1));
   font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
-  font-size: 35px;
+  font-size: 31px;
   font-weight: 600;
   line-height: 48px;
   letter-spacing: -0.03em;
@@ -81,7 +81,7 @@
 .high {
   color: rgba(0, 0, 0, 1);
   font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
-  font-size: 35px;
+  font-size: 31px;
   font-weight: 400;
   line-height: 48px;
   letter-spacing: -0.03em;

@@ -46,8 +46,8 @@
     top: 50%; /* Center it vertically */
     transform: translateY(-50%); /* Adjust for vertical centering */
     z-index: 2;
-    width: 640px;
-    height: 384px;
+    width: 540px;
+    height: 354px;
     padding: 64px 0px 0px 0px;
     gap: 60px;
     opacity: 0px;

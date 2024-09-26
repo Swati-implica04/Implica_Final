@@ -31,7 +31,7 @@
     justify-content: center; /* Center logos */
     gap: 28px; /* Updated gap */
     max-width: 100%; /* Ensure they don't exceed parent width */
-    color: #D9D9D9;
+    color: white;
 }
 
 .academic-alliances {
@@ -65,7 +65,7 @@
 .logo-box {
     width: 180px;
     height: 72px;
-    background-color: #ccc; /* Placeholder color for logos */
+    background-color:white; /* Placeholder color for logos */
     margin-bottom: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -101,7 +101,7 @@
 .log-box {
     width: 180px;  /* Reduce width */
     height: 72px;  /* Reduce height */
-    background-color:rgba(217, 217, 217, 1); /* Removed placeholder background */
+    background-color:white; /* Removed placeholder background */
     margin-bottom: 16px;
     border-radius: 2px;
     transition: transform 0.3s ease;

@@ -19,8 +19,8 @@ const BoxContainer = styled.div<{ padding?: string; }>`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
-  width: 640px;
-  height: 384px;
+  width: 540px;
+  height: 354px;
   background-color: rgba(255, 255, 255, 0.9); /* White background with slight opacity */
   color: #000000; /* Always black text */
   display: flex;

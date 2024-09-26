@@ -13,11 +13,12 @@ const Container = styled.div`
 
 const KeyAchievements = styled.div`
   grid-column: 1 / 2;
-  font-size: 48px;
+  display: flex;
+  font-size: 50px;
   font-weight: 500;
   align-self: center;
   color: #000000;
-  padding-left: 18%;
+  padding-left: 5%;
 `;
 
 const Card = styled.div`
@@ -60,7 +61,7 @@ const CardText = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 250px; /* Adjust size for visibility */
+  width: 100px; /* Adjust size for visibility */
   height: auto;
   display: inline-block;
   vertical-align: middle;
@@ -70,7 +71,7 @@ const LogoImage = styled.img`
 import imgTab1 from "../../assets/images/diversity/drawing-women-looking-camera.jpg";
 import imgTab2 from "../../assets/images/gay-with-rainbow-flags-sitting-street.jpg";
 import imgTab3 from "../../assets/images/diversity/pexels-charles-parker-5845744.jpg";
-import logoImplica from "../../assets/images/Implica_full_light_transparent_png.png";
+import logoImplica from "../../assets/images/newlogo with short size.png";
 
 
 const KeyAchievementsSection: React.FC = () => {

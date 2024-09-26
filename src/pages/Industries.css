@@ -26,7 +26,13 @@
   gap: 20px 40px; /* Adjusted spacing between items */
   margin-bottom: 50px;
 }
+.industries-list.collapsed {
+  max-height: 700px; /* Adjust this to set the height when collapsed */
+}
 
+.industries-list.expanded {
+  max-height: none; /* Allow full height when expanded */
+}
 .industry-item {
   display: flex;
   align-items: center;
@@ -102,4 +108,12 @@ opacity: 0px;
     padding: 10px 20px;
     font-size: 1rem;
   }
+}
+.industry-arrow {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.industry-item:hover .industry-arrow {
+  opacity: 1;
 }

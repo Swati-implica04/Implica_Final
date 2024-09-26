@@ -44,43 +44,38 @@ const industriesData = [
 ];
 
 const Industries = () => {
-  const [expandedTile, setExpandedTile] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate('/industry');
   };
 
-  const handleTileClick = (index: number) => {
-    setExpandedTile((prev) => (prev === index ? null : index));
+  const handleViewAllClick = () => {
+    setExpanded(!expanded);
   };
+
+  // Control how many items are shown based on expanded state
+  const visibleIndustries = expanded ? industriesData : industriesData.slice(0, 10);
 
   return (
     <section className="industries-section">
       <h2 className="industries-title">Industries</h2>
-      <div className="industries-list">
-        {industriesData.map((industry, index) => (
-          <div
-            className="industry-item"
-            key={index}
-            onClick={() => handleTileClick(index)}
-          >
+      <div className={`industries-list ${expanded ? "expanded" : "collapsed"}`}>
+        {visibleIndustries.map((industry, index) => (
+          <div className="industry-item" key={index}>
             <span className="industry-icon">{industry.icon}</span>
             <span className="industry-name">{industry.name}</span>
-            {expandedTile === index && (
-              <span className="industry-arrow">
-                <FaChevronRight />
-              </span>
-            )}
+            <span className="industry-arrow"><FaChevronRight/></span>
           </div>
         ))}
       </div>
       <button
         className="view-all-industries-button"
         style={{ marginBottom: '20px' }}
-        onClick={handleClick}
+        onClick={handleViewAllClick}
       >
-        View all Industries <span>↗</span>
+        {expanded ? 'Show Less' : 'View all Industries'} <span>↗</span>
       </button>
     </section>
   );
