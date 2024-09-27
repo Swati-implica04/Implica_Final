@@ -5,6 +5,7 @@ import image1 from "../../assets/images/IMG_0035-PL Legitymacja szkolna-35x45 mm
 import styled from 'styled-components';
 import img from "../../assets/images/team-2.jpeg"
 import img2 from "../../assets/images/IMG_0681.jpg"
+import img3 from "../../assets/images/2024-09-22-21-03-25-123.jpg"
 const CoreFounders = () => {
     const teamMembers = new Array(18).fill(null); // Placeholder for 16 team members
   return (
@@ -52,6 +53,7 @@ const CoreFounders = () => {
         <Image src={image1} alt="Description of image 1" />
         {/* </div> */}
       </div>
+
       <div className="founder-card">
       <Image src={img} alt="Description of image 1" />
 
@@ -71,6 +73,27 @@ const CoreFounders = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="founder-card">
+        <div className="founder-details">
+          <h4>Chief operating officer</h4>
+          <h2>Reetish Mohan Panigrahy</h2>
+          {/* <p className="founder-quote">
+            "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
+          </p> */}
+          <div className="social-icons">
+            <a href="https://www.linkedin.com/in/reetish-mohan-panigrahy/" className="icon-link">
+              <FaLinkedin />
+            </a>
+            <a href="reetish.panigrahy@implicaglobal.com" className="icon-link">
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
+        {/* <div className="founder-image-placeholder"> */}
+        <Image src={img3} alt="Description of image 1" />
+        {/* </div> */}
       </div>
       <div className="team-section-container">
       <h2 className="team-title">Our team</h2>
