@@ -1,127 +1,228 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./image.css";
-
+import styled, { keyframes } from "styled-components";
+ 
 type MediaType = {
   src: string;
   alt: string;
   caption: string;
   type: "image" | "video";
 };
-
+ 
 interface HorizontalCarouselProps {
   media: Array<MediaType>;
 }
-
+ 
+const zoomInOut = keyframes`
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+`;
+ 
+const fadeInText = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+ 
+const CarouselContainer = styled.div`
+  position: relative;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+`;
+ 
+const CarouselWrapper = styled.div<{ currentIndex: number }>`
+  display: flex;
+  transition: transform 0.7s ease;
+  will-change: transform;
+  transform: translateX(calc(-100% * ${props => props.currentIndex}));
+  height: 700px;
+  width: 1400px;
+`;
+ 
+const CarouselSlide = styled.div<{ isActive: boolean }>`
+  min-width: calc(100% - 20px);
+  flex-shrink: 0;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+`;
+ 
+const CarouselMedia = styled.div<{ isActive: boolean }>`
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  // transition: transform 1.2s ease;
+  // animation: ${props => props.isActive ? zoomInOut : 'none'} 12s infinite;
+  position: relative;
+`;
+ 
+const CarouselImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+ 
+const CarouselVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+ 
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+`;
+ 
+const CarouselText = styled.h2`
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+  animation: ${fadeInText} 0.5s ease;
+  opacity: 1;
+  font-family: var(--TypefaceHeading);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+`;
+ 
+const CarouselButtons = styled.div`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+`;
+ 
+const CarouselButton = styled.button`
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+ 
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+`;
+ 
+const Arrow = styled.i<{ direction: 'left' | 'right' }>`
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-top: 5px;
+  transform: ${props => props.direction === 'left' ? 'rotate(135deg)' : 'rotate(-45deg)'};
+`;
+ 
+const PlayPauseIcon = styled.i<{ isPlaying: boolean }>`
+  &:before {
+    content: ${props => props.isPlaying ? '"❙❙"' : '"▶"'};
+    color: #fff;
+  }
+`;
+ 
 const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({ media }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(1);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
-  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
-
-  const duplicatedSlides = [...media, ...media];
-
+ 
   const nextSlide = () => {
-    setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % media.length);
   };
-
+ 
   const prevSlide = () => {
-    setIsTransitioning(true);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? media.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + media.length) % media.length);
   };
-
-  useEffect(() => {
-    if (currentIndex === media.length) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(0);
-      }, 7000);
-    }
-  }, [currentIndex, media.length]);
-
+ 
   useEffect(() => {
     let interval: NodeJS.Timeout | undefined;
     if (isPlaying) {
       interval = setInterval(() => {
         nextSlide();
       }, 10000);
-    } else if (interval !== undefined) {
-      clearInterval(interval);
     }
     return () => {
       if (interval !== undefined) {
         clearInterval(interval);
       }
     };
-  }, [isPlaying, currentIndex]);
-
-  // Adding a useEffect hook to handle autoplay behavior
+  }, [isPlaying, media.length]);
+ 
   useEffect(() => {
-    const currentSlide = document.querySelectorAll(
-      ".horizontal-carousel-slide"
-    )[currentIndex];
+    const currentSlide = carouselRef.current?.children[currentIndex] as HTMLElement;
     if (currentSlide) {
       const video = currentSlide.querySelector("video");
       if (video) {
-        video.play(); // Trigger play when the slide becomes active
+        video.play();
       }
     }
   }, [currentIndex]);
-
+ 
   return (
-    <div className="horizontal-carousel-container">
-      <div
-        className="horizontal-carousel-wrapper"
-        ref={carouselRef}
-        style={{
-          '--current-index': currentIndex,
-          transform: `translateX(calc(-100% * ${currentIndex}))`,
-          transition: isTransitioning ? 'transform 0.7s ease' : 'none',
-        } as React.CSSProperties}
-      >
-        {duplicatedSlides.map((item, index) => (
-          <div
-            className={`horizontal-carousel-slide ${
-              index === currentIndex ? "active" : ""
-            }`}
-            style={{ height: "700px", width: "1100px" }}
-            key={index}
-          >
-            {item.type === "image" ? (
-              <img src={item.src} alt={item.alt} className="carousel-image" />
-            ) : (
-              <video
-                src={item.src}
-                className="carousel-video"
-                muted
-                loop
-                playsInline // Important for mobile autoplay support
-                autoPlay={index === currentIndex} // Only autoplay the current video
-              />
-            )}
-            <h2 className="carousel-text">{item.caption}</h2>
-          </div>
+    <CarouselContainer>
+      <CarouselWrapper ref={carouselRef} currentIndex={currentIndex}>
+        {media.map((item, index) => (
+          <CarouselSlide key={index} isActive={index === currentIndex}>
+            <CarouselMedia isActive={index === currentIndex}>
+              {item.type === "image" ? (
+                <CarouselImage src={item.src} alt={item.alt} />
+              ) : (
+                <CarouselVideo
+                  src={item.src}
+                  muted
+                  loop
+                  playsInline
+                  autoPlay={index === currentIndex}
+                  preload="auto"
+                />
+              )}
+              <Overlay />
+            </CarouselMedia>
+            <CarouselText>{item.caption}</CarouselText>
+          </CarouselSlide>
         ))}
-      </div>
-
-      <div className="carousel-buttons">
-        <button className="carousel-button prev-button" onClick={prevSlide}>
-          <i className="arrow left"></i>
-        </button>
-        <button className="carousel-button next-button" onClick={nextSlide}>
-          <i className="arrow right"></i>
-        </button>
-        <button
-          className="carousel-button play-button"
-          onClick={() => setIsPlaying(!isPlaying)}
-        >
-          {isPlaying ? <i className="pause-icon"></i> : <i className="play-icon"></i>}
-        </button>
-      </div>
-    </div>
+      </CarouselWrapper>
+ 
+      <CarouselButtons>
+        <CarouselButton onClick={prevSlide}>
+          <Arrow direction="left" />
+        </CarouselButton>
+        <CarouselButton onClick={nextSlide}>
+          <Arrow direction="right" />
+        </CarouselButton>
+        <CarouselButton onClick={() => setIsPlaying(!isPlaying)}>
+          <PlayPauseIcon isPlaying={isPlaying} />
+        </CarouselButton>
+      </CarouselButtons>
+    </CarouselContainer>
   );
 };
-
+ 
 export default HorizontalCarousel;
