@@ -16,7 +16,7 @@ const CoreFounders = () => {
 
         {/* <div className="founder-image-placeholder"></div> */}
         <div className="founder-details">
-          <h4>FOUNDER & CEO</h4>
+          <h4>FOUNDER & C.E.O</h4>
           <h2>Sarved Dhar Badgayan</h2>
           <p className="founder-quote">
             In a world of possibilities, we don’t follow trends; we set them. Our drive for innovation and excellence pushes us to conquer markets, disrupt industries, and lead globally. We’re not just part of the future; we’re shaping it.
@@ -35,7 +35,7 @@ const CoreFounders = () => {
 
       <div className="founder-card">
         <div className="founder-details">
-          <h4>Operational director (Knocksy) Strategic Alliance & Partnership  Dividion</h4>
+          <h4>Operational Director (Knocksy) Strategic Alliance & Partnership  Dividion</h4>
           <h2>Francesco Congiu</h2>
           {/* <p className="founder-quote">
             "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
@@ -59,7 +59,7 @@ const CoreFounders = () => {
 
         {/* <div className="founder-image-placeholder"></div> */}
         <div className="founder-details">
-        <h4>Vice President- Technology</h4>
+        <h4>Vice President - Technology</h4>
           <h2>Sebastian Opocensky</h2>
           {/* <p className="founder-quote">
             "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
@@ -77,7 +77,7 @@ const CoreFounders = () => {
 
       <div className="founder-card">
         <div className="founder-details">
-          <h4>Chief operating officer</h4>
+          <h4>Chief Operating Officer</h4>
           <h2>Reetish Mohan Panigrahy</h2>
           {/* <p className="founder-quote">
             "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
