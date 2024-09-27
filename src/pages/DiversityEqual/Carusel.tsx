@@ -1,39 +1,34 @@
-import { color } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-// Define the type for a single image
 type ImageType = {
   src: string;
   alt: string;
   caption: string;
-  content: string; // Additional subtext for the body content
+  content: string;
 };
 
-// Define the props for the HorizontalCarousel component
 interface HorizontalCarouselProps {
   images: Array<ImageType>;
-  autoScrollInterval?: number; // Optional prop for auto-scroll interval
+  autoScrollInterval?: number;
   color?: string;
 }
 
 const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({
   images,
-  autoScrollInterval = 3000, // Default auto-scroll interval set to 3 seconds
-color= "white",
+  autoScrollInterval = 3000,
+  color = "white",
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
   const duplicatedSlides = [...images, ...images];
 
-  // Function to handle next slide
   const nextSlide = () => {
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) => prevIndex + 1);
   };
 
-  // Function to handle previous slide
   const prevSlide = () => {
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) =>
@@ -41,28 +36,25 @@ color= "white",
     );
   };
 
-  // Reset transition when reaching the end of the slides
   useEffect(() => {
     if (currentIndex === images.length) {
       setTimeout(() => {
         setIsTransitioning(false);
-        setCurrentIndex(0); // Reset index without animation
+        setCurrentIndex(0);
       }, 700);
     }
   }, [currentIndex, images.length]);
 
-  // Auto-scroll effect
   useEffect(() => {
     const autoScroll = setInterval(() => {
       nextSlide();
     }, autoScrollInterval);
 
-    return () => clearInterval(autoScroll); // Cleanup interval on unmount
+    return () => clearInterval(autoScroll);
   }, [autoScrollInterval]);
 
   return (
-    <CarouselContainer>
-      {/* Carousel Images */}
+    <CarouselContainer color={color}>
       <CarouselWrapper
         style={{
           transform: `translateX(calc(-100% * ${currentIndex}))`,
@@ -82,7 +74,6 @@ color= "white",
         ))}
       </CarouselWrapper>
 
-      {/* Navigation Buttons */}
       <CarouselButtons>
         <Button onClick={prevSlide}>
           <Arrow className="left" />
@@ -95,41 +86,46 @@ color= "white",
   );
 };
 
-export default HorizontalCarousel;
-
-// Carousel container with overall layout and centering
-export const CarouselContainer = styled.div`
+const CarouselContainer = styled.div<{ color: string }>`
   position: relative;
   width: 100%;
+  max-width: 100vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  background-color: color;
+  padding: 20px;
+  background-color: ${props => props.color};
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
-// Carousel wrapper for the slides, handles the transition
-export const CarouselWrapper = styled.div`
+const CarouselWrapper = styled.div`
   display: flex;
   width: 100%;
 `;
 
-export const Slide = styled.div`
+const Slide = styled.div`
   display: flex;
   min-width: 100%;
-  justify-content: space-between; /* Align text and image side by side */
+  justify-content: space-between;
   background: var(--Color-Pink-Pink-300, rgba(131, 7, 77, 1));
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for slides */
-  border-radius: 8px; /* Slight rounding on the corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   overflow: hidden;
-  height: 540px;
-  margin-right: 30px;
+  height: auto;
+  height:560px;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
-// Text container on the left-hand side of the slide (70% width)
-export const TextContainer = styled.div`
-  flex: 7; /* 70% of the width */
+const TextContainer = styled.div`
+  flex: 7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,83 +133,115 @@ export const TextContainer = styled.div`
   padding: 20px;
   background-color: var(--Color-Pink-Pink-300, rgba(131, 7, 77, 1));
   color: white;
-  border-radius: 8px 0 0 8px; /* Rounded corners on the left */
+  border-radius: 8px 0 0 8px;
+
+  @media (max-width: 768px) {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+  }
 `;
 
-// Container for the image on the right-hand side of the slide (30% width)
-export const ImageContainer = styled.div`
-  flex: 3; /* 30% of the width */
+const ImageContainer = styled.div`
+  flex: 3;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex: 1;
+    height: 200px;
+  }
 `;
 
-// Image styling to fit the slide
-export const Image = styled.img`
+const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0 8px 8px 0; /* Rounded corners on the right */
+  border-radius: 0 8px 8px 0;
+
+  @media (max-width: 768px) {
+    border-radius: 0 0 8px 8px;
+  }
 `;
 
-// Styling for the caption (large heading text)
-export const Caption = styled.h2`
-  font-family: Houschka Rounded;
-  font-size: 48px;
+const Caption = styled.h2`
+  font-family: Houschka Rounded, sans-serif;
+  font-size: 36px;
   font-weight: 600;
-  line-height: 48px;
+  line-height: 1.2;
   text-align: left;
   color: rgba(255, 255, 255, 1);
   margin: 0;
   padding-bottom: 10px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
-// Subtext or body text below the caption
-export const SubText = styled.p`
+const SubText = styled.p`
   margin-top: 10px;
-  font-family: Work Sans;
-  font-size: 24px;
+  font-family: Work Sans, sans-serif;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 28.15px;
+  line-height: 1.4;
   text-align: left;
   color: rgba(255, 255, 255, 1);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Subtext shadow for better readability */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
-// Buttons container for left and right arrows
-export const CarouselButtons = styled.div`
+const CarouselButtons = styled.div`
   position: absolute;
-  top: 0px; /* Positioning arrows at the top */
-  left: 90%;
-  transform: translateX(-50%);
+  top: 20px;
+  right: 20px;
   display: flex;
   justify-content: space-between;
-  width: 120px; /* Fixed width for buttons */
+  width: 80px;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    top: 10px;
+    right: 10px;
+    width: 60px;
+  }
 `;
 
-// Individual button styling for navigation arrows
-export const Button = styled.button`
+const Button = styled.button`
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
   border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for the buttons */
+  padding: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
+  background-color: white;
 
   &:hover {
     background-color: #f0f0f0;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 6px;
+  }
 `;
 
-// Arrow for the left and right navigation
-export const Arrow = styled.div`
+const Arrow = styled.div`
   border: solid black;
-  border-width: 0 3px 3px 0;
-  padding: 10px;
+  border-width: 0 2px 2px 0;
+  padding: 6px;
   transform: ${(props) =>
     props.className === "left" ? "rotate(135deg)" : "rotate(-45deg)"};
   -webkit-transform: ${(props) =>
     props.className === "left" ? "rotate(135deg)" : "rotate(-45deg)"};
+
+  @media (max-width: 768px) {
+    padding: 4px;
+  }
 `;
+
+export default HorizontalCarousel;

@@ -13,14 +13,16 @@ const images = [
     src: img,
     alt: "Slide 1",
     caption: "Global Internship Program (GIP):",
-    content: "Through GIP, we provide mentorship, skills development, and leadership training specifically designed to uplift women within our organization, empowering them to drive change both within Implica and in the broader business landscape.",
+    content:
+      "Through GIP, we provide mentorship, skills development, and leadership training specifically designed to uplift women within our organization, empowering them to drive change both within Implica and in the broader business landscape.",
     subText: "",
   },
   {
     src: img,
     alt: "Slide 2",
     caption: " Carbon Neutrality by [Target Year] ",
-    content: "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power. ",
+    content:
+      "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power. ",
     subText: "Subtext for Slide 2",
   },
   {
@@ -34,33 +36,46 @@ const images = [
 const DiversitySocial: React.FC = () => {
   return (
     <div>
-        <div className="DiversitySocial">
-            <div className="white-box">
-                <span className="box_textStyle">
-                Diversity, Equality and Inclusiveness
-                </span>
-            </div>
+      <div className="DiversitySocial">
+        <div className="white-box">
+          <span className="box_textStyle">
+            Diversity, Equality and Inclusiveness
+          </span>
         </div>
-        <DiversityCmtmnt/>
-        <KeyAchievementsSection />
-        <SectionContainer>
-      <LeftContent>
-        <Heading>Empowering Women in Leadership</Heading>
-      </LeftContent>
-      <RightContent>
-     
-        <Text>
-          At <strong>our company</strong>, we know that gender diversity is key to creating a strong, resilient organization. 
-          Through initiatives such as our GIP (Global Internship Program) and Leadership Development for Women, we are committed 
-          to nurturing female talent and creating pathways for women to grow into leadership positions.
-        </Text>
-      </RightContent>
-    </SectionContainer>
-    <HorizontalCarousel images={images}/>
+      </div>
+      <DiversityCmtmnt />
+      <KeyAchievementsSection />
+      <SectionContainer>
+        <LeftContent>
+          <Heading>Empowering Women in Leadership</Heading>
+        </LeftContent>
+        <RightContent>
+          <Text>
+            At <strong>our company</strong>, we know that gender diversity is
+            key to creating a strong, resilient organization. Through
+            initiatives such as our GIP (Global Internship Program) and
+            Leadership Development for Women, we are committed to nurturing
+            female talent and creating pathways for women to grow into
+            leadership positions.
+            <p>
+              • Global Impact Program (GIP): Through GIP, we provide mentorship,
+              skills development, and leadership training specifically designed
+              to uplift women within our organization, empowering them to drive
+              change both within Implica and in the broader business landscape.
+            </p>
+            <p>
+              • Women in Leadership Network: A dedicated network supporting
+              women as they advance in their careers, offering peer mentoring,
+              coaching, and leadership workshops.
+            </p>
+          </Text>
+        </RightContent>
+      </SectionContainer>
+      <HorizontalCarousel images={images} />
 
-        <EqualitySection />
-        <CreateImpact />
-        <Footer />
+      <EqualitySection />
+      <CreateImpact />
+      <Footer />
     </div>
   );
 };
@@ -70,7 +85,7 @@ const SectionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:rgba(18, 13, 23, 1); /* Dark background color */
+  background-color: rgba(18, 13, 23, 1); /* Dark background color */
   color: white; /* White text */
   padding: 50px;
   min-height: 50vh;
@@ -83,11 +98,10 @@ const LeftContent = styled.div`
 
 const Heading = styled.h1`
   font-family: Houschka Pro;
-font-size: 48px;
-font-weight: 500;
-line-height: 48px;
-text-align: left;
-
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
 `;
 
 const RightContent = styled.div`
@@ -97,15 +111,11 @@ const RightContent = styled.div`
   text-align: left;
 `;
 
-
-
 const Text = styled.p`
-
   max-width: 500px;
   font-family: Work Sans;
-font-size: 24px;
-font-weight: 400;
-line-height: 28.15px;
-text-align: left;
-
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.15px;
+  text-align: left;
 `;

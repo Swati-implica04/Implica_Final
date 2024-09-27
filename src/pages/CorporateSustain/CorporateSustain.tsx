@@ -1,92 +1,113 @@
 import React from "react";
-import "./CorporateSustain.css"; // Ensure the path to the CSS file is correct
+import styled from "styled-components";
 import Footer from "../Footer";
-import GlobalSustain from "./GlobalSustain"
+import GlobalSustain from "./GlobalSustain";
 import SustainableFuture from "./SustainableFuture";
 import TitleBox from "./titleBox";
 import backgroundImage from "../../assets/images/Leonardo_Lightning_partnership_handshake_0.jpg";
 import HorizontalCarousel from "../DiversityEqual/Carusel";
 import img from "../../assets/images/CSR/growing-organic-ecological-plants-fields-background.jpg";
-import styled from "styled-components";
+import SustainabilityHeader from "./titleBox";
+
 const images = [
   {
     src: img,
     alt: "Slide 1",
-    caption: "Global Internship Program (GIP):",
-    content: "Through GIP, we provide mentorship, skills development, and leadership training specifically designed to uplift women within our organization, empowering them to drive change both within Implica and in the broader business landscape.",
+    caption: "Carbon Neutrality by 2040 ",
+    content: "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power.",
     subText: "",
   },
   {
     src: img,
     alt: "Slide 2",
-    caption: " Carbon Neutrality by [Target Year] ",
-    content: "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power. ",
+    caption: "Renewable Energy Adoption ",
+    content: "We are rapidly transitioning to 100% renewable energy across our global facilities. By integrating solar power, wind energy, and other clean technologies into our operations, we aim to reduce our dependency on fossil fuels and contribute to the global effort to mitigate climate change. ",
     subText: "Subtext for Slide 2",
   },
   {
     src: img,
     alt: "Slide 3",
-    caption: "Yet Another Slide",
-    content: "Content for Slide 3",
+    caption: "Circular Economy Practices",
+    content: "Our commitment to the circular economy is reflected in our focus on reducing waste, reusing materials, and ensuring that our products and services are designed with sustainability in mind. From recycling initiatives to sustainable product design, we are reimagining how businesses can operate more efficiently and responsibly. ",
     subText: "Subtext for Slide 3",
   },
+  {
+    src: img,
+    alt: "Slide 4",
+    caption: " Reforestation and Biodiversity",
+    content: "Through our Plant & Life Initiative, we are committed to protecting biodiversity and restoring natural ecosystems. We have planted 100 trees as part of our global reforestation efforts starting from 2024, helping to combat climate change and preserve wildlife habitats.",
+    subText: "Subtext for Slide 4",
+  },
 ];
+
 const CorporateSustain: React.FC = () => {
   return (
-    <div>
-  <div className="CorporateSustain">
-      <TitleBox
-        text="Pioneering a Greener, More Equitable Future"
-        padding="80px 0px 0px 0px"
-        backgroundImage={backgroundImage} // Pass the image prop
-      />
-    </div>
-
-        <GlobalSustain />
-        <SectionContainer>
-      <LeftContent>
-        <Heading>Empowering Women in Leadership</Heading>
-      </LeftContent>
-      <RightContent>
-     
-        <Text>
-        At Implica, we are deeply committed to minimizing our environmental footprint and promoting a circular economy. By investing in clean energy, reducing our resource consumption, and preserving natural ecosystems, we are paving the way for a greener, more resilient planet.
-      
-        </Text>
-      </RightContent>
-    </SectionContainer>
-    <HorizontalCarousel images={images} />
-        <SustainableFuture />
-        <Footer />
-    </div>
+    <PageWrapper>
+      <SustainabilityHeader backgroundImage={backgroundImage}/>
+      <GlobalSustain />
+      <SectionContainer>
+        <LeftContent>
+          <Heading>Environmental Stewardship: Protecting Our Planet</Heading>
+        </LeftContent>
+        <RightContent>
+          <Text>
+            At Implica, we are deeply committed to minimizing our environmental footprint and promoting a circular economy. By investing in clean energy, reducing our resource consumption, and preserving natural ecosystems, we are paving the way for a greener, more resilient planet.
+          </Text>
+        </RightContent>
+      </SectionContainer>
+      <HorizontalCarousel images={images} />
+      <SustainableFuture />
+      <Footer />
+    </PageWrapper>
   );
 };
 
 export default CorporateSustain;
+
+const PageWrapper = styled.div`
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+`;
+
 const SectionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:white; /* Dark background color */
-  color: black; /* White text */
-  padding: 50px;
+  background-color: white;
+  color: black;
+  padding: 50px 5%;
   min-height: 50vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 30px 5%;
+  }
 `;
 
 const LeftContent = styled.div`
   flex: 1;
-  padding-right: 100px;
-  width:480px
+  padding-right: 50px;
+  max-width: 480px;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    padding-bottom: 20px;
+    max-width: 100%;
+  }
 `;
 
 const Heading = styled.h1`
-  font-family: Houschka Pro;
-font-size: 48px;
-font-weight: 500;
-line-height: 48px;
-text-align: left;
-color:rgb(0,0,0,1)
+  font-family: 'Houschka Pro', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: left;
+  color: rgb(0, 0, 0, 1);
 
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 const RightContent = styled.div`
@@ -96,16 +117,17 @@ const RightContent = styled.div`
   text-align: left;
 `;
 
-
-
 const Text = styled.p`
-
   max-width: 500px;
-  font-family: Work Sans;
-font-size: 24px;
-font-weight: 400;
-line-height: 28.15px;
-text-align: left;
-color:rgb(0,0,0,1)
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  color: rgb(0, 0, 0, 1);
 
+  @media (max-width: 768px) {
+    font-size: 18px;
+    max-width: 100%;
+  }
 `;

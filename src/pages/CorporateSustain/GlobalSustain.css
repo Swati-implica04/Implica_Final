@@ -54,16 +54,16 @@
     width: 100%;
 }
 
-.CommitmentTextLeft {
-    max-width: 400px;
+.CommitmentTextLef {
+    max-width:500px;
     font-size: 48px;
     line-height: 48px;
     font-weight: 500;
     color: #FFFFFF;
 }
 
-.CommitmentTextRight {
-    max-width: 400px;
+.CommitmentTextRigh {
+    max-width: 600px;
     font-size: 24px;
     line-height: 28.15px;
     text-align: left;

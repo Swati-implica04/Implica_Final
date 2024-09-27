@@ -483,12 +483,26 @@ const StatCard = styled.div`
 `
 
 const StatTitle = styled.h3`
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  //styleName: Headings/H4/H4-Regular;
+font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+font-size: 26px;
+font-weight: 500;
+line-height: 34px;
+letter-spacing: -0.01em;
+text-align: center;
+
 `
 
 const StatDescription = styled.p`
-  font-size: 0.9rem;
   color: #555;
+  //styleName: Body/B2/B2-Regular;
+font-family: var(--TypographyFontFamilyBody-WorkSans);
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.01em;
+text-align: center;
+
 `
 
