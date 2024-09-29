@@ -6,47 +6,63 @@ import FORM from './FormDesign'
 const Container = styled.div`
   background-color: #000000;
   color: #FFFFFF;
-  padding: 64px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
 `
 
 const Title = styled.h1`
-  font-size: 64px;
+  font-size: 2.5rem;
   font-weight: 500;
   margin: 0;
-  margin-bottom: 16px;
-  padding-top: 36px;
-  line-height: 64px;
+  margin-bottom: 1rem;
+  padding-top: 100px;
+  line-height: 1.2;
   text-align: left;
-  padding-left: 36px;
   color: #FFFFFF;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    padding-left: 2rem;
+  }
 `
 
 const Subtitle = styled.p`
-  font-size: 22px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 25.81px;
+  line-height: 1.4;
   margin: 0;
-  margin-bottom: 64px;
-  padding-top: 20px;
-  padding-left: 37px;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
   color: #FFFFFF;
+
+  @media (min-width: 768px) {
+    font-size: 1.375rem;
+    padding-left: 2rem;
+  }
 `
 
 const ServiceBoxContainer = styled.div`
   display: flex;
-  gap: 24px;
-  margin-bottom: 64px;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
   align-items: center;
-  padding-left: 85px;
-  padding-top: 30px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 2rem;
+  }
 `
 
 const ServiceBox = styled.div`
-  width: 384px;
+  width: 100%;
+  max-width: 384px;
   height: 160px;
   background-color: #111111;
   border: 1px solid #C10682;
@@ -65,7 +81,7 @@ const ServiceBox = styled.div`
 const Checkbox = styled.input.attrs({ type: 'checkbox' })`
   width: 24px;
   height: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   cursor: pointer;
 
   &:checked {
@@ -74,8 +90,9 @@ const Checkbox = styled.input.attrs({ type: 'checkbox' })`
 `
 
 const ServiceName = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
+  text-align: center;
 `
 
 export default function ContactPage() {
@@ -91,8 +108,8 @@ export default function ContactPage() {
           </ServiceBox>
         ))}
       </ServiceBoxContainer>
-      <IGC />
       <FORM />
+      <IGC />
     </Container>
   )
 }
