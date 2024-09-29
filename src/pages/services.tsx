@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Services.css";
-import business from "../assets/images/services/business-people-office.jpg"
+import business from "../assets/images/services/business-people-office.jpg";
 import techServicesImage from '../assets/images/services/pexels-shkrabaanthony-5816299.jpg';
 import managementConsultingImage from '../assets/images/services/pexels-rdne-5921556.jpg';
 import strategyConsultingImage from '../assets/images/services/office-workers-using-finance-graphs.jpg';
 import operationalConsultingImage from '../assets/images/services/technician-doing-ai-simulation.jpg';
-import innovationConsultingImage from '../assets/images/services/medium-shot-man-holding-device.jpg'; // Add an appropriate image for Sustainability
-import sustainabilityConsultingImage from '../assets/images/services/man-using-tablet-eco-friendly-wind-power-project-layout.jpg'; // Add an appropriate image for Innovation
+import innovationConsultingImage from '../assets/images/services/medium-shot-man-holding-device.jpg';
+import sustainabilityConsultingImage from '../assets/images/services/man-using-tablet-eco-friendly-wind-power-project-layout.jpg';
 
 const servicesData = [
   { title: "Tech Services", subtitle: "Innovative IT solutions", image: operationalConsultingImage },

@@ -128,7 +128,6 @@
   font-weight: 500;
   line-height: 28px;
   letter-spacing: 0.01em;
-  /* width: 224px; */
   height: 44px;
   margin-left: 10px;
 }
@@ -139,45 +138,40 @@
 
 /* Media query for tablet and smaller screens */
 @media (max-width: 768px) {
-  .services-title {
-    font-size: 2rem;
-    margin-left: 20px;
-    text-align: center;
-  }
-
   .services-cards {
     flex-direction: column; /* Stack service cards vertically */
     align-items: center;
     max-height: none; /* Remove height limit for small screens */
+    padding-left: 0; /* Remove left padding */
   }
 
   .service-card {
-    width: 100%; /* Full width for each card */
-    max-width: 350px; /* Limit max width for better display */
-    height: auto; /* Adjust height to content */
+    width: 90%; /* Make the card take 90% of the screen width */
+    max-width: 400px; /* Limit the max width for better display */
+    /* height: auto; Adjust height to content */
     margin-bottom: 20px; /* Add space between cards */
   }
 
-  .view-all-button {
-    font-size: 1rem;
+  .services-title {
+    font-size: 2.5rem; /* Slightly reduce the font size for smaller screens */
+    text-align: center;
+    margin-left: 0; /* Align title properly */
   }
 }
 
 /* Media query for smaller mobile screens */
 @media (max-width: 480px) {
   .services-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
-    margin-left: 0;
   }
 
   .service-card {
-    width: 100%;
-    height: auto;
+    width: 95%; /* Take most of the screen width */
     margin-bottom: 20px;
   }
 
   .view-all-button {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }

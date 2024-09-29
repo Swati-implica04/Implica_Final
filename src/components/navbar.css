@@ -138,3 +138,67 @@ body.modal-open {
   line-height: 24px;
   text-align: left;
 }
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .navbar-nav-center,
+  .navbar-nav-right {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-nav-center {
+    position: static;
+    transform: none;
+    margin: 0;
+  }
+
+  .navbar-nav-right {
+    margin-left: 0;
+    padding-right: 0 !important;
+  }
+
+  .nav-link {
+    padding: 10px 15px;
+    text-align: left;
+  }
+
+  .full-width-dropdown {
+    position: static;
+    max-height: none;
+    transition: none;
+  }
+
+  .full-width-dropdown.show {
+    max-height: none;
+    transition: none;
+  }
+
+  .full-width-dropdown .custom-dropdown-content {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .dropdown-icon {
+    float: right;
+    margin-top: 5px;
+  }
+
+  .responsive-logo {
+    width: 200px !important;
+    margin-left: 0;
+  }
+}
+
+/* Prevent body scroll when dropdown is open */
+body.modal-open {
+  overflow: hidden;
+}

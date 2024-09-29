@@ -1,22 +1,40 @@
- 
-.carousel-container {
+/* Container for the entire carousel */
+.carousel-containe {
+  position: relative; /* Added to contain the overlay */
   display: flex;
   align-items: center;
   overflow: hidden;
   width: 100%;
-  padding: 2rem;
-  background-color: #0b0b14; /* Background color to match design */
+  padding-left: 30px;
+  padding-bottom: 50px;
+  background-color: rgba(18, 13, 23, 1); /* Background color to match design */
+  flex-wrap: wrap; /* Allow boxes to wrap for smaller screens */
+  justify-content: start; /* Start-align the boxes on smaller screens */
 }
- 
+
+/* Overlay for the carousel container */
+.carousel-containe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Individual carousel box styling */
 .carousel-box {
-  background-color: #1b1b2f; /* Box background color */
+  position: relative; /* Ensure the z-index of the box content works correctly */
+  background-color: rgba(18, 13, 23, 1); /* Box background color */
   color: #e94560; /* Text color */
-  border: 1px solid #3f3f56; /* Border styling */
+  border: 1px solid rgba(148, 10, 145, 1); /* Border styling */
   border-radius: 8px;
   padding: 1rem;
   width: 200px;
   height: 350px;
-  margin-right: 1rem;
+  margin: 1rem; /* Add consistent margin around each box */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,50 +42,50 @@
   transition: all 0.5s ease;
   overflow: hidden;
 }
- 
+
+/* Styling for the expanded box */
 .carousel-box.expanded {
-  width: 400px; /* Expand width for the first box */
+  width: 500px; /* Expand width for the first box */
   height: 350px;
-  background: url("your-image-path") no-repeat center center; /* Placeholder for background image */
+  background: url("../assets/images/tagLine.jpg") no-repeat center center; /* Placeholder for background image */
   background-size: cover; /* Background image */
   color: white; /* Change text color for expanded box */
 }
- 
+
+/* Content within the box */
 .box-content h1 {
   margin: 0;
   font-size: 2.5rem; /* Adjusted font size for "implica" */
   color: #e94560; /* Pink color for "implica" */
 }
- 
+
 .box-content p {
   margin: 0;
   font-size: 1.5rem; /* Adjusted font size for "Ventures" */
   color: #ddd; /* Light gray color for "Ventures" */
 }
- 
+
 .box-text {
   margin-top: 1rem;
   color: #fff;
   font-family: var(--TypographyFontFamilyBody-WorkSans);
-font-size: 16px;
-font-weight: 400;
-line-height: 18.77px;
-text-align: left;
- 
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: left;
 }
- 
+
 .read-more-button {
   margin-top: 5rem;
   font-family: var(--TypographyFontFamilyBody-WorkSans);
-font-size: 16px;
-font-weight: 400;
-line-height: 18.77px;
-text-align: left;cursor: pointer;
- 
- 
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: left;
+  cursor: pointer;
 }
- 
- 
+
+/* Metallic lustre animation */
 @keyframes metallicLustre {
   0% {
     background-position: 0% 50%;
@@ -76,7 +94,7 @@ text-align: left;cursor: pointer;
     background-position: 100% 50%;
   }
 }
- 
+
 .metallic-lustre {
   background: linear-gradient(90deg, #7b0b98, #610c9f, #da0c81, #e95793);
   background-size: 200% 200%;
@@ -84,36 +102,71 @@ text-align: left;cursor: pointer;
   -webkit-text-fill-color: transparent;
   animation: metallicLustre 3s linear infinite;
   font-family: Houschka Rounded;
-font-size: 42.25px;
-font-weight: 500;
-line-height: 42.25px;
-text-align: left;
- 
+  font-size: 42.25px;
+  font-weight: 500;
+  line-height: 42.25px;
+  text-align: left;
 }
- 
+
 .metallic-lustre-subtitle {
-  background: linear-gradient(
-    90deg,
-    #24231f,
-    #e2e2d9,
-    #2a2a2a,
-    #ffffff,
-    #161616
-  );
+  background: linear-gradient(90deg, #24231f, #e2e2d9, #2a2a2a, #ffffff, #161616);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: metallicLustre 3s linear infinite;
 }
+
 .cardIgc {
   font-family: var(--TypefaceHeading);
-  font-size: 64px;
-  font-weight: 500;
-  line-height: 48px;
-  text-align: left;
   padding: 30px;
-  background-color: #0b0b14; /* Background color to match design */
+  padding-left: 40px;
+  background-color: rgba(18, 13, 23, 1); /* Background color to match design */
+  font-family: Houschka Rounded;
+  font-size: 66px;
+  font-weight: 500;
+  line-height: 74px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: white;
 }
-.i{
-  background-color: #0b0b14; /* Background color to match design */
+
+.i {
+  background-color: rgba(18, 13, 23, 1); /* Background color to match design */
+}
+
+/* Responsive styling */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .carousel-box {
+    width: 300px; /* Increase box width for better visibility on tablets */
+    height: auto; /* Adjust height automatically based on content */
+  }
+
+  .carousel-box.expanded {
+    width: 350px; /* Adjust expanded width for tablets */
+    height: auto;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .carousel-containe {
+    padding: 1rem; /* Reduce padding for mobile screens */
+    flex-direction: column; /* Stack boxes vertically */
+  }
+
+  .carousel-box {
+    width: 100%; /* Make box take full width of the screen */
+    height: auto;
+  }
+
+  .carousel-box.expanded {
+    width: 100%; /* Full width for expanded box */
+    height: auto;
+  }
+
+  .cardIgc {
+    text-align: center; /* Center align title for mobile screens */
+  }
 }

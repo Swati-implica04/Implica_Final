@@ -125,7 +125,7 @@ text-align: center;
   .team-gri {
     display: grid;
     grid-template-columns: repeat(6, 120px); /* 6 items in one row, each 120px wide */
-    grid-gap: 20px; /* Gap between team members */
+    /* grid-gap: 20px; Gap between team members */
     justify-content: center; /* Center the grid horizontally */
     margin-bottom: 50px;
   }

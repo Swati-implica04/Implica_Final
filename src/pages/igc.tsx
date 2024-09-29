@@ -14,7 +14,7 @@ const AnimatedCarousel: React.FC = () => {
     {
       id: 2,
       title: "Implica",
-      subtitle: "Capital  ",
+      subtitle: "Capital",
       text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
@@ -50,12 +50,15 @@ const AnimatedCarousel: React.FC = () => {
   };
 
   useEffect(() => {
-    const interval: ReturnType<typeof setInterval> = setInterval(() => {
-      rotateBoxes();
-    }, 3000); // Rotate every 3 seconds
+    let interval: ReturnType<typeof setInterval>;
+    if (!isPaused) {
+      interval = setInterval(() => {
+        rotateBoxes();
+      }, 3000); // Rotate every 3 seconds
+    }
 
     return () => clearInterval(interval); // Cleanup on pause or unmount
-  }, [isPaused]); // Re-run effect when `isPaused` changes
+  }, [isPaused, boxes.length]); // Re-run effect when `isPaused` or `boxes.length` changes
 
   const handleMouseEnter = () => {
     setIsPaused(true); // Pause the carousel on hover
@@ -68,7 +71,7 @@ const AnimatedCarousel: React.FC = () => {
   return (
     <div className="i">
       <p className="cardIgc">Igc way</p>
-      <div className="carousel-container">
+      <div className="carousel-containe">
         {boxes.map((box, index) => (
           <motion.div
             key={box.id}

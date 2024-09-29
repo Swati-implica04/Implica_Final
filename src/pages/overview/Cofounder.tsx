@@ -1,119 +1,272 @@
 import React from 'react';
-import './CoreFounders.css';
+import styled from 'styled-components';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import image1 from "../../assets/images/IMG_0035-PL Legitymacja szkolna-35x45 mm.jpg";
-import styled from 'styled-components';
-import img from "../../assets/images/team-2.jpeg"
-import img2 from "../../assets/images/IMG_0681.jpg"
-import img3 from "../../assets/images/2024-09-22-21-03-25-123.jpg"
+import img from "../../assets/images/team-2.jpeg";
+import img2 from "../../assets/images/IMG_0681.jpg";
+import img3 from "../../assets/images/2024-09-22-21-03-25-123.jpg";
+import img4 from "../../assets/images/Implica Our Team.png";
+
+const CoreFoundersContainer = styled.div`
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+`;
+
+const CoreTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: left;
+  padding-top: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+`;
+
+const FounderCard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+`;
+
+const FounderDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+`;
+
+const FounderRole = styled.h4`
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
+const FounderName = styled.h2`
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+`;
+
+const FounderQuote = styled.p`
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  gap: 15px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const IconLink = styled.a`
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #0072b1;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+const Image = styled.img`
+  max-width: 432px;
+  max-height: 575px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    max-height: 400px;
+  }
+`;
+
+const TeamSectionContainer = styled.div`
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+`;
+
+const TeamTitle = styled.h2`
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-family: Houschka Rounded, sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+`;
+
+const TeamImage = styled.img`
+  max-width: 900px;
+  max-height: 675px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+`;
+
+const TeamDescription = styled.p`
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: var(--TypefaceBody);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding-top: 10px;
+  }
+`;
+
 const CoreFounders = () => {
-    const teamMembers = new Array(18).fill(null); // Placeholder for 16 team members
   return (
-    <div className="core-founders-container">
-      <h1 className="core-title">Our Leadership</h1>
-      <div className="founder-card">
-      <Image src={img2} alt="Description of image 1" />
-
-        {/* <div className="founder-image-placeholder"></div> */}
-        <div className="founder-details">
-          <h4>FOUNDER & C.E.O</h4>
-          <h2>Sarved Dhar Badgayan</h2>
-          <p className="founder-quote">
-            In a world of possibilities, we don’t follow trends; we set them. Our drive for innovation and excellence pushes us to conquer markets, disrupt industries, and lead globally. We’re not just part of the future; we’re shaping it.
-            {/* "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'" */}
-          </p>
-          <div className="social-icons">
-            <a href="https://linkedin.com" className="icon-link">
+    <CoreFoundersContainer>
+      <CoreTitle>Our Leadership</CoreTitle>
+      <FounderCard>
+        <Image src={img2} alt="Sarved Dhar Badgayan" />
+        <FounderDetails>
+          <FounderRole>FOUNDER & C.E.O</FounderRole>
+          <FounderName>Sarved Dhar Badgayan</FounderName>
+          <FounderQuote>
+            In a world of possibilities, we don't follow trends; we set them. Our drive for innovation and excellence pushes us to conquer markets, disrupt industries, and lead globally. We're not just part of the future; we're shaping it.
+          </FounderQuote>
+          <SocialIcons>
+            <IconLink href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
-            </a>
-            <a href="Sarved.badgayan@implicaglobal.com" className="icon-link">
+            </IconLink>
+            <IconLink href="mailto:Sarved.badgayan@implicaglobal.com">
               <FaEnvelope />
-            </a>
-          </div>
-        </div>
-      </div>
+            </IconLink>
+          </SocialIcons>
+        </FounderDetails>
+      </FounderCard>
 
-      <div className="founder-card">
-        <div className="founder-details">
-          <h4>Operational Director (Knocksy) Strategic Alliance & Partnership  Dividion</h4>
-          <h2>Francesco Congiu</h2>
-          {/* <p className="founder-quote">
-            "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
-          </p> */}
-          <div className="social-icons">
-            <a href="https://www.linkedin.com/in/francesco-congiu/" className="icon-link">
+      <FounderCard>
+        <FounderDetails>
+          <FounderRole>Operational Director (Knocksy) Strategic Alliance & Partnership Division</FounderRole>
+          <FounderName>Francesco Congiu</FounderName>
+          <SocialIcons>
+            <IconLink href="https://www.linkedin.com/in/francesco-congiu/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
-            </a>
-            <a href="francesco.congiu@implicaglobal.com" className="icon-link">
+            </IconLink>
+            <IconLink href="mailto:francesco.congiu@implicaglobal.com">
               <FaEnvelope />
-            </a>
-          </div>
-        </div>
-        {/* <div className="founder-image-placeholder"> */}
-        <Image src={image1} alt="Description of image 1" />
-        {/* </div> */}
-      </div>
+            </IconLink>
+          </SocialIcons>
+        </FounderDetails>
+        <Image src={image1} alt="Francesco Congiu" />
+      </FounderCard>
 
-      <div className="founder-card">
-      <Image src={img} alt="Description of image 1" />
-
-        {/* <div className="founder-image-placeholder"></div> */}
-        <div className="founder-details">
-        <h4>Vice President - Technology</h4>
-          <h2>Sebastian Opocensky</h2>
-          {/* <p className="founder-quote">
-            "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
-          </p> */}
-          <div className="social-icons">
-            <a href="https://linkedin.com" className="icon-link">
+      <FounderCard>
+        <Image src={img} alt="Sebastian Opocensky" />
+        <FounderDetails>
+          <FounderRole>Vice President - Technology</FounderRole>
+          <FounderName>Sebastian Opocensky</FounderName>
+          <SocialIcons>
+            <IconLink href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
-            </a>
-            <a href="ceo.office@implicaglobalcorp.com" className="icon-link">
+            </IconLink>
+            <IconLink href="mailto:ceo.office@implicaglobalcorp.com">
               <FaEnvelope />
-            </a>
-          </div>
-        </div>
-      </div>
+            </IconLink>
+          </SocialIcons>
+        </FounderDetails>
+      </FounderCard>
 
-      <div className="founder-card">
-        <div className="founder-details">
-          <h4>Chief Operating Officer</h4>
-          <h2>Reetish Mohan Panigrahy</h2>
-          {/* <p className="founder-quote">
-            "We are an organization led by a purpose: to make a positive, sustainable, and impact that matters to everyone Implica Choice. 'Everyone is an Entrepreneur, and their preneur is themselves.'"
-          </p> */}
-          <div className="social-icons">
-            <a href="https://www.linkedin.com/in/reetish-mohan-panigrahy/" className="icon-link">
+      <FounderCard>
+        <FounderDetails>
+          <FounderRole>Chief Operating Officer</FounderRole>
+          <FounderName>Reetish Mohan Panigrahy</FounderName>
+          <SocialIcons>
+            <IconLink href="https://www.linkedin.com/in/reetish-mohan-panigrahy/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
-            </a>
-            <a href="reetish.panigrahy@implicaglobal.com" className="icon-link">
+            </IconLink>
+            <IconLink href="mailto:reetish.panigrahy@implicaglobal.com">
               <FaEnvelope />
-            </a>
-          </div>
-        </div>
-        {/* <div className="founder-image-placeholder"> */}
-        <Image src={img3} alt="Description of image 1" />
-        {/* </div> */}
-      </div>
-      <div className="team-section-container">
-      <h2 className="team-title">Our team</h2>
-      <div className="team-gri">
-        {teamMembers.map((_, index) => (
-          <div key={index} className="team-member-placeholder"></div>
-        ))}
-      </div>
-      <p className="team-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
-    </div>
+            </IconLink>
+          </SocialIcons>
+        </FounderDetails>
+        <Image src={img3} alt="Reetish Mohan Panigrahy" />
+      </FounderCard>
+
+      <TeamSectionContainer>
+        <TeamTitle>Our team</TeamTitle>
+        <TeamImage src={img4} alt="Our Team" />
+        <TeamDescription>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </TeamDescription>
+      </TeamSectionContainer>
+    </CoreFoundersContainer>
   );
 };
 
 export default CoreFounders;
-
-const Image = styled.img`
-      max-width: 432px; 
-    max-height: 575px;
-  margin-bottom: 20px; /* Add space between images */
-`;
