@@ -8,17 +8,17 @@ import Footer from "../Footer";
 const CorporateSocial: React.FC = () => {
   return (
     <div>
-        <div className="CorporateSocial">
+      <div className="CorporateSocial">
         <div className="white-box">
-            <span className="box_textStyle">
+          <span className="box_textStyle">
             Corporate Social Responsibility: Driving Purpose with Impact
-            </span>
+          </span>
         </div>
-        </div>
-        <GlobalCorp />
-        <CorpCEO />
-        <CSRFrameWork />
-        <Footer />
+      </div>
+      <GlobalCorp />
+      <CorpCEO />
+      <CSRFrameWork />
+      <Footer />
     </div>
   );
 };

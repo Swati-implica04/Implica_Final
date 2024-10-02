@@ -1,11 +1,11 @@
 /* Main container for the Corporate Social Responsibility section */
 .GlobalCorp {
-    /* width: 100vw; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
+    width: 100%; /* Ensure it uses the full width */
 }
 
 /* Top section with background image and text */
@@ -21,41 +21,39 @@
     padding: 20px;
     position: relative;
     background: #FFFFFF7A;
-
 }
 
 .CSRBanner .CSRText {
     max-width: 1200px;
     padding: 20px;
     color: #000000;
-    font-size: 20px;
+    font-size: 20px; /* Base font size */
     font-weight: 500;
     text-align: center;
-    line-height: 23.46px;
+    line-height: 1.5; /* Responsive line-height */
     border-radius: 8px;
 }
 
 /* Second section with black background and text */
-.CommitmentSection {
+.CommitmentSectionalfa {
     width: 100%;
-    height: 500px;
+    height: 530px;
     background-color: #120D17;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 64px;
+    padding: 32px; /* Reduced padding for better responsiveness */
 }
 
-.CSRText p{
+.CSRText p {
     max-width: 1200px;
     padding: 20px;
     color: #000000;
     font-size: 24px;
     font-weight: 500;
-    padding-left: 1px;
     text-align: left;
-    line-height: 23.46px;
+    line-height: 1.5; /* Responsive line-height */
     border-radius: 8px;
 }
 
@@ -71,7 +69,7 @@
 .CommitmentTextLeft {
     max-width: 400px;
     font-size: 48px;
-    line-height: 48px;
+    line-height: 1.5; /* Responsive line-height */
     font-weight: 500;
     color: #FFFFFF;
 }
@@ -79,17 +77,17 @@
 .CommitmentTextRight {
     max-width: 400px;
     font-size: 24px;
-    line-height: 28.15px;
+    line-height: 1.5; /* Responsive line-height */
     text-align: left;
     font-weight: 400;
 }
 
-.CommitmentTextRight p{
+.CommitmentTextRight p {
     max-width: 1200px;
     font-size: 24px;
     font-weight: 500;
     text-align: left;
-    line-height: 23.46px;
+    line-height: 1.5; /* Responsive line-height */
     border-radius: 8px;
     color: #FFFFFF;
     padding-top: 30px;
@@ -108,6 +106,34 @@
 
     .CommitmentTextRight {
         max-width: 100%;
-        font-size: 16px;
+        font-size: 16px; /* Adjusted for smaller screens */
+    }
+
+    /* Adjust the font sizes in the CSRText */
+    .CSRBanner .CSRText {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .CSRBanner {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .CommitmentSectionalfa {
+        padding: 16px; /* Reduced padding for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .CommitmentTextLeft {
+        font-size: 28px; /* Further reduced for very small screens */
+    }
+
+    .CommitmentTextRight {
+        font-size: 14px; /* Further reduced for very small screens */
+    }
+
+    .CSRBanner .CSRText {
+        font-size: 14px; /* Further reduced for very small screens */
     }
 }

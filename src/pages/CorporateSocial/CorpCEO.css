@@ -5,7 +5,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0; /* No internal padding */
-    width: 85vw; /* Fixed width */
+    width: 85vw; /* Base width */
+    max-width: 1200px; /* Maximum width for larger screens */
     height: 540px; /* Fixed height */
     background-color: #1E021D; /* Dark background for contrast */
     color: white;
@@ -14,9 +15,7 @@
     overflow: hidden; /* Prevent any content from overflowing */
     opacity: 1; /* Fully visible */
     box-sizing: border-box; /* Include padding/border in total width/height */
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 100px;
+    margin: 30px auto; /* Center the container with auto margins */
 }
 
 /* Left section for the CEO quote */
@@ -53,7 +52,7 @@
 
 .CEOImage img {
     max-width: 100%;
-    height: 540px;
+    height: auto; /* Adjust height to maintain aspect ratio */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -62,6 +61,7 @@
         flex-direction: column;
         padding: 20px;
         width: 90vw; /* Adjust width to be more fluid on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
     }
 
     .CEOQuote {
@@ -71,10 +71,33 @@
     }
 
     .CEOQuote p {
-        font-size: 20px;
+        font-size: 20px; /* Smaller text size for the quote */
     }
 
     .CEOQuote span {
-        font-size: 28px;
+        font-size: 28px; /* Smaller text size for the name */
+    }
+
+    .CEOImage {
+        width: 100%; /* Ensure image section takes full width */
+        margin-bottom: 20px; /* Add margin below the image for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .CEOQuote {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    .CEOQuote p {
+        font-size: 18px; /* Further reduced text size for smaller screens */
+    }
+
+    .CEOQuote span {
+        font-size: 24px; /* Further reduced text size for smaller screens */
+    }
+
+    .CorpCEO {
+        margin: 20px; /* Adjust margins for smaller screens */
     }
 }

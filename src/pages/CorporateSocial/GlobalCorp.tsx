@@ -21,7 +21,7 @@ const GlobalCorp: React.FC = () => {
       </div>
 
       {/* Second Section with Commitment to Sustainable Development */}
-      <div className="CommitmentSection">
+      <div className="CommitmentSectionalfa">
         <div className="CommitmentContent">
           <div className="CommitmentTextLeft">
             Our Commitment to Sustainable Development
