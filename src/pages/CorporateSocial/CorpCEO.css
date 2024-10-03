@@ -1,5 +1,3 @@
-/* General page styling */
-/* Container for the CEO Quote and Image */
 .CorpCEO {
     display: flex;
     justify-content: space-between;
@@ -17,7 +15,7 @@
     box-sizing: border-box; /* Include padding/border in total width/height */
     margin: 30px auto; /* Center the container with auto margins */
 }
-
+ 
 /* Left section for the CEO quote */
 .CEOQuote {
     flex: 1;
@@ -25,14 +23,14 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-
+ 
 .CEOQuote_pText {
     font-size: 24px;
     line-height: 28.15px;
     font-weight: 400;
     color: #FFFFFF;
 }
-
+ 
 .ceoname_span2 {
     display: block;
     font-size: 48px;
@@ -41,7 +39,7 @@
     color: #FFFFFF;
     padding-top: 6%;
 }
-
+ 
 /* Right section for the CEO image */
 .CEOImage {
     flex: 0.4;
@@ -49,12 +47,12 @@
     justify-content: center;
     align-items: center;
 }
-
+ 
 .CEOImage img {
     max-width: 100%;
     height: auto; /* Adjust height to maintain aspect ratio */
 }
-
+ 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .CorpCEO {
@@ -63,40 +61,40 @@
         width: 90vw; /* Adjust width to be more fluid on smaller screens */
         height: auto; /* Allow height to adjust based on content */
     }
-
+ 
     .CEOQuote {
         padding-right: 0;
         text-align: center;
         margin-bottom: 20px;
     }
-
+ 
     .CEOQuote p {
         font-size: 20px; /* Smaller text size for the quote */
     }
-
+ 
     .CEOQuote span {
         font-size: 28px; /* Smaller text size for the name */
     }
-
+ 
     .CEOImage {
         width: 100%; /* Ensure image section takes full width */
         margin-bottom: 20px; /* Add margin below the image for spacing */
     }
 }
-
+ 
 @media (max-width: 480px) {
     .CEOQuote {
         padding: 10px; /* Reduce padding for very small screens */
     }
-
+ 
     .CEOQuote p {
         font-size: 18px; /* Further reduced text size for smaller screens */
     }
-
+ 
     .CEOQuote span {
         font-size: 24px; /* Further reduced text size for smaller screens */
     }
-
+ 
     .CorpCEO {
         margin: 20px; /* Adjust margins for smaller screens */
     }

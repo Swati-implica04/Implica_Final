@@ -1,6 +1,6 @@
 import React from "react";
 import "./GlobalCorp.css"; // Ensure this path is correct
-
+ 
 const GlobalCorp: React.FC = () => {
   return (
     <div className="GlobalCorp">
@@ -19,7 +19,7 @@ const GlobalCorp: React.FC = () => {
           </p>
         </div>
       </div>
-
+ 
       {/* Second Section with Commitment to Sustainable Development */}
       <div className="CommitmentSectionalfa">
         <div className="CommitmentContent">
@@ -42,5 +42,5 @@ const GlobalCorp: React.FC = () => {
     </div>
   );
 };
-
+ 
 export default GlobalCorp;

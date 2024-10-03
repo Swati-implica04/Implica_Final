@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import CustomNavbar from './components/navBar';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported globally
@@ -33,6 +33,7 @@ import video1 from "./assets/images/video/5396818-uhd_3840_2160_30fps.mp4"
 import img1 from "./assets/images/video/pexels-jokassis-5534595.jpg"
 import HorizontalCarousel from './pages/image';
 import IndustriesPage from './pages/consulting/implicaConsulting';
+import AppContainer from "./components/mobile-navbar"
 interface MediaType {
   src: string;
   alt: string;
@@ -46,15 +47,27 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const location = useLocation(); // Get the current location
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>
       {/* Conditionally render the navbar */}
-      {location.pathname !== '/implica-ai' && <CustomNavbar />}
+      {location.pathname !== '/implica-ai' && (isMobile ? <AppContainer /> : <CustomNavbar />)}
       {children}
     </>
   );
 };
+
+export { MainLayout };
 const App: React.FC = () => {
   const media: MediaType[] = [
     {

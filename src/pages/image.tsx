@@ -43,7 +43,6 @@ const CarouselWrapper = styled.div<{ currentIndex: number }>`
   display: flex;
   transition: transform 0.7s ease;
   will-change: transform;
-    -webkit-transition: transform 0.7s ease; 
   transform: translateX(calc(-100% * ${(props) => props.currentIndex}));
   height: 700px;
   width: 1400px;
@@ -84,14 +83,12 @@ const CarouselMedia = styled.div`
 const CarouselImage = styled.img`
   width: 100%;
   height: 100%;
-  -webkit-object-fit: cover;
   object-fit: cover;
 `;
 
 const CarouselVideo = styled.video`
   width: 100%;
   height: 100%;
-  -webkit-object-fit: cover;
   object-fit: cover;
 `;
 
@@ -243,7 +240,6 @@ export default function HorizontalCarousel({ media }: HorizontalCarouselProps) {
                   loop
                   playsInline
                   preload="auto"
-                  autoPlay={true}  
                 />
               )}
               <Overlay />
