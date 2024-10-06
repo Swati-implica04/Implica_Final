@@ -46,7 +46,8 @@ const CarouselWrapper = styled.div<{ currentIndex: number }>`
   transform: translateX(calc(-100% * ${(props) => props.currentIndex}));
   height: 700px;
   width: 1400px;
-
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
   @media (max-width: 1400px) {
     width: 100%;
   }
@@ -90,6 +91,7 @@ const CarouselVideo = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
+    -webkit-transform: translate3d(0, 0, 0);
 `;
 
 const Overlay = styled.div`
@@ -169,7 +171,7 @@ const PlayPauseIcon = styled.i<{ isPlaying: boolean }>`
 `;
 
 export default function HorizontalCarousel({ media }: HorizontalCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(1);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -211,16 +213,16 @@ export default function HorizontalCarousel({ media }: HorizontalCarouselProps) {
           }
         });
       },
-      { threshold: 0.5 } // Adjust threshold as necessary
+      { rootMargin: "0px 0px -50px 0px" } // Adjust rootMargin instead of threshold
     );
-
+  
     videoRefs.current.forEach((video, index) => {
       if (video) {
         video.dataset.index = index.toString();
         observer.observe(video);
       }
     });
-
+  
     return () => observer.disconnect();
   }, [currentIndex]);
 
@@ -234,13 +236,13 @@ export default function HorizontalCarousel({ media }: HorizontalCarouselProps) {
                 <CarouselImage src={item.src} alt={item.alt} />
               ) : (
                 <CarouselVideo
-                  ref={(el) => (videoRefs.current[index] = el)}
-                  src={item.src}
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                />
+                ref={(el) => (videoRefs.current[index] = el)}
+                src={item.src}
+                muted
+                playsInline
+                preload="auto"
+                loop
+              />
               )}
               <Overlay />
             </CarouselMedia>

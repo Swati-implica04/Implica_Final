@@ -5,7 +5,7 @@ const FormContainer = styled.div`
   max-width: 1280px;
   width: 100vw;
   margin: 0 auto;
-  padding-top:100px;
+  padding-top: 100px;
   font-family: Arial, sans-serif;
 `;
 
@@ -165,6 +165,7 @@ const SubmitButton = styled.button`
   width: 180px;
   padding: 16px;
   margin-top: 48px;
+  margin-bottom: 24px;
   background-color: #FFFFFF;
   color: #000000;
   border: none;
@@ -179,12 +180,16 @@ const SubmitButton = styled.button`
   }
 `;
 
-export default function ContactForm() {
+interface ContactFormProps {
+  title?: string;
+}
+
+export default function ContactForm({ title }: ContactFormProps) {
   return (
     <FormContainer>
       <FormContent>
         <LeftColumn>
-          <Title>What's on your mind?</Title>
+          <Title>{title || "What's on your mind?"}</Title> {/* Use the title prop */}
           <Subtitle>We would love to hear from you</Subtitle>
           <CheckboxGroup>
             <CheckboxItem>

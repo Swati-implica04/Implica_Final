@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { MdSearch, MdMenu, MdChevronRight, MdChevronLeft, MdClose } from 'react-icons/md'
-import { useNavigate } from 'react-router-dom'
-
+import { MdSearch, MdMenu, MdChevronRight, MdChevronLeft, MdClose, MdAdd, MdRemove } from 'react-icons/md'
+import { Link, useNavigate } from 'react-router-dom'
+import Log from "../assets/images/Implica_full_dark_transparent_png.png"
 const AppContainer = styled.div`
   font-family: Arial, sans-serif;
   background-color: #000;
@@ -47,23 +47,14 @@ const IconButton = styled.button`
 
 const MenuContainer = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  top: 52px;
+  top: 60px;
   left: ${props => props.isOpen ? '0' : '100%'};
   width: 100%;
-  height: calc(100% - 52px);
+  height: calc(100% - 60px);
   background-color: #000;
   transition: left 0.3s ease-in-out;
   z-index: 999;
   overflow-y: auto;
-`
-
-const MenuHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  border-bottom: 1px solid #333;
-  height: 52px;
 `
 
 const MenuList = styled.ul`
@@ -97,14 +88,26 @@ const BackButton = styled.button`
   text-align: left;
 `
 
+const SubMenuList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #111;
+`
+
+const SubMenuItem = styled.li`
+  border-top: 1px solid #333;
+`
+
 export default function Component() {
   type MenuType = 'main' | 'about' | 'industries' | 'services' | 'career' | 'insights';
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentMenu, setCurrentMenu] = useState<MenuType>('main')
   const [menuStack, setMenuStack] = useState<MenuType[]>(['main'])
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
 
-  const menus: Record<MenuType, { title: string; submenu?: MenuType; link?: string }[]> = {
+  const menus: Record<MenuType, { title: string; submenu?: MenuType; link?: string; expandable?: { title: string; link: string }[] }[]> = {
     main: [
       { title: 'About us', submenu: 'about' },
       { title: 'Industries', submenu: 'industries' },
@@ -115,27 +118,44 @@ export default function Component() {
       { title: 'Contact us', link: '/contact' },
     ],
     about: [
-    //   { title: 'Our organization', link: "/overview" },
-      { title: 'Overview', link:  "/overview"  },
+      { title: 'Our organisation', link: "/organization" },
+      { title: 'Overview', link: "/overview" },
       { title: 'Our Leadership', link: '/leadership' },
       { title: 'Purpose, Mission and Values', link: "/mission" },
-      { title: 'News Room', link: "/News" },
-      { title: 'Global Alliances', link:"/alliances" },
-    
+      { title: 'Global Alliances', link: "/alliances" },
+      { title: 'News Room', link: "/news" },
+      { 
+        title: 'Values', 
+        expandable: [
+          { title: 'Corporate Social Responsibility', link: "/corporateSocial" },
+          { title: 'Corporate Sustainability', link:"/sustainability"},
+          { title: 'Diversity, Equality & Inclusion', link: "/diversity" },
+        ]
+      },
+      { 
+        title: 'IGC Way', 
+        expandable: [
+          { title: 'Implica Capital', link: "/capital" },
+          { title: 'Implica Ventures', link: "/ventures" },
+          { title: 'Implica A.I.', link: "/implica-ai" },
+          { title: 'Implica Consulting', link: "/implica-consulting" },
+        ]
+      },
     ],
     industries: [
-      { title: 'E-commerce', link: '/industries/e-commerce' },
-      { title: 'Manufacturing', link: '/industries/manufacturing' },
-      { title: 'Automotive', link: '/industries/automotive' },
-      { title: 'Real Estate', link: '/industries/real-estate' },
-      { title: 'Transportation and Logistics', link: '/industries/transportation' },
-      { title: 'Agriculture', link: '/industries/agriculture' },
-      { title: 'Insurance', link: '/industries/insurance' },
-      { title: 'Banking', link: '/industries/banking' },
-      { title: 'Private Equity', link: '/industries/private-equity' },
-      { title: 'Metals and Minerals', link: '/industries/metals-minerals' },
-      { title: 'Environmental Services', link: '/industries/environmental' },
-      { title: 'Marine and Shipping', link: '/industries/marine-shipping' },
+      { title: 'E-commerce', link: "/industry-detail" },
+      { title: 'Manufacturing', link: "/industry-detail"},
+      { title: 'Automotive', link:"/industry-detail" },
+      { title: 'Real Estate', link: "/industry-detail" },
+      { title: 'Transportation and Logistics', link: "/industry-detail"},
+      { title: 'Agriculture', link: "/industry-detail" },
+      { title: 'Insurance', link: "/industry-detail" },
+      { title: 'Banking', link: "/industry-detail" },
+      { title: 'Private Equity', link: "/industry-detail" },
+      { title: 'Metals and Minerals', link: "/industry-detail" },
+      { title: 'Environmental Services', link: "/industry-detail" },
+      { title: 'Marine and Shipping', link:"/industry-detail" },
+      {title: 'View all', link: '/industry'},
     ],
     services: [
       { title: 'Implica Digital', link: "/implica-digital" },
@@ -179,6 +199,7 @@ export default function Component() {
     setIsMenuOpen(false)
     setCurrentMenu('main')
     setMenuStack(['main'])
+    setExpandedItems([])
   }
 
   const handleLinkClick = (link: string) => {
@@ -187,10 +208,19 @@ export default function Component() {
     closeMenu()
   }
 
+  const toggleExpand = (title: string) => {
+    setExpandedItems(prev => 
+      prev.includes(title) ? prev.filter(item => item !== title) : [...prev, title]
+    )
+  }
+
   return (
     <AppContainer>
       <Header>
-        <Logo>implica</Logo>
+        <Link to="/">
+      <img src={Log} alt="Company Logo" className="responsive-logo" style={{width:'270px'}}/>
+      </Link>
+        {/* <Logo>implica</Logo> */}
         <div style={{display:'flex'}}>
           <IconButton>
             <MdSearch size={24} />
@@ -211,12 +241,30 @@ export default function Component() {
           {menus[currentMenu].map((item, index) => (
             <MenuItem key={index}>
               {item.submenu ? (
-                <MenuLink  onClick={() => navigateTo(item.submenu!)}>
+                <MenuLink onClick={() => navigateTo(item.submenu!)}>
                   {item.title}
                   <MdChevronRight size={24} />
                 </MenuLink>
+              ) : item.expandable ? (
+                <>
+                  <MenuLink onClick={() => toggleExpand(item.title)}>
+                    {item.title}
+                    {expandedItems.includes(item.title) ? <MdRemove size={24} /> : <MdAdd size={24} />}
+                  </MenuLink>
+                  {expandedItems.includes(item.title) && (
+                    <SubMenuList>
+                      {item.expandable.map((subItem, subIndex) => (
+                        <SubMenuItem key={subIndex}>
+                          <MenuLink href="" onClick={() => handleLinkClick(subItem.link)}>
+                            {subItem.title}
+                          </MenuLink>
+                        </SubMenuItem>
+                      ))}
+                    </SubMenuList>
+                  )}
+                </>
               ) : (
-                <MenuLink href="#" onClick={() => handleLinkClick(item.link!)}>
+                <MenuLink href="" onClick={() => handleLinkClick(item.link!)}>
                   {item.title}
                 </MenuLink>
               )}

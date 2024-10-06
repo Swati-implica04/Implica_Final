@@ -36,6 +36,7 @@ const academicLogos = [logo,col,logo4,];
 
 const CorporateAllience: React.FC = () => {
   return (
+    <div>
     <div className="alliances-section">
       {/* Corporate Alliances */}
       <div className="corporate-alliances">
@@ -67,10 +68,12 @@ const CorporateAllience: React.FC = () => {
           ))}
         </div>
       </div>
+      </div>
 
-      <FormDesign />
+      <FormDesign title='Contact Us for Partnership Opportunities'/>
       <Footer />
     </div>
+
   );
 };
 
