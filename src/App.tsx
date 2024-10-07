@@ -34,6 +34,7 @@ import img1 from "./assets/images/video/pexels-jokassis-5534595.jpg"
 import HorizontalCarousel from './pages/image';
 import IndustriesPage from './pages/consulting/implicaConsulting';
 import AppContainer from "./components/mobile-navbar"
+import Component from './pages/caro';
 interface MediaType {
   src: string;
   alt: string;
@@ -69,6 +70,16 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
 export { MainLayout };
 const App: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const media: MediaType[] = [
     {
       src:video1, // Image source (for the image)
@@ -105,7 +116,7 @@ const App: React.FC = () => {
           <Route path="/" element={
             <>
               <section id="welcome">
-                <HorizontalCarousel media={media} />
+              {isMobile ?  <Component/>: <HorizontalCarousel media={media} />}
                 {/* <WelcomePage /> */}
               </section>
               <section id="hero">
