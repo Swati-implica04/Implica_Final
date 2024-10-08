@@ -85,7 +85,7 @@ const CompanyAd = () => {
     <FactsComponent
         title="Facts"
         facts={facts}
-        backgroundImage={map}
+        backgroundimage={map}
       />
     <div style={{background:'white'}}>
     <div className="features-container">

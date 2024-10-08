@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import HeroImage from "../../assets/images/laptop-with-futuristic-design-screen-glass-sphere-generative-ai_561855-22012-removebg-preview.png"; // Path to your image
+import HeroImage from "../../assets/images/consulting/businessman-using-tablet-with-network-icons.jpg"; // Path to your image
 import Footer from "../Footer";
-
+import img from "../../assets/images/consulting/hologram-projector-screen-with-cloud-system-technology.jpg"
 // Digital Component
 const Container = styled.div`
   display: flex;
@@ -43,16 +43,18 @@ const ServiceDescription = styled.p`
 `;
 
 // Right section (Details and Image placeholder)
-const DetailsContainer = styled.div`
+const DetailsContainer = styled.div<{ backgroundImage: string }>`
   width: 50%;
-  background: rgba(217, 217, 217, 1);
   height: 400px; // Adjust based on the content
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   margin-top:200px;
-  color: black; /* Black text */
+  color: black; 
+    background-size: cover;
+  background-position: center;
+    background-image: url(${(props) => props.backgroundImage});
 `;
 const serviceData = [
   {
@@ -166,7 +168,7 @@ const Digital: React.FC = () => {
         </ServiceList>
 
         {/* Right Section - Details and Image */}
-        <DetailsContainer>
+        <DetailsContainer backgroundImage={img} >
           {/* Image Placeholder (could be a service-related image) */}
         </DetailsContainer>
       </Container>
@@ -376,16 +378,16 @@ const BottomTitle = styled.h2`
   margin-bottom: 20px;
   color: white;
   font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
-  font-size: 26px;
+  font-size: 48px;
   font-weight: 500;
-  line-height: 34px;
+  line-height: 48px;
   letter-spacing: -0.01em;
   text-align: left;
 `;
 
 // Bottom Content
 const BottomContent = styled.p`
-  max-width: 800px;
+  // max-width: 800px;
   margin: 0 auto;
   color: white;
   font-family: var(--TypographyFontFamilyBody-WorkSans);

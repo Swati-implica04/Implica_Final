@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import HeroImage from "../../assets/images/laptop-with-futuristic-design-screen-glass-sphere-generative-ai_561855-22012-removebg-preview.png"; // Path to your image
 import Footer from "../Footer";
-
 import img1 from "../../assets/images/consulting/pexels-vlada-karpovich-7433822.jpg";
 import img2 from "../../assets/images/consulting/pexels-yankrukov-7794005.jpg";
 import img3 from "../../assets/images/consulting/business-people-working-with-ipad-side-view.jpg"; 

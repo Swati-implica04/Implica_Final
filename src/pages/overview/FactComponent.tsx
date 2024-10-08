@@ -11,13 +11,13 @@ interface Fact {
 interface FactsComponentProps {
   title: string;
   facts: Fact[];
-  backgroundImage: string;
+  backgroundimage: string;
 //   icon: string;
 }
 
-const FactsComponent: React.FC<FactsComponentProps> = ({ title, facts, backgroundImage}) => {
+const FactsComponent: React.FC<FactsComponentProps> = ({ title, facts, backgroundimage }) => {
   return (
-    <Container backgroundImage={backgroundImage}>
+    <Container backgroundImage={backgroundimage}>
       <Title>{title}</Title>
       <FactsGrid>
         {facts.map((fact) => (
