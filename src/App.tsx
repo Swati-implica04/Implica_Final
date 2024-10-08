@@ -32,7 +32,7 @@ import video2 from "./assets/images/video/12324291-uhd_3840_2160_60fps.mp4";
 import video1 from "./assets/images/video/5396818-uhd_3840_2160_30fps.mp4"
 import img1 from "./assets/images/video/pexels-jokassis-5534595.jpg"
 import HorizontalCarousel from './pages/image';
-import IndustriesPage from './pages/Consulting/implicaConsulting';
+import IndustriesPage from './pages/consulting/implicaConsulting';
 import AppContainer from "./components/mobile-navbar"
 import Component from './pages/caro';
 interface MediaType {
