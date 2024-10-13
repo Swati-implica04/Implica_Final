@@ -28,7 +28,7 @@ const OurStory = () => {
 
 export default OurStory;
 const Image = styled.img`
-  width: 300px; /* Adjust width as needed */
-  height: 300px; /* Maintain aspect ratio */
+  width: 544px; /* Adjust width as needed */
+  height: 436px; /* Maintain aspect ratio */
   margin-bottom: 20px; /* Add space between images */
 `;

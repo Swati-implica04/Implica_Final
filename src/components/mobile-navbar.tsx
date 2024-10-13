@@ -202,7 +202,7 @@ export default function Component() {
   }
 
   const handleLinkClick = (link: string) => {
-    // console.log(Navigating to: ${link});
+    // console.log(`Navigating to: ${link}`);
     navigate(link);
     closeMenu();
   }

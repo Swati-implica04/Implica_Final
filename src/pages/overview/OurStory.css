@@ -8,17 +8,28 @@
   }
   
   .our-story-title {
-    font-size: 2.5rem;
     margin-bottom: 20px;
+font-family: Houschka Rounded;
+font-size: 66px;
+font-weight: 500;
+line-height: 74px;
+letter-spacing: -0.03em;
+text-align: left;
+
   }
   
   .our-story-intro, .our-story-conclusion {
-    font-size: 1.1rem;
-    line-height: 1.6;
     margin-bottom: 40px;
-    max-width: 800px;
+    /* max-width: 1200px; */
     margin-left: auto;
     margin-right: auto;
+font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+font-size: 26px;
+font-weight: 500;
+line-height: 34px;
+letter-spacing: -0.01em;
+text-align: left;
+
   }
   
   .our-story-images {

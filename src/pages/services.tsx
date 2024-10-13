@@ -7,6 +7,7 @@ import strategyConsultingImage from '../assets/images/services/office-workers-us
 import operationalConsultingImage from '../assets/images/services/technician-doing-ai-simulation.jpg';
 import innovationConsultingImage from '../assets/images/services/medium-shot-man-holding-device.jpg';
 import sustainabilityConsultingImage from '../assets/images/services/man-using-tablet-eco-friendly-wind-power-project-layout.jpg';
+import { FaArrowDown, FaArrowUp, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const servicesData = [
   { title: "Tech Services", subtitle: "Innovative IT solutions", image: operationalConsultingImage },
@@ -39,7 +40,7 @@ const Services = () => {
         ))}
       </div>
       <button className="view-all-button" onClick={handleViewAllClick}>
-        {isExpanded ? 'Collapse' : 'View all topics'} <span>{isExpanded ? '↑' : '↓'}</span>
+        {isExpanded ? 'Collapse' : 'View all topics'}         <span>{isExpanded ? <FaArrowUp /> : <FaArrowDown />}</span>
       </button>
     </section>
   );

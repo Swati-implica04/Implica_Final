@@ -37,7 +37,7 @@ const CompanyAd = () => {
     <Image src={im} alt="Description of image 1" />
    
       <h1 className="slogan">
-        Where vision meets execution—<span className="highligt">Implica Co.</span>
+        Where vision meets execution-<span className="highligt">Implica Co.</span>
       </h1>
       <p className="descriptio">
       At Implica Global Corporation, we do more than transform businesses; we empower them to make a difference for their customers and communities.
@@ -57,7 +57,8 @@ const CompanyAd = () => {
       <div className="approach-section reverse">
         {/* <div className="image-placeholder"></div> */}
         <p className="approach-text">
-          At Implica, we believe that true stability comes from being agile, forward-thinking, and ready to embrace new opportunities. Our journey from a small consultancy to a global corporation reflects this ethos. Today, we support over $16.7 billion in combined business valuations across 500+ diverse businesses, from startups and multinational corporations to government entities.
+          At Implica, we believe that true stability comes from being agile, forward-thinking, and ready to embrace new opportunities. Our journey from a small consultancy to a global corporation reflects this ethos. 
+          <p>Today, we support over $16.7 billion in combined business valuations across 500+ diverse businesses, from startups and multinational corporations to government entities.</p>
         </p>
       </div>
 
@@ -93,33 +94,33 @@ const CompanyAd = () => {
       <div className="features-grid">
         <div className="feature-item">
           <h3>Tech Services</h3>
-          <p>Empowering organizations with cutting-edge technology solutions that drive efficiency, innovation, and growth.</p>
-         <Image src={img3} alt="Description of image 1" />
+          <p className='yts'>Empowering organizations with cutting-edge technology solutions that drive efficiency, innovation, and growth.</p>
+         <Imag src={img3} alt="Description of image 1" />
         </div>
         <div className="feature-item">
           <h3>Management Consulting</h3>
           <p>Helping businesses optimize their operations, enhance leadership, and achieve operational excellence.</p>
-         <Image src={img4} alt="Description of image 1" />
+         <Imag src={img4} alt="Description of image 1" />
         </div>
         <div className="feature-item">
           <h3>Strategy Consulting</h3>
           <p>Crafting actionable strategies that align with market dynamics and future business goals.</p>
-         <Image src={img5} alt="Description of image 1" />
+         <Imag src={img5} alt="Description of image 1" />
         </div>
         <div className="feature-item">
           <h3>Operational Consulting</h3>
           <p>Streamlining processes to improve productivity and reduce costs.</p>
-         <Image src={img6} alt="Description of image 1" />
+         <Imag src={img6} alt="Description of image 1" />
         </div>
         <div className="feature-item">
           <h3>Marketing Consulting</h3>
           <p>Developing data-driven marketing strategies that resonate with target audiences and drive growth.</p>
-         <Image src={img7} alt="Description of image 1" />
+         <Imag src={img7} alt="Description of image 1" />
         </div>
         <div className="feature-item">
           <h3>Sustainability & Green</h3>
           <p>Leading the charge towards sustainable practices, ensuring long-term success for our clients and the planet.</p>
-         <Image src={img8} alt="Description of image 1" />
+         <Imag src={img8} alt="Description of image 1" />
         </div>
       </div>
     </div>
@@ -132,6 +133,10 @@ const CompanyAd = () => {
 
 export default CompanyAd;
 const Image = styled.img`
+  width: 544px; /* Adjust width as needed */
+  height: 436px; /* Maintain aspect ratio */
+`;
+const Imag= styled.img`
   width: 300px; /* Adjust width as needed */
   height: 300px; /* Maintain aspect ratio */
 `;

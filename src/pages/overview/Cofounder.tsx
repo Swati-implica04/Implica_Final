@@ -26,7 +26,7 @@ const CoreTitle = styled.h1`
   font-weight: 400;
   margin-bottom: 40px;
   text-align: left;
-  padding-top: 40px;
+  padding-top: 60px;
 
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -120,12 +120,11 @@ const IconLink = styled.a`
 `;
 
 const Image = styled.img`
-  max-width: 432px;
-  max-height: 575px;
+  width: 432px;  // Set the width you want
+  height: 575px;  // Set the height you want
+  // object-fit: contain;  // This ensures the image covers the area while keeping its aspect ratio
   margin-bottom: 20px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  object-position: center;
 
   @media (max-width: 768px) {
     max-width: 100%;

@@ -68,7 +68,7 @@ const PurposeMissionValues = () => {
               I: Innovation, M: Magnify, P: Partnerships, L: Leadership, I: Integrity, C: Consistency, A: Achievement.
             </AnimatedText>
           )}
-          {!isReadMore && <ReadMoreLink onClick={handleReadMoreClick}>Read more</ReadMoreLink>}
+          {/* {!isReadMore && <ReadMoreLink onClick={handleReadMoreClick}>Read more</ReadMoreLink>} */}
         </RightSection>
       </Content>
 
@@ -108,7 +108,7 @@ const LeftSection = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 20%;
-  padding: 40px;
+  padding: 50px;
   color: white;
 `;
 
@@ -146,7 +146,7 @@ const CircleImage = styled.img`
 const RightSection = styled.div`
   width: 50%;
   color: white;
-  padding: 80px;
+  padding: 50px;
   margin-top: 150px;
   text-align: left;
 `;
@@ -184,17 +184,7 @@ const AnimatedText = styled.p<{ isVisible: boolean }>`
       : 'none'};
 `;
 
-const ReadMoreLink = styled.a`
-  font-size: 1.2rem;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 const Footer = styled.div`
   display: flex;

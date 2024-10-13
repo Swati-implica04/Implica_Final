@@ -198,7 +198,7 @@ export default function ContactForm({ title }: ContactFormProps) {
             </CheckboxItem>
             <CheckboxItem>
               <Checkbox />
-              I’m looking to collaborate or partner with Implica Global.
+              I’m looking to collaborate or partner with Implica Global Co.
             </CheckboxItem>
             <CheckboxItem>
               <Checkbox />
