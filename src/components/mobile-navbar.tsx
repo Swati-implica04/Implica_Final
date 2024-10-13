@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { MdSearch, MdMenu, MdChevronRight, MdChevronLeft, MdClose, MdAdd, MdRemove } from 'react-icons/md'
 import { Link, useNavigate } from 'react-router-dom'
 import Log from "../assets/images/Implica_full_dark_transparent_png.png"
+
 const AppContainer = styled.div`
   font-family: Arial, sans-serif;
   background-color: #000;
@@ -24,12 +25,6 @@ const Header = styled.header`
   right: 0;
   background-color: #000;
   z-index: 1000;
-`
-
-const Logo = styled.h1`
-  color: #ff00ff;
-  font-size: 1.5rem;
-  margin: 0;
 `
 
 const IconButton = styled.button`
@@ -67,13 +62,17 @@ const MenuItem = styled.li`
   border-bottom: 1px solid #333;
 `
 
-const MenuLink = styled.a`
+const MenuLink = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   color: #fff;
-  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
 `
 
 const BackButton = styled.button`
@@ -102,10 +101,10 @@ const SubMenuItem = styled.li`
 export default function Component() {
   type MenuType = 'main' | 'about' | 'industries' | 'services' | 'career' | 'insights';
   const navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentMenu, setCurrentMenu] = useState<MenuType>('main')
-  const [menuStack, setMenuStack] = useState<MenuType[]>(['main'])
-  const [expandedItems, setExpandedItems] = useState<string[]>([])
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentMenu, setCurrentMenu] = useState<MenuType>('main');
+  const [menuStack, setMenuStack] = useState<MenuType[]>(['main']);
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const menus: Record<MenuType, { title: string; submenu?: MenuType; link?: string; expandable?: { title: string; link: string }[] }[]> = {
     main: [
@@ -178,49 +177,48 @@ export default function Component() {
   }
 
   const navigateTo = (submenu: MenuType) => {
-    setCurrentMenu(submenu)
-    setMenuStack([...menuStack, submenu])
+    setCurrentMenu(submenu);
+    setMenuStack([...menuStack, submenu]);
   }
 
   const goBack = () => {
     if (menuStack.length > 1) {
-      const newStack = [...menuStack]
-      newStack.pop()
-      setMenuStack(newStack)
-      setCurrentMenu(newStack[newStack.length - 1])
+      const newStack = [...menuStack];
+      newStack.pop();
+      setMenuStack(newStack);
+      setCurrentMenu(newStack[newStack.length - 1]);
     }
   }
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen(!isMenuOpen);
   }
 
   const closeMenu = () => {
-    setIsMenuOpen(false)
-    setCurrentMenu('main')
-    setMenuStack(['main'])
-    setExpandedItems([])
+    setIsMenuOpen(false);
+    setCurrentMenu('main');
+    setMenuStack(['main']);
+    setExpandedItems([]);
   }
 
   const handleLinkClick = (link: string) => {
-    console.log(`Navigating to: ${link}`)
-    navigate(link)
-    closeMenu()
+    // console.log(Navigating to: ${link});
+    navigate(link);
+    closeMenu();
   }
 
   const toggleExpand = (title: string) => {
     setExpandedItems(prev => 
       prev.includes(title) ? prev.filter(item => item !== title) : [...prev, title]
-    )
+    );
   }
 
   return (
     <AppContainer>
       <Header>
         <Link to="/">
-      <img src={Log} alt="Company Logo" className="responsive-logo" style={{width:'270px'}}/>
-      </Link>
-        {/* <Logo>implica</Logo> */}
+          <img src={Log} alt="Company Logo" className="responsive-logo" style={{width:'270px'}}/>
+        </Link>
         <div style={{display:'flex'}}>
           <IconButton>
             <MdSearch size={24} />
@@ -255,7 +253,7 @@ export default function Component() {
                     <SubMenuList>
                       {item.expandable.map((subItem, subIndex) => (
                         <SubMenuItem key={subIndex}>
-                          <MenuLink href="" onClick={() => handleLinkClick(subItem.link)}>
+                          <MenuLink onClick={() => handleLinkClick(subItem.link)}>
                             {subItem.title}
                           </MenuLink>
                         </SubMenuItem>
@@ -264,7 +262,7 @@ export default function Component() {
                   )}
                 </>
               ) : (
-                <MenuLink href="" onClick={() => handleLinkClick(item.link!)}>
+                <MenuLink onClick={() => handleLinkClick(item.link!)}>
                   {item.title}
                 </MenuLink>
               )}
@@ -273,5 +271,5 @@ export default function Component() {
         </MenuList>
       </MenuContainer>
     </AppContainer>
-  )
+  );
 }
