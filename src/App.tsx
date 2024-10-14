@@ -35,6 +35,7 @@ import HorizontalCarousel from './pages/image';
 import IndustriesPage from './pages/Consulting/implicaConsulting';
 import AppContainer from "./components/mobile-navbar"
 import Component from './pages/caro';
+
 interface MediaType {
   src: string;
   alt: string;
