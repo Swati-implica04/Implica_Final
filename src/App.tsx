@@ -35,49 +35,49 @@ import HorizontalCarousel from './pages/image';
 import IndustriesPage from './pages/Consultingcode/implicaConsulting';
 import AppContainer from "./components/mobile-navbar"
 import Component from './pages/caro';
-
+ 
 interface MediaType {
   src: string;
   alt: string;
   caption: string;
   type: "image" | "video"; // Ensure type is a union of string literals
 }
-
+ 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
-
+ 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const location = useLocation(); // Get the current location
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+ 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+ 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
+ 
   return (
     <>
       {/* Conditionally render the navbar */}
-      {location.pathname !== '/implica-ai' && (isMobile ? <AppContainer /> : <CustomNavbar />)}
+      {location.pathname !== '/implica-ai' &&location.pathname!=="/capital"&& (isMobile ? <AppContainer /> : <CustomNavbar />)}
       {children}
     </>
   );
 };
-
+ 
 export { MainLayout };
 const App: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+ 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+ 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -168,5 +168,5 @@ const App: React.FC = () => {
     </Router>
   );
 };
-
+ 
 export default App;

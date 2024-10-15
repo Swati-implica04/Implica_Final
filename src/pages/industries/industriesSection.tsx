@@ -47,7 +47,7 @@ const SectionContainer = styled.section`
 `;
 
 const ContentWrapper = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   margin-bottom: 30px;
   padding: 0 20px; /* Prevent text from touching edges on small screens */
   box-sizing: border-box;
@@ -76,7 +76,7 @@ const Description = styled.p`
   margin: 0 auto;
   padding: 0 10px;
 font-family: var(--TypefaceBody);
-font-size: 18px;
+font-size: 24px;
 font-weight: 500;
 line-height: 30px;
 text-align: center;

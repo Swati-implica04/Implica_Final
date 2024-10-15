@@ -15,7 +15,7 @@ const CSRFrameWork = () => {
       {/* Header Section */}
       <div className="csr-framework-header-container">
         <div className="csr-framework-header">
-          <h1>Our CSR framework is built around four strategic pillars that drive impact</h1>
+          <h1>Our CSR framework is built around four strategic pillars that drive impact.</h1>
         </div>
       </div>
       

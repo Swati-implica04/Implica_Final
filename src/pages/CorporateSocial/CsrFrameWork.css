@@ -9,7 +9,7 @@
   .csr-framework-header-container {
     text-align: left;
     background-color: #120D17; /* A different background color if needed */
-    height: 320px;
+    /* height: 320px; */
     width: 100vw;
   }
   
@@ -19,7 +19,7 @@
     line-height: 48px;
     color: #FFFFFF;
     height: 192px;
-    width: 480px;
+    width: 680px;
     padding-top: 30px;
     padding-left: 20px;
   }

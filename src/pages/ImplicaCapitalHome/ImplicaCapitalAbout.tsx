@@ -57,9 +57,68 @@ const Button = styled.button`
     background-color:rgba(118, 8, 116, 0.8); /* Darken color on hover */
   }
 `;
+
+const NavbarContainer = styled.nav`
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  background-color: white;
+  padding: 20px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+`;
+
+const NavMenu = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const NavItem = styled.li`
+  margin: 0 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #620062; /* Purple color for hover effect */
+  }
+`;
+
+const SubmitButton = styled.button`
+  padding: 10px 20px;
+  background-color: #4a004a; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #620062; /* Button hover color */
+  }
+`;
+
+
 const ImplicaCapitalHome : React.FC = () => {
   return (
     <div>
+          <NavbarContainer>
+      {/* Menu Items */}
+      <NavMenu>
+        <NavItem>About Us</NavItem>
+        <NavItem>Focus</NavItem>
+        <NavItem>Our Funds</NavItem>
+        <NavItem>Contact Us</NavItem>
+      </NavMenu>
+
+      {/* Submit Button */}
+      <SubmitButton>SUBMIT NOW</SubmitButton>
+    </NavbarContainer>
         <div className="ImplicaCapitalHome">
             <h1 className="headerclass">
                 ABOUT US

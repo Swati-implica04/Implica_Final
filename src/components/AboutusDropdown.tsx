@@ -27,7 +27,7 @@ const AboutUsDropdown: React.FC = () => {
           <Nav.Link as={Link} to = "/capital">Implica Capital</Nav.Link>
           <Nav.Link as={Link} to="/ventures">Implica Ventures</Nav.Link>
           <Nav.Link  as={Link} to="/implica-ai">Implica A.I.</Nav.Link>
-          <Nav.Link as={Link} to="/implica-consulting">Implica Consulting</Nav.Link>
+          <Nav.Link as={Link} to="/implica-consulting">Implica Foundation</Nav.Link>
           {/* <Nav.Link href="#private">Implica Private</Nav.Link> */}
         </div>
         <div className="featured-section">

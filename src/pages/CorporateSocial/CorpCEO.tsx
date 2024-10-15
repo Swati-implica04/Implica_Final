@@ -12,6 +12,7 @@ const CorpCEO: React.FC = () => {
           “We believe that corporate success and social responsibility go hand-in-hand. By embedding CSR into our core business strategy, we not only create value for our stakeholders but also drive positive change for the communities and ecosystems in which we operate.”
         </span>
         <span className="ceoname_span2">-Sarved Dhar Badgayan, CEO</span>
+        <span className="ceoname_span2">Implica Global Corporation, Global.</span>
       </div>
 
       {/* Right section with CEO image */}

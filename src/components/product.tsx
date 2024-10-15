@@ -5,7 +5,7 @@ const ProductsDropdown: React.FC = () => {
     <div className="career-section">
       <p className="Career" style={{ paddingLeft: "20px" }}>Products</p>
       <div style={{ display: "flex" }}>
-        <div className="product-category">
+        {/* <div className="product-category">
           <p className="inProduct">Implica Capital</p>
           <div className="product-cards">
             <div className="product-card">
@@ -17,9 +17,9 @@ const ProductsDropdown: React.FC = () => {
                <p className="imgText">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="product-category" style={{ paddingLeft: "30px" }}>
-          <p className="inProduct">Implica Ventures presents Knocksy</p>
+          <p className="inProduct">Implica Ventures presents : Knocksy Boat</p>
           <div className="product-cards">
             <div className="product-card">
               <div className="imag"></div>

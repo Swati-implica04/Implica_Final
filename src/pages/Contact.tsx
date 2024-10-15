@@ -96,17 +96,23 @@ const ServiceName = styled.p`
 `
 
 export default function ContactPage() {
+  const services = [
+    { id: 1, name: 'Request for Services' },
+    { id: 2, name: 'Submit RFP' },
+    { id: 3, name: 'CSR' },
+  ];
+  
   return (
     <Container>
       <Title>What's on your mind?</Title>
       <Subtitle>We would love to hear from you</Subtitle>
       <ServiceBoxContainer>
-        {[1, 2, 3].map((index) => (
-          <ServiceBox key={index}>
-            <Checkbox />
-            <ServiceName>Name of Service</ServiceName>
-          </ServiceBox>
-        ))}
+      {services.map((service) => (
+  <ServiceBox key={service.id}>
+    <Checkbox />
+    <ServiceName>{service.name}</ServiceName>
+  </ServiceBox>
+))}
       </ServiceBoxContainer>
       <FORM />
       <IGC />

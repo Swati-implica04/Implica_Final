@@ -1,120 +1,119 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Search, ChevronRight } from 'lucide-react'
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100vw;
-  min-height: 848px;
-  padding: 64px 0 0 0;
+  height: 100vh; /* Full height of viewport */
+  padding: 32px 5%; /* Adjust padding */
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  padding-left: 14%
-`
+  gap: 32px;
+  box-sizing: border-box; /* Ensure padding is included in total size */
+  overflow: hidden; /* Prevent scrolling */
+  max-width: 1200px; /* Limit maximum width */
+  margin: 0 auto; /* Center the container */
+`;
 
 const Title = styled.h1`
-  font-size: 64px;
+  font-size: 48px; /* Smaller font for better fit */
   font-weight: 500;
-  line-height: 64px;
+  line-height: 1.2;
   text-align: left;
   color: #FFFFFF;
-`
+  margin-bottom: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    text-align: center;
+  }
+`;
 
 const Content = styled.div`
   display: flex;
-  gap: 64px;
-`
-
-const CityList = styled.div`
-  width: 360px;
-  hight: 720px;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-`
-
-const SearchContainer = styled.div`
-  position: relative;
-`
-
-const SearchInput = styled.input`
-  // width: 100%;
-  padding: 12px 16px;
-  background-color: transparent;
-  border: 1px solid #333;
-  border-radius: 4px;
-  color: white;
-  font-size: 1rem;
-
-  &::placeholder {
-    color: #666;
+  gap: 32px;
+  width: 100%;
+  justify-content: space-between; /* Ensure even spacing */
+  flex-grow: 1; /* Ensure it expands to fill available space */
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
-
-  &:focus {
-    outline: none;
-    border-color: #c10682;
-  }
-`
-
-const SearchIcon = styled(Search)`
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-`
-
-const CityListUl = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 360px;
-  height: 720px;
-  gap: 48px;
-  opacity: 0px;
-
-`
-
-const CityListItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #333;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #111;
-  }
-`
+`;
 
 const MapContainer = styled.div`
-  width: 640px;
-  height: 640px;
+  flex: 1;
+  min-width: 300px; /* Minimum width for map */
+  height: 100%; /* Ensure it fills available height */
   background-color: #D9D9D9;
-`
+
+  @media (max-width: 768px) {
+    height: 320px; /* Reduce height for smaller screens */
+  }
+`;
+
+// Contact section styles
+const ContactContainer = styled.div`
+  flex: 1;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 32px;
+  max-width: 500px; /* Limits width */
+  min-width: 300px; /* Minimum size for responsiveness */
+  height: 100%; /* Ensure it fills the available height */
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const ContactTitle = styled.h2`
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
+
+const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+const ContactItem = styled.p`
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin: 0;
+`;
 
 export default function IGCOffices() {
   return (
     <Container>
-      <Title>IGC Offices</Title>
+      <Title>IGC Contact</Title>
       <Content>
-        <CityList>
-          <SearchContainer>
-            <SearchInput type="text" placeholder="Enter city" />
-            <SearchIcon size={20} />
-          </SearchContainer>
-          <CityListUl>
-            {Array(8).fill(null).map((_, index) => (
-              <CityListItem key={index}>
-                <span>City Name</span>
-                <ChevronRight size={20} color="#D9D9D9" />
-              </CityListItem>
-            ))}
-          </CityListUl>
-        </CityList>
+        <ContactContainer>
+          <ContactTitle>IGC Contact</ContactTitle>
+          <ContactInfo>
+            <ContactItem>
+              Headquarters Address: Implica Global Corporation OÜ, Ahtri tn 12, Kesklinna linnaosa, 15551 Tallinn, Harju maakond, Estonia
+            </ContactItem>
+            <ContactItem>Phone Number: +393336893675</ContactItem>
+            <ContactItem>Email Address: info@implicaglobalcorp.com</ContactItem>
+            <ContactItem>Business Hours: Monday to Sunday: 24/7</ContactItem>
+          </ContactInfo>
+        </ContactContainer>
+
+        {/* Map container */}
         <MapContainer />
       </Content>
     </Container>
-  )
+  );
 }

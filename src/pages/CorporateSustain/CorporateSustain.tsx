@@ -14,28 +14,32 @@ const images = [
     src: img,
     alt: "Slide 1",
     caption: "Carbon Neutrality by 2040 ",
-    content: "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power.",
+    content:
+      "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power.",
     subText: "",
   },
   {
     src: img,
     alt: "Slide 2",
     caption: "Renewable Energy Adoption ",
-    content: "We are rapidly transitioning to 100% renewable energy across our global facilities. By integrating solar power, wind energy, and other clean technologies into our operations, we aim to reduce our dependency on fossil fuels and contribute to the global effort to mitigate climate change. ",
+    content:
+      "We are rapidly transitioning to 100% renewable energy across our global facilities. By integrating solar power, wind energy, and other clean technologies into our operations, we aim to reduce our dependency on fossil fuels and contribute to the global effort to mitigate climate change. ",
     subText: "Subtext for Slide 2",
   },
   {
     src: img,
     alt: "Slide 3",
     caption: "Circular Economy Practices",
-    content: "Our commitment to the circular economy is reflected in our focus on reducing waste, reusing materials, and ensuring that our products and services are designed with sustainability in mind. From recycling initiatives to sustainable product design, we are reimagining how businesses can operate more efficiently and responsibly. ",
+    content:
+      "Our commitment to the circular economy is reflected in our focus on reducing waste, reusing materials, and ensuring that our products and services are designed with sustainability in mind. From recycling initiatives to sustainable product design, we are reimagining how businesses can operate more efficiently and responsibly. ",
     subText: "Subtext for Slide 3",
   },
   {
     src: img,
     alt: "Slide 4",
     caption: " Reforestation and Biodiversity",
-    content: "Through our Plant & Life Initiative, we are committed to protecting biodiversity and restoring natural ecosystems. We have planted 100 trees as part of our global reforestation efforts starting from 2024, helping to combat climate change and preserve wildlife habitats.",
+    content:
+      "Through our Plant & Life Initiative, we are committed to protecting biodiversity and restoring natural ecosystems. We have planted 100 trees as part of our global reforestation efforts starting from 2024, helping to combat climate change and preserve wildlife habitats.",
     subText: "Subtext for Slide 4",
   },
 ];
@@ -43,18 +47,24 @@ const images = [
 const CorporateSustain: React.FC = () => {
   return (
     <PageWrapper>
-      <SustainabilityHeader backgroundImage={backgroundImage}/>
+      <SustainabilityHeader backgroundImage={backgroundImage} />
       <GlobalSustain />
-      <SectionContainer>
-        <LeftContent>
-          <Heading>Environmental Stewardship: Protecting Our Planet</Heading>
-        </LeftContent>
-        <RightContent>
-          <Text>
-            At Implica, we are deeply committed to minimizing our environmental footprint and promoting a circular economy. By investing in clean energy, reducing our resource consumption, and preserving natural ecosystems, we are paving the way for a greener, more resilient planet.
-          </Text>
-        </RightContent>
-      </SectionContainer>
+      <CommitmentSection>
+        <SectionContainer>
+          <LeftContent>
+            <Heading>Environmental Stewardship: Protecting Our Planet</Heading>
+          </LeftContent>
+          <RightContent>
+            <Text>
+              At Implica, we are deeply committed to minimizing our
+              environmental footprint and promoting a circular economy. By
+              investing in clean energy, reducing our resource consumption, and
+              preserving natural ecosystems, we are paving the way for a
+              greener, more resilient planet.
+            </Text>
+          </RightContent>
+        </SectionContainer>
+      </CommitmentSection>
       <HorizontalCarousel images={images} />
       <SustainableFuture />
       <Footer />
@@ -69,11 +79,22 @@ const PageWrapper = styled.div`
   max-width: 100vw;
   overflow-x: hidden;
 `;
+const CommitmentSection = styled.div`
+  width: 100%;
+  background-color: white;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+  min-height: 300px;
+`;
 
 const SectionContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
   background-color: white;
   color: black;
   padding: 50px 5%;
@@ -88,8 +109,8 @@ const SectionContainer = styled.div`
 const LeftContent = styled.div`
   flex: 1;
   padding-right: 50px;
-  max-width: 480px;
-
+  max-width: 500px;
+  text-align: left;
   @media (max-width: 768px) {
     padding-right: 0;
     padding-bottom: 20px;
@@ -98,7 +119,7 @@ const LeftContent = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-family: 'Houschka Pro', sans-serif;
+  font-family: "Houschka Pro", sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 1.2;
@@ -119,7 +140,7 @@ const RightContent = styled.div`
 
 const Text = styled.p`
   max-width: 500px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.4;

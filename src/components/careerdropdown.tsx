@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import "./dropdown.css"
+import { Link } from "react-router-dom";
 const CareerDropdown: React.FC = () => {
   return (
     <div className="career-section">
@@ -16,7 +17,7 @@ const CareerDropdown: React.FC = () => {
           <p className="head">Human Resource</p>
           <Nav.Link href="#positions">Open Positions</Nav.Link>
           <Nav.Link href="#life">Life at IGC</Nav.Link>
-          <Nav.Link href="#partners">Academic Partners</Nav.Link>
+          <Nav.Link as={Link} to="/alliances">Academic Partners</Nav.Link>
           <Nav.Link href="#waitlist">Join the Waitlist</Nav.Link>
         </div>
         <div className="featured-section">

@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled components
+import imgTab1 from "../../assets/images/diversity/drawing-women-looking-camera.jpg";
+import imgTab2 from "../../assets/images/gay-with-rainbow-flags-sitting-street.jpg";
+import imgTab3 from "../../assets/images/diversity/pexels-charles-parker-5845744.jpg";
+import logoImplica from "../../assets/images/newlogo with short size.png";
+
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -14,11 +18,22 @@ const Container = styled.div`
 const KeyAchievements = styled.div`
   grid-column: 1 / 2;
   display: flex;
+  align-items: center;
   font-size: 50px;
   font-weight: 500;
-  align-self: center;
   color: #000000;
   padding-left: 5%;
+`;
+
+const KeyAchievementsText = styled.span`
+  white-space: nowrap;
+`;
+
+const LogoImage = styled.img`
+  // width: 100px;
+  height: 50px;
+  margin-left: 20px;
+  vertical-align: middle;
 `;
 
 const Card = styled.div`
@@ -28,57 +43,44 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   background-color: #FFFFFF;
-  padding: 0;  /* Remove padding for correct positioning */
+  padding: 0;
   border-radius: 10px;
-  overflow: hidden; /* Ensure that the content stays inside the card */
+  overflow: hidden;
 `;
 
 const CardImage = styled.img`
   width: 480px;
   height: 480px;
-  border-radius: 8px 8px 0 0; /* Rounded top corners only */
+  border-radius: 8px 8px 0 0;
 `;
 
 const CardTextBox = styled.div`
   position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    padding: 16px;
-    margin-left: 17%;
-    gap: 8px;
-    color: #000000;
-    width: 360px;
-    height: 128px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  padding: 8px;
+  margin-left: 16%;
+  gap: 8px;
+  color: #000000;
+  width: 360px;
+  height: 128px;
 `;
 
 const CardText = styled.div`
-  font-family: Houschka Pro;
+  font-family: 'Houschka Pro', sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;
   text-align: left;
 `;
 
-const LogoImage = styled.img`
-  width: 100px; /* Adjust size for visibility */
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 20px; /* Adjust space between text and logo */
-`;
-
-import imgTab1 from "../../assets/images/diversity/drawing-women-looking-camera.jpg";
-import imgTab2 from "../../assets/images/gay-with-rainbow-flags-sitting-street.jpg";
-import imgTab3 from "../../assets/images/diversity/pexels-charles-parker-5845744.jpg";
-import logoImplica from "../../assets/images/newlogo with short size.png";
-
-
 const KeyAchievementsSection: React.FC = () => {
   return (
     <Container>
-      <KeyAchievements>Key Achievements of 
-      <LogoImage src={logoImplica} alt="Implica Logo" />
+      <KeyAchievements>
+        <KeyAchievementsText>Key Achievements of</KeyAchievementsText>
+        <LogoImage src={logoImplica} alt="Implica Logo" />
       </KeyAchievements>
 
       <Card>

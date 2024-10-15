@@ -92,7 +92,7 @@ const industryTemplate = [
 const IndustryGrid: React.FC = () => {
   return (
     <SectionContainer>
-      <Title>Industries we impact</Title>
+      <Title>Industries we impact :</Title>
       <GridContainer>
         {industryTemplate.map((industry, index) => (
                <LazyLoad height={
