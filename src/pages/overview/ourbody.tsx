@@ -1,7 +1,7 @@
 import React from 'react';
 import './OurStory.css'; // Make sure to create and style this CSS file
-import image1 from '../../assets/images/overview/pexels-divinetechygirl-1181372.jpg'; // Replace with the actual path to your image
-import image2 from '../../assets/images/overview/pexels-kraken-images-3626720-5426376.jpg';
+import image1 from '../../assets/images/overview/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg'; // Replace with the actual path to your image
+import image2 from '../../assets/images/overview/happy-confident-business-partners-enjoying-teamwork.jpg';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 const OurStory = () => {

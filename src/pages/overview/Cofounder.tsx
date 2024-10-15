@@ -261,7 +261,7 @@ const CoreFounders = () => {
         <TeamTitle>Our team</TeamTitle>
         <TeamImage src={img4} alt="Our Team" />
         <TeamDescription>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Meet our dynamic team, dedicated to driving innovation and excellence. With diverse expertise and a shared vision, we empower growth, foster collaboration, and guide our organization toward success. Our commitment to integrity and innovation sets the foundation for a thriving future.
         </TeamDescription>
       </TeamSectionContainer>
     </CoreFoundersContainer>

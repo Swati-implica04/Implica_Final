@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import logo from '../../assets/images/Implica_full_light_transparent_png.png';
 import placeholderImage from '../../assets/images/tagLine.jpg';
-
+import placeholderImage1 from '../../assets/images/overview/Designer.jpeg'; // Adjust the path as needed
+import placeholderImage2 from '../../assets/images/overview/Designer-2.jpeg'; // Adjust the path as needed
+import placeholderImage3 from '../../assets/images/overview/Designer-3.jpeg';
 const PurposeMissionValues = () => {
   const sections = ['purpose', 'mission', 'values'];
-  const [activeSection, setActiveSection] = useState<'purpose' | 'mission' | 'values' | null>('purpose');
+  const [activeSection, setActiveSection] = useState<'purpose' | 'mission' | 'values'>('purpose');
   const [isReadMore, setIsReadMore] = useState(false);
 
   useEffect(() => {
@@ -28,6 +30,11 @@ const PurposeMissionValues = () => {
   const handleReadMoreClick = () => {
     setIsReadMore(true);
   };
+  const images = {
+    purpose: { src: placeholderImage2, alt: 'Purpose Image' },
+    mission: { src: placeholderImage1, alt: 'Mission Image' },
+    values: { src: placeholderImage3, alt: 'Values Image' },
+  };
 
   return (
     <Container>
@@ -45,7 +52,8 @@ const PurposeMissionValues = () => {
         </LeftSection>
 
         <MiddleSection>
-          <CircleImage src={placeholderImage} alt="Placeholder" />
+        {activeSection && <CircleImage src={images[activeSection].src} alt={images[activeSection].alt} />}
+          {/* <CircleImage src={placeholderImage} alt="Placeholder" /> */}
         </MiddleSection>
 
         <RightSection>

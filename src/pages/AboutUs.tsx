@@ -8,13 +8,13 @@ import styled from 'styled-components';
 import implicaLogo from '../assets/images/laptop-with-futuristic-design-screen-glass-sphere-generative-ai_561855-22012-removebg-preview.png';
 import img from "../assets/images/overview/pexels-a-darmel-7710083.jpg"
 import img2 from "../assets/images/overview/pexels-thirdman-5582871.jpg"
-import img7 from "../assets/images/services/business-people-office.jpg"
-import img6 from '../assets/images/services/pexels-shkrabaanthony-5816299.jpg';
-import img4 from '../assets/images/services/pexels-rdne-5921556.jpg';
-import img5 from '../assets/images/services/office-workers-using-finance-graphs.jpg';
-import img3 from '../assets/images/services/technician-doing-ai-simulation.jpg';
+import img7 from "../assets/images/overview/pexels-mikhail-nilov-7681961.jpg"
+import img6 from '../assets/images/overview/colleagues-working-together-environment-project.jpg';
+import img4 from '../assets/images/overview/businessman-pointing-screen-showing-project-details-colleague.jpg';
+import img5 from '../assets/images/overview/pexels-shkrabaanthony-5816299.jpg';
+import img3 from '../assets/images/overview/medium-shot-man-holding-device.jpg';
 // import img8 from '../assets/images/services/medium-shot-man-holding-device.jpg'; // Add an appropriate image for Sustainability
-import img8 from '../assets/images/services/man-using-tablet-eco-friendly-wind-power-project-layout.jpg';
+import img8 from '../assets/images/overview/pexels-n-voitkevich-8062287.jpg';
 import im from "../assets/images/diversity/pexels-august-de-richelieu-4427430.jpg"
 import logoImplica from "../assets/images/newlogo with short size.png";
 
@@ -110,7 +110,7 @@ const CompanyAd = () => {
         <div className="feature-item">
           <h3>Operational Consulting</h3>
           <p>Streamlining processes to improve productivity and reduce costs.</p>
-         <Imag src={img6} alt="Description of image 1" />
+         <Imag src={img8} alt="Description of image 1" />
         </div>
         <div className="feature-item">
           <h3>Marketing Consulting</h3>
@@ -120,7 +120,7 @@ const CompanyAd = () => {
         <div className="feature-item">
           <h3>Sustainability & Green</h3>
           <p>Leading the charge towards sustainable practices, ensuring long-term success for our clients and the planet.</p>
-         <Imag src={img8} alt="Description of image 1" />
+         <Imag src={img6} alt="Description of image 1" />
         </div>
       </div>
     </div>
