@@ -3,12 +3,13 @@ import styled from "styled-components";
 import Footer from "../Footer";
 import GlobalSustain from "./GlobalSustain";
 import SustainableFuture from "./SustainableFuture";
-import TitleBox from "./titleBox";
-import backgroundImage from "../../assets/images/Leonardo_Lightning_partnership_handshake_0.jpg";
+import backgroundImage from "../../assets/images/CSR/pexels-goumbik-653429.jpg";
 import HorizontalCarousel from "../DiversityEqual/Carusel";
-import img from "../../assets/images/CSR/growing-organic-ecological-plants-fields-background.jpg";
+import img from "../../assets/images/CSR/view-green-forest-trees-with-co2.jpg";
 import SustainabilityHeader from "./titleBox";
-
+import img3 from "../../assets/images/CSR/planet-earth-surrounded-by-nature-vegetation.jpg"
+import img2 from "../../assets/images/CSR/clean-energy-with-wind-power-plant.jpg";
+import img1 from "../../assets/images/CSR/sustainable-development-goals-still-life.jpg"
 const images = [
   {
     src: img,
@@ -19,7 +20,7 @@ const images = [
     subText: "",
   },
   {
-    src: img,
+    src: img2,
     alt: "Slide 2",
     caption: "Renewable Energy Adoption ",
     content:
@@ -27,7 +28,7 @@ const images = [
     subText: "Subtext for Slide 2",
   },
   {
-    src: img,
+    src: img1,
     alt: "Slide 3",
     caption: "Circular Economy Practices",
     content:
@@ -35,7 +36,7 @@ const images = [
     subText: "Subtext for Slide 3",
   },
   {
-    src: img,
+    src: img3,
     alt: "Slide 4",
     caption: " Reforestation and Biodiversity",
     content:

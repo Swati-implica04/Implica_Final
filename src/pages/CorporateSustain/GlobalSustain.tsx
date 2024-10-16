@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "../../assets/images/CSR/growing-organic-ecological-plants-fields-background.jpg";
+import backgroundImage from "../../assets/images/CSR/Designer-5.jpeg";
 
 // Main container for Global Sustainability
 const GlobalSustainContainer = styled.div`
@@ -27,7 +27,7 @@ const CSRBanner = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust for readability */
+    background-color: rgba(255, 255, 255, 0.6); /* Adjust for readability */
     z-index: 1;
   }
 `;

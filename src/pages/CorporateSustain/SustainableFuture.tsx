@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import grass_back from "../../assets/images/CSR/growing-organic-ecological-plants-fields-background.jpg";
+import grass_back from "../../assets/images/CSR/woman-office-working-environment-project.jpg";
 
 // Styled Components
 const Container = styled.div`
@@ -72,7 +72,7 @@ const BannerOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 `;
 
