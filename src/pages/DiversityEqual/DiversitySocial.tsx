@@ -8,6 +8,7 @@ import CreateImpact from "./CreateImpact";
 import HorizontalCarousel from "./Carusel";
 import img from "../../assets/images/pexels-tima-miroshnichenko-5685951.jpg";
 import styled from "styled-components";
+import KeyInitiativesSection from "./keyIntialize";
 const images = [
   {
     src: img,
@@ -20,18 +21,11 @@ const images = [
   {
     src: img,
     alt: "Slide 2",
-    caption: " Carbon Neutrality by [Target Year] ",
-    content:
-      "We are on an ambitious journey toward achieving carbon neutrality across all of our operations by [target year]. This involves reducing greenhouse gas emissions, optimizing energy use, and investing in renewable energy sources like solar and wind power. ",
+    caption: "Women in Leadership Network:",
+    content:"A dedicated network supporting women as they advance in their careers, offering peer mentoring, coaching, and leadership workshops.",
     subText: "Subtext for Slide 2",
   },
-  {
-    src: img,
-    alt: "Slide 3",
-    caption: "Yet Another Slide",
-    content: "Content for Slide 3",
-    subText: "Subtext for Slide 3",
-  },
+
 ];
 const DiversitySocial: React.FC = () => {
   return (
@@ -57,7 +51,7 @@ const DiversitySocial: React.FC = () => {
             Leadership Development for Women, we are committed to nurturing
             female talent and creating pathways for women to grow into
             leadership positions.
-            <p>
+            {/* <p>
               • Global Impact Program (GIP): Through GIP, we provide mentorship,
               skills development, and leadership training specifically designed
               to uplift women within our organization, empowering them to drive
@@ -67,12 +61,12 @@ const DiversitySocial: React.FC = () => {
               • Women in Leadership Network: A dedicated network supporting
               women as they advance in their careers, offering peer mentoring,
               coaching, and leadership workshops.
-            </p>
+            </p> */}
           </Text>
         </RightContent>
       </SectionContainer>
       <HorizontalCarousel images={images} />
-
+<KeyInitiativesSection/>
       <EqualitySection />
       <CreateImpact />
       <Footer />
