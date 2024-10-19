@@ -51,7 +51,7 @@
   z-index: 2; /* Keep content above the overlay */
   color: white;
   max-width: 1100px;
-  font-family: "Houschka Rounded";
+  /* font-family: "Houschka Rounded"; */
   font-size: 36px;
   font-weight: 500;
   line-height: 44px;
@@ -62,7 +62,7 @@
 .str {
   color: white; /* Emphasized part of the text */
   font-weight: bold;
-  font-family: "Houschka Rounded";
+  /* font-family: "Houschka Rounded"; */
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;

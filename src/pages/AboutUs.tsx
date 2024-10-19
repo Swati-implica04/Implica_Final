@@ -17,7 +17,114 @@ import img3 from '../assets/images/overview/medium-shot-man-holding-device.jpg';
 import img8 from '../assets/images/overview/pexels-n-voitkevich-8062287.jpg';
 import im from "../assets/images/diversity/pexels-august-de-richelieu-4427430.jpg"
 import logoImplica from "../assets/images/newlogo with short size.png";
+import backgroundImage from "../assets/images/tagLine.jpg";
 
+const BannerContainer = styled.div`
+  position: relative;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center;
+  height: 264px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  max-width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+`;
+
+const BannerContent = styled.div`
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 1100px;
+  // font-family: "Houschka Rounded";
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+`;
+
+const LogoImage = styled.img`
+  width: 123.55px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 11px;
+
+  @media (max-width: 768px) {
+    width: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+  }
+
+  @media (max-width: 320px) {
+    width: 70px;
+  }
+`;
+
+const StrongText = styled.span`
+  color: white;
+  font-weight: bold;
+  // font-family: "Houschka Rounded";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+`;
 
 
 const CompanyAd = () => {
@@ -70,19 +177,17 @@ const CompanyAd = () => {
         </p>
       </div>
     </div>
-    <div
-      className="banner-container"
-      style={{ backgroundImage: `url(${implicaLogo})` }}
-    >
-      <div className="lay"></div> {/* This is the overlay element */}
-      <div className="banner-content">
-        {/* <p className="logo"> */}
-        <img src={logoImplica} alt="Implica Logo" className="logo-image" />
-          s more than a corporation—{" "}
-    <p className="banner-content">we are a movement, driving lasting change and helping businesses achieve their full potential in a rapidly evolving world. 
-        </p>
-      </div>
-    </div>
+    <BannerContainer>
+      <Overlay />
+      <BannerContent>
+        <LogoImage src={logoImplica} alt="Implica Logo" />
+        s more than a corporation—{" "}
+        <StrongText></StrongText>{" "}
+        <br/>
+        we are a movement, driving lasting change and helping businesses achieve their full potential in a rapidly evolving world. 
+      </BannerContent>
+    </BannerContainer>
+ 
     <FactsComponent
         title="Facts"
         facts={facts}

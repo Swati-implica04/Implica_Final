@@ -2,8 +2,7 @@ import React from 'react';
 import './EqualitySection.css'; // Import the CSS file
 import eqlReq from "../../assets/images/diversity/pexels-edmond-dantes-4344860.jpg";
 import eqlpay from "../../assets/images/diversity/pexels-fauxels-3184423.jpg";
-import growthPay from "../../assets/images/overview/pexels-olia-danilevich-5313182.jpg";
-
+import growthPay from "../../assets/images/diversity/multiethnic-work-group-posing-modern-office.jpg";
 
 const EqualitySection = () => {
   return (

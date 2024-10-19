@@ -17,7 +17,7 @@
  
 .corporate-alliances h2 {
     font-size: 5vw; /* Fluid typography for responsiveness */
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     color: #fff;
     margin-bottom: 50px;
     padding-left: 2vw;
@@ -40,7 +40,7 @@
  
 .academic-alliances h2 {
     font-size: 5vw; /* Fluid typography */
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     color: #000;
     margin-bottom: 30px;
     padding-left: 2vw;

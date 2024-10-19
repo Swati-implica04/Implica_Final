@@ -111,7 +111,7 @@ const CarouselText = styled.h2`
   z-index: 10;
   animation: ${fadeInText} 0.5s ease;
   opacity: 1;
-  font-family: var(--TypefaceHeading);
+  // font-family: var(--TypefaceHeading);
   font-size: 36px;
   font-weight: 500;
   line-height: 64px;

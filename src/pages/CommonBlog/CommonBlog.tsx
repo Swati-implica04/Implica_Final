@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: left;
   padding: 80px 0px 20px 80px;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   background-color: white; /* Set the background color to white */
   position: relative; /* Added to make sure the back button positions correctly */
 `;
@@ -42,7 +42,7 @@ const Header = styled.div`
 const Title = styled.h1`
   color:#000000;
   margin: 50px 10px;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 46px;
   font-weight: 500;
   line-height: 52px;
@@ -94,7 +94,7 @@ const MoreLikeThisSection = styled.div`
 const MoreLikeThisTitle = styled.h2`
   color: #000000;
   margin-bottom: 20px;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 36px;
   font-weight: 500;
   line-height: 46px;
@@ -133,7 +133,7 @@ const CardImagePlaceholder = styled.div`
 const BlogHeading = styled.h3`
   color: #000000;
   margin-bottom: 10px;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;

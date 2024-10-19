@@ -5,7 +5,7 @@
     color: white;
     text-align: left;
     padding: 2rem;
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif; */
 }
 
 /* .featured-contacts h1 {
@@ -26,7 +26,7 @@
     justify-content: center;
 }
 .ls{
-    font-family: Houschka Rounded;
+    /* font-family: Houschka Rounded; */
 font-size: 48px;
 font-weight: 500;
 line-height: 48px;
@@ -55,7 +55,7 @@ text-align: left;
     margin-bottom: 0.75rem;
 }
 .HeadPlace{
-    font-family: Houschka Rounded;
+    /* font-family: Houschka Rounded; */
 font-size: 24px;
 font-weight: 500;
 line-height: 24px;
@@ -63,7 +63,7 @@ text-align: left;
 
 }
 .fp{
-    font-family: Houschka Rounded;
+    /* font-family: Houschka Rounded; */
 font-size: 18px;
 font-weight: 400;
 line-height: 21.11px;
@@ -80,7 +80,7 @@ text-align: left;
 .emailLink{
     color: white;
     text-decoration: underline;
-    font-family: var(--TypefaceBody);
+    /* font-family: var(--TypefaceBody); */
 font-size: 18px;
 font-weight: 400;
 line-height: 21.11px;

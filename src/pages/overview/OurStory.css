@@ -9,7 +9,7 @@
   
   .our-story-title {
     margin-bottom: 20px;
-font-family: Houschka Rounded;
+/* font-family: Houschka Rounded; */
 font-size: 66px;
 font-weight: 500;
 line-height: 74px;
@@ -23,7 +23,7 @@ text-align: left;
     /* max-width: 1200px; */
     margin-left: auto;
     margin-right: auto;
-font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+/* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
 font-size: 26px;
 font-weight: 500;
 line-height: 34px;

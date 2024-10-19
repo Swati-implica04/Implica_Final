@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: left;
   padding: 80px 0px 20px 80px;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   background-color: white; /* Set the background color to white */
 `;
 
@@ -27,7 +27,7 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
 font-size: 64px;
 font-weight: 500;
 line-height: 64px;
@@ -39,7 +39,7 @@ text-align: left;
 const Subtitle = styled.h2`
   color:rgba(0, 0, 0, 1);
   margin: 10px 0;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
 font-size: 64px;
 font-weight: 500;
 line-height: 64px;

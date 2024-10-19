@@ -7,7 +7,7 @@ import tag from "../../assets/images/tagLine.jpg"
 const Container = styled.div`
   background: white;
   padding: 50px;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
 
 const Header = styled.div`
@@ -27,7 +27,7 @@ const Logo = styled.p`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
 font-size: 67.6px;
 font-weight: 500;
 line-height: 67.6px;
@@ -48,7 +48,7 @@ const BrandName = styled.p`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
 font-size: 67.6px;
 font-weight: 500;
 line-height: 67.6px;

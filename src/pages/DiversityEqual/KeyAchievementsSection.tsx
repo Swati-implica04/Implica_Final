@@ -9,29 +9,33 @@ import logoImplica from "../../assets/images/newlogo with short size.png";
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   padding: 40px;
   background-color: #FFFFFF;
 `;
 
 const KeyAchievements = styled.div`
-  grid-column: 1 / 2;
   display: flex;
   align-items: center;
-  font-size: 50px;
+  justify-content: center;
+  font-size: 48px; /* Reduced font size */
   font-weight: 500;
+  line-height: 48px;
   color: #000000;
-  padding-left: 5%;
+  // background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
 `;
 
 const KeyAchievementsText = styled.span`
   white-space: nowrap;
+  margin-right: 10px;
 `;
 
 const LogoImage = styled.img`
   height: 50px;
-  margin-left: 20px;
   vertical-align: middle;
 `;
 
@@ -40,10 +44,10 @@ const CardTextBox = styled.div`
   bottom: 0;
   left: 0;
   background-color: #FFFFFF;
-  padding: 8px;
+  padding: 16px;
   color: #000000;
   width: 360px;
-  height: 120px; /* Reduced height */
+  height: 120px;
   transition: all 0.3s ease;
 `;
 
@@ -74,10 +78,10 @@ const Card = styled.div`
   flex-direction: column;
   text-align: left;
   background-color: #FFFFFF;
-  padding: 0;
+  padding: 20px;
   border-radius: 10px;
   overflow: hidden;
-  width: 480px;
+  width: 100%; /* Set width to 100% of the column */
   height: 480px;
   transition: all 0.3s ease;
 
@@ -108,7 +112,6 @@ const Card = styled.div`
 `;
 
 const CardText = styled.div`
-  font-family: 'Houschka Pro', sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 40px;
@@ -129,7 +132,7 @@ const KeyAchievementsSection: React.FC = () => {
           <CardText>58% Women in Our Workforce</CardText>
         </CardTextBox>
         <CardDescription>
-        We are proud to have women making up more than half of our workforce, contributing to leadership, innovation, and success across every level of the company. 
+          We are proud to have women making up more than half of our workforce, contributing to leadership, innovation, and success across every level of the company. 
         </CardDescription>
       </Card>
 
@@ -139,7 +142,7 @@ const KeyAchievementsSection: React.FC = () => {
           <CardText>Inclusive Hiring Practices</CardText>
         </CardTextBox>
         <CardDescription>
-        We actively recruit from a diverse pool of candidates, ensuring equal opportunities for underrepresented groups and promoting diversity at all levels. 
+          We actively recruit from a diverse pool of candidates, ensuring equal opportunities for underrepresented groups and promoting diversity at all levels. 
         </CardDescription>
       </Card>
 
@@ -149,7 +152,7 @@ const KeyAchievementsSection: React.FC = () => {
           <CardText>Global Diversity Councils</CardText>
         </CardTextBox>
         <CardDescription>
-        Our regional and global diversity councils work to promote DEI initiatives, ensuring that our goals are embedded in our business strategies worldwide.
+          Our regional and global diversity councils work to promote DEI initiatives, ensuring that our goals are embedded in our business strategies worldwide.
         </CardDescription>
       </Card>
     </Container>

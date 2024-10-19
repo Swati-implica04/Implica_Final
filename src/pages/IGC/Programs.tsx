@@ -194,7 +194,7 @@ const WhatWeDoSection = styled.section`
 const WhatWeDoText = styled.div`
   flex: 1;
   padding-right: 2rem;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
 font-size: 48px;
 font-weight: 500;
 line-height: 40px;
@@ -204,7 +204,7 @@ text-align: left;
 
 const WhatWeDoTitle = styled.h2`
   margin-bottom: 1rem;
-font-family: Houschka Rounded;
+// font-family: Houschka Rounded;
 font-size: 48px;
 font-weight: 500;
 line-height: 40px;

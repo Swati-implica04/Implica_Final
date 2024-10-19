@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"; // Import icons
 
 type ImageType = {
   src: string;
@@ -55,6 +56,16 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({
 
   return (
     <CarouselContainer color={color}>
+      {/* Positioned Carousel Buttons at the top */}
+      <ButtonWrapper>
+        <Button onClick={prevSlide}>
+          <FaArrowLeft />
+        </Button>
+        <Button onClick={nextSlide}>
+          <FaArrowRight />
+        </Button>
+      </ButtonWrapper>
+
       <CarouselWrapper
         style={{
           transform: `translateX(calc(-100% * ${currentIndex}))`,
@@ -73,15 +84,6 @@ const HorizontalCarousel: React.FC<HorizontalCarouselProps> = ({
           </Slide>
         ))}
       </CarouselWrapper>
-
-      <CarouselButtons>
-        <Button onClick={prevSlide}>
-          <Arrow className="left" />
-        </Button>
-        <Button onClick={nextSlide}>
-          <Arrow className="right" />
-        </Button>
-      </CarouselButtons>
     </CarouselContainer>
   );
 };
@@ -91,11 +93,11 @@ const CarouselContainer = styled.div<{ color: string }>`
   width: 100%;
   max-width: 100vw;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -105,6 +107,7 @@ const CarouselContainer = styled.div<{ color: string }>`
 const CarouselWrapper = styled.div`
   display: flex;
   width: 100%;
+  padding-top: 40px;
 `;
 
 const Slide = styled.div`
@@ -115,12 +118,12 @@ const Slide = styled.div`
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  height: auto;
-  height:560px;
-
+  height: 560px;
+  padding: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -163,7 +166,6 @@ const Image = styled.img`
 `;
 
 const Caption = styled.h2`
-  font-family: Houschka Rounded, sans-serif;
   font-size: 36px;
   font-weight: 600;
   line-height: 1.2;
@@ -193,54 +195,36 @@ const SubText = styled.p`
   }
 `;
 
-const CarouselButtons = styled.div`
+const ButtonWrapper = styled.div`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0; /* Set to the top of the container */
+  right: 0; /* Align to the right */
   display: flex;
-  justify-content: space-between;
-  width: 80px;
+  gap: 10px;
   z-index: 2;
+  padding-bottom: 20px;
 
   @media (max-width: 768px) {
-    top: 10px;
-    right: 10px;
-    width: 60px;
+    top: 0;
+    right: 0;
   }
 `;
 
 const Button = styled.button`
   border: none;
   cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-  border-radius: 50%;
-  padding: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-  background-color: white;
+  font-size: 1rem;
+  color:grey; /* Set the arrows to black */
+  padding: 20px;
+  background: none; /* Remove background color */
+  transition: transform 0.3s ease;
 
   &:hover {
-    background-color: #f0f0f0;
+    transform: scale(1.1); /* Slightly enlarge on hover */
   }
 
   @media (max-width: 768px) {
-    font-size: 1rem;
-    padding: 6px;
-  }
-`;
-
-const Arrow = styled.div`
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  padding: 6px;
-  transform: ${(props) =>
-    props.className === "left" ? "rotate(135deg)" : "rotate(-45deg)"};
-  -webkit-transform: ${(props) =>
-    props.className === "left" ? "rotate(135deg)" : "rotate(-45deg)"};
-
-  @media (max-width: 768px) {
-    padding: 4px;
+    font-size: 1.5rem;
   }
 `;
 

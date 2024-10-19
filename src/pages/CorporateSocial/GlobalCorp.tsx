@@ -8,7 +8,7 @@ const GlobalCorpContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   width: 100%;
   // height: 100vh; /* Full viewport height */
   overflow: hidden;
@@ -106,7 +106,7 @@ const CommitmentContent = styled.div`
 const CommitmentTextLeft = styled.div`
   max-width: 500px;
   color: #ffffff;
-font-family: Houschka Rounded;
+// font-family: Houschka Rounded;
 font-size: 48px;
 font-weight: 500;
 line-height: 48px;

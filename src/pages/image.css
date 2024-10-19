@@ -49,7 +49,7 @@
   z-index: 10; /* Ensure text is above image */
   animation: zoomInOut 12s infinite;
   opacity: 1; /* Ensure text is always visible */
-  font-family: var(--TypefaceHeading);
+  /* font-family: var(--TypefaceHeading); */
   font-size: 36px;
   font-weight: 500;
   line-height: 64px;

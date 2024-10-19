@@ -94,7 +94,7 @@ const Icon = styled.img`
 
 const FactValue = styled.div`
   margin-top: 160px;
-font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+// font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
 font-size: 41px;
 font-weight: 600;
 line-height: 48px;

@@ -28,7 +28,7 @@ const TextOverlay = styled.div`
 const HeaderText = styled.h1`
   color: black;
   margin: 0;
-  font-family: Houschka Pro;
+  // font-family: Houschka Pro;
 font-size: 64px;
 font-weight: 500;
 line-height: 64px;

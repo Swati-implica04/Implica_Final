@@ -43,7 +43,7 @@ const BannerContent = styled.div`
   z-index: 2;
   color: white;
   max-width: 1100px;
-  font-family: "Houschka Rounded";
+  // font-family: "Houschka Rounded";
   font-size: 36px;
   font-weight: 500;
   line-height: 44px;
@@ -88,7 +88,7 @@ const LogoImage = styled.img`
 const StrongText = styled.span`
   color: white;
   font-weight: bold;
-  font-family: "Houschka Rounded";
+  // font-family: "Houschka Rounded";
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;

@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
 
 const Title = styled.h2`

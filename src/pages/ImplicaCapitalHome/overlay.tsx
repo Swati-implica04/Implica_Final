@@ -17,7 +17,7 @@ const BackgroundContainer = styled.div`
 `;
 
 const Container = styled.div`
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   text-align: left; /* Center align text */
 `;
 
@@ -39,7 +39,7 @@ const Logo = styled.p`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
   font-size: 67.6px;
   font-weight: 500;
   line-height: 67.6px;
@@ -117,7 +117,7 @@ const TextOverlay = styled(motion.div)`
 //   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   transition: opacity 0.5s ease-in-out;
-  font-family: Impact;
+  // font-family: Impact;
 font-size: 38px;
 font-weight: 400;
 line-height: 57.6px;

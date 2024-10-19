@@ -88,7 +88,7 @@
     border-radius: 4px;
   }
   .ins{
-    font-family: var(--TypefaceHeading);
+    /* font-family: var(--TypefaceHeading); */
 font-size: 44px;
 font-weight: 500;
 line-height: 48px;

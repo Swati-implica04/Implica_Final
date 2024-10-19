@@ -7,6 +7,8 @@ import EqualitySection from "./EqualitySection";
 import CreateImpact from "./CreateImpact";
 import HorizontalCarousel from "./Carusel";
 import img from "../../assets/images/pexels-tima-miroshnichenko-5685951.jpg";
+import growthPay from "../../assets/images/diversity/medium-shot-woman-posing-indoors.jpg";
+
 import styled from "styled-components";
 import KeyInitiativesSection from "./keyIntialize";
 const images = [
@@ -19,7 +21,7 @@ const images = [
     subText: "",
   },
   {
-    src: img,
+    src: growthPay,
     alt: "Slide 2",
     caption: "Women in Leadership Network:",
     content:"A dedicated network supporting women as they advance in their careers, offering peer mentoring, coaching, and leadership workshops.",
@@ -91,7 +93,7 @@ const LeftContent = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-family: Houschka Pro;
+  // font-family: Houschka Pro;
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;

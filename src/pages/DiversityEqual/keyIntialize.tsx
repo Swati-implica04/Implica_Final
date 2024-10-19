@@ -1,28 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import imgTab1 from "../../assets/images/diversity/drawing-women-looking-camera.jpg";
-import imgTab2 from "../../assets/images/gay-with-rainbow-flags-sitting-street.jpg";
-import imgTab3 from "../../assets/images/diversity/pexels-charles-parker-5845744.jpg";
+import imgTab1 from "../../assets/images/diversity/people-taking-part-business-event.jpg";
+import imgTab2 from "../../assets/images/diversity/polocies-compliance-operation-method-system.jpg";
+import imgTab3 from "../../assets/images/diversity/teamwork-meeting-with-business-people.jpg";
 import logoImplica from "../../assets/images/newlogo with short size.png";
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   padding: 40px;
   background-color: #FFFFFF;
 `;
 
 const KeyInitiatives = styled.div`
-  grid-column: 1 / 2;
   display: flex;
   align-items: center;
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 500;
   color: #000000;
+line-height: 48px;
+text-align: left;
+
   padding-left: 5%;
+//   background-color: #f7f7f7;
+  height: 100%;
 `;
 
 const KeyInitiativesText = styled.span`
@@ -77,7 +81,7 @@ const Card = styled.div`
   padding: 0;
   border-radius: 10px;
   overflow: hidden;
-  width: 480px;
+  width: 100%; /* Set width to 100% of the column */
   height: 480px;
   transition: all 0.3s ease;
 
@@ -108,7 +112,6 @@ const Card = styled.div`
 `;
 
 const CardText = styled.div`
-  font-family: 'Houschka Pro', sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 40px;
@@ -134,7 +137,7 @@ const KeyInitiativesSection: React.FC = () => {
       </Card>
 
       <Card>
-        <CardImage src={imgTab2} alt="Inclusive Leadership Training" />
+        <CardImage src={imgTab3} alt="Inclusive Leadership Training" />
         <CardTextBox>
           <CardText>Inclusive Leadership Training</CardText>
         </CardTextBox>
@@ -144,7 +147,7 @@ const KeyInitiativesSection: React.FC = () => {
       </Card>
 
       <Card>
-        <CardImage src={imgTab3} alt="Flexible Work Policies" />
+        <CardImage src={imgTab2} alt="Flexible Work Policies" />
         <CardTextBox>
           <CardText>Flexible Work Policies</CardText>
         </CardTextBox>

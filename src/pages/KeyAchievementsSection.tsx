@@ -51,7 +51,7 @@ const CardTextBox = styled.div`
 `;
 
 const CardText = styled.div`
-  font-family: Houschka Pro;
+  // font-family: Houschka Pro;
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;

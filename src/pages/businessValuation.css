@@ -16,7 +16,7 @@
 }
 
 .sd {
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
@@ -37,8 +37,8 @@
 
 .highlight-text {
   color: #e6007e;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
-  font-size: 54px;
+  /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
+  font-size: 50px;
   font-weight: 600;
   line-height: 64px;
   text-align: left;
@@ -50,8 +50,8 @@
 
 .highlight-secondary {
   color: var(--Color-Violet-Violet-5, rgba(97, 12, 159, 1));
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
-  font-size: 40px;
+  /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
+  font-size: 44px;
   font-weight: 600;
   line-height: 40px;
   text-align: left;
@@ -63,7 +63,7 @@
 
 .highlight-tertiary {
   color: var(--Color-Brand-Magenta, rgba(148, 10, 145, 1));
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
   font-size: 31px;
   font-weight: 600;
   line-height: 48px;
@@ -77,7 +77,7 @@
 
 .high {
   color: rgba(0, 0, 0, 1);
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
   font-size: 31px;
   font-weight: 400;
   line-height: 48px;

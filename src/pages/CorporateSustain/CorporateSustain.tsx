@@ -120,7 +120,7 @@ const LeftContent = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-family: "Houschka Pro", sans-serif;
+  // font-family: "Houschka Pro", sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 1.2;

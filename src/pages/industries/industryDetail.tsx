@@ -83,7 +83,7 @@ const TextContent = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 20px;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
   font-size: 64px;
   font-weight: 500;
   line-height: 64px;

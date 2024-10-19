@@ -17,7 +17,7 @@ const LimitedPartnersSection = styled.section`
 const Heading = styled.h1`
   color: rgba(118, 8, 116, 1); /* Matching the purple color in your design */
   margin-bottom: 20px;
-    font-family: Impact;
+    // font-family: Impact;
 font-size: 64px;
 font-weight: 400;
 line-height: 78.06px;
@@ -28,7 +28,7 @@ text-align: left;
 const Text = styled.p`
   color: #333;
   margin-bottom: 20px;
-  font-family: Inter;
+  // font-family: Inter;
 font-size: 24px;
 font-weight: 400;
 line-height: 29.05px;
@@ -76,7 +76,7 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
   margin: 0 20px;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   font-size: 16px;
   color: black;
   cursor: pointer;
@@ -93,7 +93,7 @@ const SubmitButton = styled.button`
   color: white;
   border: none;
   border-radius: 4px;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;

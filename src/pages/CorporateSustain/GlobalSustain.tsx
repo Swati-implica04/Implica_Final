@@ -77,7 +77,7 @@ const CommitmentContent = styled.div`
 const CommitmentTextLeft = styled.div`
   max-width: 600px;
   color: #ffffff;
-  font-family: Houschka Pro;
+  // font-family: Houschka Pro;
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;

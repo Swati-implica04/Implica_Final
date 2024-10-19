@@ -58,7 +58,7 @@ const Title = styled.h1`
   margin-top:30px;
   padding: 40px;
   text-align: center;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
 font-size: 64px;
 font-weight: 600;
 line-height: 52px;
@@ -75,7 +75,7 @@ line-height: 52px;
 const Description = styled.p`
   margin: 0 auto;
   padding: 0 10px;
-font-family: var(--TypefaceBody);
+// font-family: var(--TypefaceBody);
 font-size: 24px;
 font-weight: 500;
 line-height: 30px;

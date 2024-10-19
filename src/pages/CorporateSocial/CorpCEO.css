@@ -20,7 +20,7 @@
 .CEOQuote {
     flex: 1;
     padding: 20px; /* Padding for content inside the quote section */
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     line-height: 1.6;
 }
  
@@ -38,7 +38,7 @@
     line-height: 48px;
     color: #FFFFFF;
     padding-top: 6%;
-    font-family: Houschka Rounded;
+    /* font-family: Houschka Rounded; */
 text-align: left;
 
 }

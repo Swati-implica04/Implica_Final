@@ -10,12 +10,12 @@ const FocusAreaContainer = styled.div`
   padding: 2rem 0rem 0.5rem 4rem;
   background-color: rgba(19, 2, 32, 1); /* Dark background */
   color: white;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
 
 // Title and Description Section
 const FocusTitle = styled.h2`
-  font-family: Houschka Pro;
+  // font-family: Houschka Pro;
 font-size: 48px;
 font-weight: 500;
 line-height: 48px;
@@ -75,7 +75,7 @@ const FocusCardText = styled.div`
   color: black;
   padding: 1rem;
   border-radius: 4px;
-  font-family: Houschka Pro;
+  // font-family: Houschka Pro;
 font-size: 48px;
 font-weight: 500;
 line-height: 48px;

@@ -241,7 +241,7 @@ const Digital: React.FC = () => {
 export default Digital;
 
 const DigitalContainer = styled.div`
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
 
 // Hero Section Styling with increased height and left-aligned content
@@ -289,7 +289,7 @@ const ContentText = styled.p`
 const SectionContainer = styled.div`
   background: linear-gradient(180deg, #130220 0%, #3b043a 100%);
   color: white;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
 
 // Container for the Why Choose section
@@ -303,7 +303,7 @@ const SectionTitle = styled.h2`
   margin-bottom: 50px;
   margin-top: 50px;
   color: #ffffff;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 46px;
   font-weight: 500;
   line-height: 52px;
@@ -377,7 +377,7 @@ const Overlay = styled.div`
 const BottomTitle = styled.h2`
   margin-bottom: 20px;
   color: white;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;

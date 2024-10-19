@@ -30,6 +30,7 @@ const PurposeMissionValues = () => {
   const handleReadMoreClick = () => {
     setIsReadMore(true);
   };
+
   const images = {
     purpose: { src: placeholderImage2, alt: 'Purpose Image' },
     mission: { src: placeholderImage1, alt: 'Mission Image' },
@@ -52,31 +53,29 @@ const PurposeMissionValues = () => {
         </LeftSection>
 
         <MiddleSection>
-        {activeSection && <CircleImage src={images[activeSection].src} alt={images[activeSection].alt} />}
-          {/* <CircleImage src={placeholderImage} alt="Placeholder" /> */}
+          {activeSection && <CircleImage src={images[activeSection].src} alt={images[activeSection].alt} />}
         </MiddleSection>
 
         <RightSection>
-          {(!isReadMore || activeSection === 'purpose') && activeSection === 'purpose' && (
-            <AnimatedText isVisible={isReadMore || activeSection === 'purpose'}>
-              Transforming industries and empowering communities through innovation, strategic insight, and global partnerships for a sustainable future.
+          {activeSection === 'purpose' && (
+            <AnimatedText isVisible={true}>
+              Transforming industries and empowering communities through innovation, strategic insight, and global partnerships for a sustainable future. <br />
               Our purpose at Implica Global Corporation is to go beyond conventional consulting and technology services. Through scalable solutions and innovative technologies, we drive efficiency and sustainability across industries worldwide. We help every business we partner with create a lasting, positive change in the world.
             </AnimatedText>
           )}
-          {(!isReadMore || activeSection === 'mission') && activeSection === 'mission' && (
-            <AnimatedText isVisible={isReadMore || activeSection === 'mission'}>
-              To lead the global revolution of industries through innovation, investment, and sustainable growth, driving success for businesses of all sizes.
+          {activeSection === 'mission' && (
+            <AnimatedText isVisible={true}>
+           To lead the global revolution of industries through innovation, investment, and sustainable growth, driving success for businesses of all sizes. <br />
               At Implica Global Corporation, our mission is to lead the way in creating meaningful change—both in business and society. We aim to be the trusted partner for organizations worldwide, enabling them to achieve unparalleled success while making a positive difference in the communities they touch.
             </AnimatedText>
           )}
-          {(!isReadMore || activeSection === 'values') && activeSection === 'values' && (
-            <AnimatedText isVisible={isReadMore || activeSection === 'values'}>
-              Our values are the foundation of everything we do. They guide our actions, shape our culture, and define who we are as a company.
-              I.M.P.L.I.C.A: Our values define who we are and guide our actions in every endeavor.
-              I: Innovation, M: Magnify, P: Partnerships, L: Leadership, I: Integrity, C: Consistency, A: Achievement.
+          {activeSection === 'values' && (
+            <AnimatedText isVisible={true}>
+             Our values are the foundation of everything we do. They guide our actions, shape our culture, and define who we are as a company. <br />
+              <strong>I.M.P.L.I.C.A:</strong> Our values define who we are and guide our actions in every endeavor. <br />
+              <strong>I</strong>: Innovation, <strong>M</strong>: Magnify, <strong>P</strong>: Partnerships, <strong>L</strong>: Leadership, <strong>I</strong>: Integrity, <strong>C</strong>: Consistency, <strong>A</strong>: Achievement.
             </AnimatedText>
           )}
-          {/* {!isReadMore && <ReadMoreLink onClick={handleReadMoreClick}>Read more</ReadMoreLink>} */}
         </RightSection>
       </Content>
 
@@ -96,6 +95,7 @@ const PurposeMissionValues = () => {
 };
 
 export default PurposeMissionValues;
+
 
 // Styled Components
 const Container = styled.div`
@@ -126,7 +126,7 @@ const LeftText = styled.h2<{ isActive?: boolean }>`
   margin-bottom: 30px;
   cursor: pointer;
   transition: color 0.3s;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 58px;
   line-height: 64px;
   letter-spacing: -0.03em;

@@ -90,7 +90,7 @@ const TextContainer = styled.div`
 const Heading = styled.h1`
   color: white;
   width: 580px;
-  font-family: Satoshi;
+  // font-family: Satoshi;
   font-size: 64px;
   font-weight: 400;
   line-height: 64px;
@@ -149,7 +149,7 @@ const Div = styled.div`
 
 const Text = styled.div`
   width: 100%;
-  font-family: Source Code Pro;
+  // font-family: Source Code Pro;
   font-size: 28px;
   font-weight: 400;
   line-height: 30.17px;
@@ -166,7 +166,7 @@ const Text = styled.div`
 `;
 
 const TextH1 = styled.div`
-  font-family: Satoshi;
+  // font-family: Satoshi;
   font-size: 48px;
   font-weight: 400;
   line-height: 72px;
@@ -180,7 +180,7 @@ const TextH1 = styled.div`
 `;
 
 const TextH2 = styled.div`
-  font-family: Satoshi;
+  // font-family: Satoshi;
   font-size: 48px;
   font-weight: 400;
   line-height: 48px;
@@ -193,7 +193,7 @@ const TextH2 = styled.div`
 `;
 
 const TextH3 = styled.div`
-  font-family: Source Code Pro;
+  // font-family: Source Code Pro;
   font-size: 16px;
   font-weight: 400;
   line-height: 20.11px;
@@ -305,7 +305,7 @@ const MissionContainer = styled.section`
 const TextBlock = styled.div`
   color: white;
   max-width: 500px;
-  font-family: Source Code Pro;
+  // font-family: Source Code Pro;
   font-size: 24px;
   font-weight: 400;
   line-height: 20.11px;

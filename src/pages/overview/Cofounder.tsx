@@ -148,7 +148,7 @@ const TeamSectionContainer = styled.div`
 const TeamTitle = styled.h2`
   margin-bottom: 30px;
   letter-spacing: 2px;
-  font-family: Houschka Rounded, sans-serif;
+  // font-family: Houschka Rounded, sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;

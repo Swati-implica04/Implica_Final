@@ -130,7 +130,7 @@ const SectionContainer = styled.section`
 const Title = styled.p`
   margin-bottom: 40px;
   margin-left: 40px;
-  font-family: var(--TypefaceHeading);
+  // font-family: var(--TypefaceHeading);
   font-size: 64px;
   font-weight: 600;
   line-height: 64px;

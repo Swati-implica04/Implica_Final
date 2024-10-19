@@ -28,8 +28,8 @@
 }
 
 .GlobalAlliance h1 {
-    styleName: Displays/D1/D1-Medium;
-    font-family: Houschka Rounded;
+    /* styleName: Displays/D1/D1-Medium; */
+    /* font-family: Houschka Rounded; */
     font-size: 66px;
     font-weight: 500;
     line-height: 74px;
@@ -38,8 +38,8 @@
     color: #FFFFFF;
 }
 .GlobalAlliance_text1,.GlobalAlliance_text2 {
-    styleName: Headings/H5/H5-Regular;
-    font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+    /* styleName: Headings/H5/H5-Regular; */
+    /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
     font-size: 23px;
     font-weight: 500;
     line-height: 30px;
@@ -55,7 +55,7 @@
 }
 .GlobalAlliance span {
     z-index: 1; 
-    font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+    /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -90,7 +90,7 @@
     }
 
     .GlobalAlliance h1 {
-        font-family: Houschka Rounded;
+        /* font-family: Houschka Rounded; */
         font-size: 66px;
         font-weight: 500;
         line-height: 74px;
@@ -100,8 +100,8 @@
 
     .GlobalAlliance_text1,
     .GlobalAlliance_text2 {
-        styleName: Headings/H5/H5-Regular;
-        font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+        /* styleName: Headings/H5/H5-Regular; */
+        /* font-family: var(--TypographyFontFamilyHeading-HouschkaRounded); */
         font-size: 23px;
         font-weight: 500;
         line-height: 30px;

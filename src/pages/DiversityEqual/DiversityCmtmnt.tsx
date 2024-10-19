@@ -7,7 +7,7 @@ const DiversityCmtmntContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   width: 100%;
 `;
 

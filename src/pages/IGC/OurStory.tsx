@@ -21,7 +21,7 @@ const ProductsTitle = styled.h1`
   font-size: 2.5rem;
   text-align: center;
   color: black;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   margin-bottom: 1rem;
 `;
 
@@ -38,7 +38,7 @@ const ProductCard = styled.div<ProductCardProps>`
   height: 360px;
   background-color: ${props => props.dark ? '#1a1a1a' : '#e0e0e0'};
   color: ${props => props.dark ? 'white' : 'black'};
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
 
 const ProductName = styled.h2`
@@ -62,7 +62,7 @@ const WhatWeDoSection = styled.section`
 const WhatWeDoText = styled.div`
   flex: 1;
   padding-right: 2rem;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
 font-size: 48px;
 font-weight: 500;
 line-height: 40px;
@@ -72,7 +72,7 @@ text-align: left;
 
 const WhatWeDoTitle = styled.h2`
   margin-bottom: 1rem;
-font-family: Houschka Rounded;
+// font-family: Houschka Rounded;
 font-size: 48px;
 font-weight: 500;
 line-height: 40px;
@@ -196,7 +196,7 @@ const ServiceCard = styled.div`
 
 const CardTitle = styled.h2`
   margin-bottom: 20px;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
 font-size: 48px;
 font-weight: 500;
 line-height: 40px;

@@ -312,7 +312,7 @@ text-align: left;
  
 `;
 const DigitalContainer = styled.div`
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
 `;
  
 // Hero Section Styling with increased height and left-aligned content
@@ -346,7 +346,7 @@ const Title = styled.h1`
 `;
  
 const SubTitle = styled.p`
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 29px;
   font-weight: 500;
   line-height: 38px;
@@ -386,7 +386,7 @@ const HelpSectionTitle = styled.h2`
   color: black;
  
   //styleName: Displays/D4/D4-Medium;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 46px;
   font-weight: 500;
   line-height: 52px;
@@ -423,7 +423,7 @@ const HelpCardContent = styled.div`
 const HelpCardTitle = styled.h3`
   margin-bottom: 0.5rem;
   color: black;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 46px;
   font-weight: 500;
   line-height: 52px;
@@ -468,7 +468,7 @@ const PageContainer = styled.div`
   background-color: #1a0933;
   color: white;
   padding: 2rem;
-  font-family: Arial, sans-serif;
+  // font-family: Arial, sans-serif;
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically */
@@ -508,7 +508,7 @@ const StatCard = styled.div`
 
 const StatTitle = styled.h3`
   margin-bottom: 0.5rem;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 26px;
   font-weight: 500;
   line-height: 34px;

@@ -33,7 +33,7 @@ const SectionContainer = styled.section`
 
 const Heading = styled.h1`
   margin-bottom: 20px;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
   font-size: 64px;
   color:rgba(0, 0, 0, 1);
   font-weight: 500;

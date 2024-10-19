@@ -98,7 +98,7 @@ const Oay = styled.div`
 const Header = styled.h1`
   color: rgba(0, 0, 0, 1);
   margin-bottom: 20px;
-  font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
+  // font-family: var(--TypographyFontFamilyHeading-HouschkaRounded);
   font-size: 40px;
   font-weight: 500;
   line-height: 48px;
@@ -128,7 +128,7 @@ const PinkText = styled.span`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
   font-size: 42.25px;
   font-weight: 500;
   line-height: 42.25px;
@@ -150,7 +150,7 @@ const GreenText = styled.span`
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   text-align: left;
-  font-family: Houschka Rounded;
+  // font-family: Houschka Rounded;
   font-size: 42.25px;
   font-weight: 500;
   line-height: 42.25px;
@@ -210,5 +210,5 @@ const ServiceTitle = styled.h3`
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Arial", sans-serif;
+  // font-family: "Arial", sans-serif;
 `;
